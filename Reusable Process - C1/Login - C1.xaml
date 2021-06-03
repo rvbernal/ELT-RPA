@@ -68,6 +68,7 @@
       <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.Word</AssemblyReference>
+
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <sap:WorkflowViewStateService.ViewState>
@@ -76,7 +77,9 @@
       <x:Boolean x:Key="ShouldCollapseAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
+
   <Sequence DisplayName="Login" sap:VirtualizedContainerService.HintSize="242,613" sap2010:WorkflowViewState.IdRef="Sequence_1">
+
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="LoginExist" />
       <Variable x:TypeArguments="x:Boolean" Name="UsernameExist" />
@@ -99,7 +102,9 @@
         </ActivityAction>
       </ui:OpenBrowser.Body>
     </ui:OpenBrowser>
+
     <ui:InterruptibleDoWhile Condition="[LoginExist = False]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_7">
+
       <ui:InterruptibleDoWhile.Body>
         <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_13">
           <sap:WorkflowViewStateService.ViewState>
@@ -115,6 +120,7 @@
           <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Delay_8" />
         </Sequence>
       </ui:InterruptibleDoWhile.Body>
+
     </ui:InterruptibleDoWhile>
     <ui:UiElementExists DisplayName="Element Exists 'push button  Maximize'" Exists="[MaximizeExist]" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="UiElementExists_10">
       <ui:UiElementExists.Target>
@@ -145,6 +151,7 @@
       </If.Then>
     </If>
     <Sequence sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_11">
+
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -202,7 +209,9 @@
           </ui:Target>
         </ui:TypeInto.Target>
       </ui:TypeInto>
+
       <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DelayMS="500" DisplayName="Type Into 'INPUT  login-pass'" EmptyField="True" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="TypeInto_6" Text="[Password]">
+
         <ui:TypeInto.Target>
           <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="9724ae26-1a07-44e0-89ea-0f55f5a760a1" InformativeScreenshot="3f80949c84d78ebb0c1871a7db14c1b0" Selector="&lt;html app='chrome.exe' title='comproDLS™ Identity' /&gt;&lt;webctrl tag='INPUT' type='password' id='login-pass' /&gt;">
             <ui:Target.TimeoutMS>
@@ -427,10 +436,12 @@
                       <ui:Target.TimeoutMS>
                         <InArgument x:TypeArguments="x:Int32" />
                       </ui:Target.TimeoutMS>
+
                       <ui:Target.WaitForReady>
                         <InArgument x:TypeArguments="ui:WaitForReady" />
                       </ui:Target.WaitForReady>
                     </ui:Target>
+
                   </ui:TypeInto.Target>
                 </ui:TypeInto>
                 <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="3000" DisplayName="Click 'BUTTON  login-mfa-btn'" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT">
@@ -453,6 +464,7 @@
                         <InArgument x:TypeArguments="ui:WaitForReady" />
                       </ui:Target.WaitForReady>
                     </ui:Target>
+
                   </ui:Click.Target>
                 </ui:Click>
                 <ui:InterruptibleDoWhile Condition="[DashboardExist = False]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_4">
