@@ -7,7 +7,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>840.8,3414.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1104,3688.8</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ProcessHeader_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="30">
@@ -70,15 +70,16 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="ProcessHeader" sap:VirtualizedContainerService.HintSize="794.4,3249.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="ProcessHeader" sap:VirtualizedContainerService.HintSize="794.4,3627.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="752.8,3156.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="752.8,3534.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:Boolean" Name="saveMSg" />
+        <Variable x:TypeArguments="ui:UiElement" Name="mediaResult" />
       </Sequence.Variables>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -190,7 +191,7 @@
         </ui:Click.Target>
       </ui:Click>
       <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="711.2,22.4" sap2010:WorkflowViewState.IdRef="Delay_1" />
-      <r:Wait_for_Element elementresult="{x:Null}" DisplayName="Wait for Element" sap:VirtualizedContainerService.HintSize="711.2,22.4" sap2010:WorkflowViewState.IdRef="Wait_for_Element_3" element="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='*Author*' /&gt;&#xD;&#xA;&lt;ctrl name='Avallain Author' role='document' /&gt;&#xD;&#xA;&lt;ctrl name='Media Library | Author by Avallain' role='document' /&gt;&#xD;&#xA;&lt;ctrl idx='25' role='editable text' /&gt;" />
+      <r:Wait_for_Element elementresult="{x:Null}" DisplayName="Wait for Element" sap:VirtualizedContainerService.HintSize="711.2,22.4" sap2010:WorkflowViewState.IdRef="Wait_for_Element_3" element="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='*Author*' /&gt;&#xA;&lt;ctrl name='Avallain Author' role='document' /&gt;&#xA;&lt;ctrl name='Media Library | Author by Avallain' role='document' /&gt;&#xA;&lt;ctrl idx='25' role='editable text' /&gt;" />
       <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'editable text'" sap:VirtualizedContainerService.HintSize="711.2,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_2" Text="[in_mediaheader]">
         <ui:TypeInto.Target>
           <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b9f15d27-b37f-4302-91f0-40f3f2656f2f" InformativeScreenshot="3b65603d056ea435429f99652bd2a9ab" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='*Author*' /&gt;&lt;ctrl name='Avallain Author' role='document' /&gt;&lt;ctrl name='Media Library | Author by Avallain' role='document' /&gt;&lt;ctrl idx='25' role='editable text' /&gt;">
@@ -215,8 +216,8 @@
           </ui:Target>
         </ui:SendHotkey.Target>
       </ui:SendHotkey>
-      <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="711.2,22.4" sap2010:WorkflowViewState.IdRef="Delay_2" />
-      <r:Wait_for_Element elementresult="{x:Null}" DisplayName="Wait for Element" sap:VirtualizedContainerService.HintSize="711.2,22.4" sap2010:WorkflowViewState.IdRef="Wait_for_Element_4" element="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='*Author*' /&gt;&#xA;&lt;ctrl name='Avallain Author' role='document' /&gt;&#xA;&lt;ctrl name='Media Library | Author by Avallain' role='document' /&gt;&#xA;&lt;ctrl name='preview ich5_pe_in_l3_u01_l03_t05.mp3 ich5_pe_in_l3_u01_l03_t05.*' role='link' /&gt;&#xA;&lt;ctrl name='ich5_pe_in_l3_u01_l03_t05.mp3' role='grouping' /&gt;" />
+      <Delay Duration="00:01:00" sap:VirtualizedContainerService.HintSize="711.2,22.4" sap2010:WorkflowViewState.IdRef="Delay_3" />
+      <r:Wait_for_Element elementresult="{x:Null}" DisplayName="Wait for Element" sap:VirtualizedContainerService.HintSize="711.2,22.4" sap2010:WorkflowViewState.IdRef="Wait_for_Element_7" element="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Avallain Author - Google Chrome' /&gt;&#xD;&#xA;&lt;ctrl name='Avallain Author' role='document' /&gt;&#xD;&#xA;&lt;ctrl name='Media Library | Author by Avallain' role='document' /&gt;&#xD;&#xA;&lt;ctrl name='preview ich5_pe_in_l3_u01_l03_t05.mp3 ich5_pe_in_l3_u01_l03_t05.*' role='link' /&gt;&#xD;&#xA;&lt;ctrl name='ich5_pe_in_l3_u01_l03_t05.mp3' role='grouping' /&gt;" />
       <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'editable text'" sap:VirtualizedContainerService.HintSize="711.2,107.2" sap2010:WorkflowViewState.IdRef="Click_6" KeyModifiers="None" MouseButton="BTN_LEFT">
         <ui:Click.CursorPosition>
           <ui:CursorPosition Position="Center">
@@ -229,7 +230,7 @@
           </ui:CursorPosition>
         </ui:Click.CursorPosition>
         <ui:Click.Target>
-          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="60c0e759-32af-4134-958d-8cbf65285e85" InformativeScreenshot="b21ed27b312702ebbed04a8f3b10640c" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='*Author*' /&gt;&lt;ctrl name='Avallain Author' role='document' /&gt;&lt;ctrl name='Media Library | Author by Avallain' role='document' /&gt;&lt;ctrl name='preview ich5_pe_in_l3_u01_l03_t05.mp3 ich5_pe_in_l3_u01_l03_t05.*' role='link' /&gt;&lt;ctrl role='editable text' /&gt;">
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="60c0e759-32af-4134-958d-8cbf65285e85" InformativeScreenshot="b21ed27b312702ebbed04a8f3b10640c" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Avallain Author - Google Chrome' /&gt;&lt;ctrl name='Avallain Author' role='document' /&gt;&lt;ctrl name='Media Library | Author by Avallain' role='document' /&gt;&lt;ctrl name='preview ich5_pe_in_l3_u01_l03_t05.mp3 ich5_pe_in_l3_u01_l03_t05.*' role='link' /&gt;&lt;ctrl role='editable text' /&gt;">
             <ui:Target.TimeoutMS>
               <InArgument x:TypeArguments="x:Int32" />
             </ui:Target.TimeoutMS>
@@ -251,7 +252,7 @@
           </ui:CursorPosition>
         </ui:Click.CursorPosition>
         <ui:Click.Target>
-          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="36eb53f6-e9b3-470a-8709-ba82e572cf53" InformativeScreenshot="0de79aab23124367abd6567ccc30995d" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='*Author*' /&gt;&lt;ctrl name='Avallain Author' role='document' /&gt;&lt;ctrl name='Media Library | Author by Avallain' role='document' /&gt;&lt;ctrl idx='30' role='grouping' /&gt;">
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="36eb53f6-e9b3-470a-8709-ba82e572cf53" InformativeScreenshot="0de79aab23124367abd6567ccc30995d" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Avallain Author - Google Chrome' /&gt;&lt;ctrl name='Avallain Author' role='document' /&gt;&lt;ctrl name='Media Library | Author by Avallain' role='document' /&gt;&lt;ctrl idx='30' role='grouping' /&gt;">
             <ui:Target.TimeoutMS>
               <InArgument x:TypeArguments="x:Int32" />
             </ui:Target.TimeoutMS>
@@ -261,7 +262,7 @@
           </ui:Target>
         </ui:Click.Target>
       </ui:Click>
-      <r:Wait_for_Element elementresult="{x:Null}" DisplayName="Wait for Element" sap:VirtualizedContainerService.HintSize="711.2,22.4" sap2010:WorkflowViewState.IdRef="Wait_for_Element_6" element="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='*Author*' /&gt;&#xD;&#xA;&lt;ctrl name='Avallain Author' role='document' /&gt;&#xD;&#xA;&lt;ctrl idx='5' role='row' /&gt;&#xD;&#xA;&lt;ctrl name='1' role='cell' /&gt;&#xD;&#xA;&lt;ctrl role='editable text' /&gt;" />
+      <r:Wait_for_Element elementresult="{x:Null}" DisplayName="Wait for Element" sap:VirtualizedContainerService.HintSize="711.2,22.4" sap2010:WorkflowViewState.IdRef="Wait_for_Element_6" element="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='*Author*' /&gt;&#xA;&lt;ctrl name='Avallain Author' role='document' /&gt;&#xA;&lt;ctrl idx='5' role='row' /&gt;&#xA;&lt;ctrl name='1' role='cell' /&gt;&#xA;&lt;ctrl role='editable text' /&gt;" />
       <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'grouping'" sap:VirtualizedContainerService.HintSize="711.2,107.2" sap2010:WorkflowViewState.IdRef="Click_7" KeyModifiers="None" MouseButton="BTN_LEFT">
         <ui:Click.CursorPosition>
           <ui:CursorPosition Position="Center">
@@ -284,6 +285,30 @@
           </ui:Target>
         </ui:Click.Target>
       </ui:Click>
+      <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SpecialKey="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="711.2,117.6" sap2010:WorkflowViewState.IdRef="SendHotkey_3" Key="a" KeyModifiers="Ctrl">
+        <ui:SendHotkey.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="b77897bb-c05b-456a-9d73-061204cbef2e">
+            <ui:Target.TimeoutMS>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:Target.TimeoutMS>
+            <ui:Target.WaitForReady>
+              <InArgument x:TypeArguments="ui:WaitForReady" />
+            </ui:Target.WaitForReady>
+          </ui:Target>
+        </ui:SendHotkey.Target>
+      </ui:SendHotkey>
+      <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="711.2,117.6" sap2010:WorkflowViewState.IdRef="SendHotkey_4" Key="back" KeyModifiers="None" SpecialKey="True">
+        <ui:SendHotkey.Target>
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="8364a06c-3ae0-402a-8058-c8c1cc172c1b">
+            <ui:Target.TimeoutMS>
+              <InArgument x:TypeArguments="x:Int32" />
+            </ui:Target.TimeoutMS>
+            <ui:Target.WaitForReady>
+              <InArgument x:TypeArguments="ui:WaitForReady" />
+            </ui:Target.WaitForReady>
+          </ui:Target>
+        </ui:SendHotkey.Target>
+      </ui:SendHotkey>
       <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" DisplayName="Type Into 'editable text'" sap:VirtualizedContainerService.HintSize="711.2,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_3" Text="[in_mediaheaderinfo]">
         <ui:TypeInto.Target>
           <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="af69f1c9-690d-49bd-b6a0-1cb8042d0ae0" InformativeScreenshot="fe6229ac6949c6a3a4057fdf03b06278" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='*Author*' /&gt;&lt;ctrl name='Avallain Author' role='document' /&gt;&lt;ctrl idx='5' role='row' /&gt;&lt;ctrl name='1' role='cell' /&gt;&lt;ctrl role='editable text' /&gt;">
@@ -318,6 +343,7 @@
           </ui:Target>
         </ui:Click.Target>
       </ui:Click>
+      <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="711.2,22.4" sap2010:WorkflowViewState.IdRef="Delay_4" />
       <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'push button  SAVE'" sap:VirtualizedContainerService.HintSize="711.2,107.2" sap2010:WorkflowViewState.IdRef="Click_9" KeyModifiers="None" MouseButton="BTN_LEFT">
         <ui:Click.CursorPosition>
           <ui:CursorPosition Position="Center">
