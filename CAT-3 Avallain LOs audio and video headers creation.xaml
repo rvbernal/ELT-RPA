@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="CAT_3_Avallain_LOs_audio_and_video_headers_creation" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="872.8,2039.2" sap2010:WorkflowViewState.IdRef="CAT_3_Avallain_LOs_audio_and_video_headers_creation_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="CAT_3_Avallain_LOs_audio_and_video_headers_creation" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="872.8,2192.8" sap2010:WorkflowViewState.IdRef="CAT_3_Avallain_LOs_audio_and_video_headers_creation_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="66">
       <x:String>System.Activities</x:String>
@@ -78,12 +78,8 @@
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="CAT_3_Avallain_LOs_audio_and_video_headers_creation" sap:VirtualizedContainerService.HintSize="883.2,2028" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
-      <Variable x:TypeArguments="x:Int32" Name="row">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:Int32" Value="2" />
-        </Variable.Default>
-      </Variable>
-      <Variable x:TypeArguments="x:String" Name="out_meadiheaderinfo" />
+      <Variable x:TypeArguments="x:Int32" Default="2" Name="row" />
+      <Variable x:TypeArguments="x:String" Name="out_mediaheaderinfo" />
       <Variable x:TypeArguments="x:String" Name="out_mediaheader" />
       <Variable x:TypeArguments="x:String" Name="out_lo" />
       <Variable x:TypeArguments="x:Int32" Name="rowCount" />
@@ -157,10 +153,10 @@
               <InArgument x:TypeArguments="x:String" x:Key="rowArg">["A" + row.ToString]</InArgument>
               <OutArgument x:TypeArguments="x:String" x:Key="LearningObject">[out_lo]</OutArgument>
               <OutArgument x:TypeArguments="x:String" x:Key="MediaHeader">[out_mediaheader]</OutArgument>
-              <OutArgument x:TypeArguments="x:String" x:Key="MediaHeaderInfo">[out_meadiheaderinfo]</OutArgument>
+              <OutArgument x:TypeArguments="x:String" x:Key="MediaHeaderInfo">[out_mediaheaderinfo]</OutArgument>
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
-          <If Condition="[prev_lo.Equals(out_lo) OR out_meadiheaderinfo.Equals(&quot;&quot;) OR out_mediaheader.Equals(&quot;&quot;)]" DisplayName="CheckIf Data Column is empty" sap:VirtualizedContainerService.HintSize="764.8,658.4" sap2010:WorkflowViewState.IdRef="If_1">
+          <If Condition="[prev_lo.Equals(out_lo) OR out_mediaheaderinfo.Equals(&quot;&quot;) OR out_mediaheader.Equals(&quot;&quot;)]" DisplayName="CheckIf Data Column is empty" sap:VirtualizedContainerService.HintSize="764.8,658.4" sap2010:WorkflowViewState.IdRef="If_1">
             <If.Then>
               <Sequence sap:VirtualizedContainerService.HintSize="304,252.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
                 <sap:WorkflowViewStateService.ViewState>
@@ -201,9 +197,15 @@
                   </sap:WorkflowViewStateService.ViewState>
                   <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="333.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Avallain Reusables\ProcessHeader.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_lo">[out_lo]</InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_mediaheader">[out_mediaheader]</InArgument>
-                      <InArgument x:TypeArguments="x:String" x:Key="in_mediaheaderinfo">[out_meadiheaderinfo]</InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_lo">
+                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="out_lo" />
+                      </InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_mediaheader">
+                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="out_mediaheader" />
+                      </InArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="in_mediaheaderinfo">
+                        <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="out_mediaheaderinfo" />
+                      </InArgument>
                     </ui:InvokeWorkflowFile.Arguments>
                   </ui:InvokeWorkflowFile>
                   <Assign sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="Assign_2">
