@@ -11,7 +11,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>935,672</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>829,672</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Edit_Metadata_Tag_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="28">
@@ -46,7 +46,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="27">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="54">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -74,6 +74,8 @@
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
       <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Word</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <sap:WorkflowViewStateService.ViewState>
@@ -127,7 +129,7 @@
     </Assign>
     <ui:InterruptibleDoWhile DisplayName="Do While" sap:VirtualizedContainerService.HintSize="262,51" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_29">
       <ui:InterruptibleDoWhile.Body>
-        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="304,334" sap2010:WorkflowViewState.IdRef="Sequence_71">
+        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_71">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -142,7 +144,7 @@
               </ui:Target>
             </ui:UiElementExists.Target>
           </ui:UiElementExists>
-          <If Condition="[NoAssetExist = True]" sap:VirtualizedContainerService.HintSize="484,237" sap2010:WorkflowViewState.IdRef="If_5">
+          <If Condition="[NoAssetExist = True]" sap:VirtualizedContainerService.HintSize="262,51" sap2010:WorkflowViewState.IdRef="If_5">
             <If.Then>
               <ui:Break sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Break_1" />
             </If.Then>
@@ -169,7 +171,7 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:InterruptibleDoWhile DisplayName="Do While" sap:VirtualizedContainerService.HintSize="334,231" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_20">
+          <ui:InterruptibleDoWhile DisplayName="Do While" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_20">
             <ui:InterruptibleDoWhile.Body>
               <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="242,205" sap2010:WorkflowViewState.IdRef="Sequence_50">
                 <sap:WorkflowViewStateService.ViewState>
@@ -193,7 +195,7 @@
               <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="TagExist = False" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_1" />
             </ui:InterruptibleDoWhile.Condition>
           </ui:InterruptibleDoWhile>
-          <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayBefore="1000" DelayMS="500" DisplayName="Click 'Link'" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="Click_36" KeyModifiers="None" MouseButton="BTN_LEFT">
+          <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayBefore="1000" DelayMS="500" DisplayName="Click 'Link'" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="Click_36" KeyModifiers="None" MouseButton="BTN_LEFT">
             <ui:Click.CursorPosition>
               <ui:CursorPosition Position="Center">
                 <ui:CursorPosition.OffsetX>
@@ -215,7 +217,7 @@
               </ui:Target>
             </ui:Click.Target>
           </ui:Click>
-          <ui:InterruptibleDoWhile DisplayName="Do While" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_21">
+          <ui:InterruptibleDoWhile DisplayName="Do While" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_21">
             <ui:InterruptibleDoWhile.Body>
               <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="242,205" sap2010:WorkflowViewState.IdRef="Sequence_51">
                 <sap:WorkflowViewStateService.ViewState>
@@ -239,7 +241,7 @@
               <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="TagExist = False" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_2" />
             </ui:InterruptibleDoWhile.Condition>
           </ui:InterruptibleDoWhile>
-          <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="1000" DisplayName="Click 'Edit'" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="Click_37" KeyModifiers="None" MouseButton="BTN_LEFT">
+          <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="1000" DisplayName="Click 'Edit'" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="Click_37" KeyModifiers="None" MouseButton="BTN_LEFT">
             <ui:Click.CursorPosition>
               <ui:CursorPosition Position="Center">
                 <ui:CursorPosition.OffsetX>
@@ -261,7 +263,7 @@
               </ui:Target>
             </ui:Click.Target>
           </ui:Click>
-          <ui:InterruptibleDoWhile DisplayName="Do While" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_22">
+          <ui:InterruptibleDoWhile DisplayName="Do While" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_22">
             <ui:InterruptibleDoWhile.Body>
               <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="242,205" sap2010:WorkflowViewState.IdRef="Sequence_52">
                 <sap:WorkflowViewStateService.ViewState>
@@ -285,7 +287,7 @@
               <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="TagExist = False" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_3" />
             </ui:InterruptibleDoWhile.Condition>
           </ui:InterruptibleDoWhile>
-          <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="500" DisplayName="Click 'Segment'" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="Click_38" KeyModifiers="None" MouseButton="BTN_LEFT">
+          <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="500" DisplayName="Click 'Segment'" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="Click_38" KeyModifiers="None" MouseButton="BTN_LEFT">
             <ui:Click.CursorPosition>
               <ui:CursorPosition Position="Center">
                 <ui:CursorPosition.OffsetX>
@@ -307,18 +309,18 @@
               </ui:Target>
             </ui:Click.Target>
           </ui:Click>
-          <ui:UiElementExists DisplayName="Element Exists 'tag'" Exists="[TagExist]" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="UiElementExists_43">
+          <ui:UiElementExists DisplayName="Element Exists 'tag'" Exists="[TagExist]" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="UiElementExists_43">
             <ui:UiElementExists.Target>
-              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="59e114d9-31c6-49c9-99aa-4a8163fb6b9e" InformativeScreenshot="87d18a130de6996e091f637ed82392cf" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Assets' /&gt;&lt;webctrl parentid='s2id_b4c5b7f09f2e11eab44a37c893731fdc-select-metadata' tag='A' /&gt;" TimeoutMS="500">
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="59e114d9-31c6-49c9-99aa-4a8163fb6b9e" InformativeScreenshot="87d18a130de6996e091f637ed82392cf" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Assets' /&gt;&lt;webctrl aaname=' Segment : ' tag='DIV' /&gt;&lt;nav up='1' /&gt;&lt;webctrl tag='A' /&gt;" TimeoutMS="500">
                 <ui:Target.WaitForReady>
                   <InArgument x:TypeArguments="ui:WaitForReady" />
                 </ui:Target.WaitForReady>
               </ui:Target>
             </ui:UiElementExists.Target>
           </ui:UiElementExists>
-          <ui:InterruptibleWhile DisplayName="While" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_6">
+          <ui:InterruptibleWhile DisplayName="While" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_6">
             <ui:InterruptibleWhile.Body>
-              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="242,234" sap2010:WorkflowViewState.IdRef="Sequence_53">
+              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_53">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -336,7 +338,7 @@
                     </ui:CursorPosition>
                   </ui:Click.CursorPosition>
                   <ui:Click.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8ec3e31e-4e8f-4111-98ad-b17aea1fbbcd" InformativeScreenshot="206064a4141803072507e10a1661ed6b" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Assets' /&gt;&lt;webctrl parentid='s2id_b4c5b7f09f2e11eab44a37c893731fdc-select-metadata' tag='A' /&gt;">
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8ec3e31e-4e8f-4111-98ad-b17aea1fbbcd" InformativeScreenshot="206064a4141803072507e10a1661ed6b" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Assets' /&gt;&lt;webctrl aaname=' Segment : ' tag='DIV' /&gt;&lt;nav up='1' /&gt;&lt;webctrl tag='A' /&gt;">
                       <ui:Target.TimeoutMS>
                         <InArgument x:TypeArguments="x:Int32" />
                       </ui:Target.TimeoutMS>
@@ -348,7 +350,7 @@
                 </ui:Click>
                 <ui:UiElementExists DisplayName="Element Exists 'tag'" Exists="[TagExist]" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="UiElementExists_44">
                   <ui:UiElementExists.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="59e114d9-31c6-49c9-99aa-4a8163fb6b9e" InformativeScreenshot="87d18a130de6996e091f637ed82392cf" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Assets' /&gt;&lt;webctrl parentid='s2id_b4c5b7f09f2e11eab44a37c893731fdc-select-metadata' tag='A' /&gt;" TimeoutMS="500">
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="59e114d9-31c6-49c9-99aa-4a8163fb6b9e" InformativeScreenshot="87d18a130de6996e091f637ed82392cf" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Assets' /&gt;&lt;webctrl aaname=' Segment : ' tag='DIV' /&gt;&lt;nav up='1' /&gt;&lt;webctrl tag='A' /&gt;" TimeoutMS="500">
                       <ui:Target.WaitForReady>
                         <InArgument x:TypeArguments="ui:WaitForReady" />
                       </ui:Target.WaitForReady>
@@ -361,7 +363,7 @@
               <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="TagExist = True" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_4" />
             </ui:InterruptibleWhile.Condition>
           </ui:InterruptibleWhile>
-          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="CommentOut_12">
+          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="CommentOut_12">
             <ui:CommentOut.Body>
               <Sequence DisplayName="Ignored Activities" sap2010:WorkflowViewState.IdRef="Sequence_55">
                 <ui:InterruptibleDoWhile Condition="[TagExist = True]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_23">
@@ -409,9 +411,9 @@
               </Sequence>
             </ui:CommentOut.Body>
           </ui:CommentOut>
-          <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DelayMS="500" DisplayName="Type Into 'Segment'" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="TypeInto_17" Text="[Segment]">
+          <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DelayMS="500" DisplayName="Type Into 'Segment'" EmptyField="True" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="TypeInto_17" Text="[Segment]">
             <ui:TypeInto.Target>
-              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="620ea170-1bf6-4934-a192-ac9208d7f0e4" InformativeScreenshot="7f6e01b1e43c4c9245e528edb724d869" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Assets' /&gt;&lt;webctrl aaname=' Segment : ' tag='DIV' /&gt;&lt;nav up='1' /&gt;&lt;webctrl parentid='s2id_b4c5b7f09f2e11eab44a37c893731fdc-select-metadata' tag='UL' idx='1' /&gt;">
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="620ea170-1bf6-4934-a192-ac9208d7f0e4" InformativeScreenshot="7f6e01b1e43c4c9245e528edb724d869" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Assets' /&gt;&lt;webctrl aaname=' Segment : ' tag='DIV' /&gt;&lt;nav up='1' /&gt;&lt;webctrl tag='UL' idx='1' /&gt;">
                 <ui:Target.TimeoutMS>
                   <InArgument x:TypeArguments="x:Int32" />
                 </ui:Target.TimeoutMS>
@@ -421,7 +423,7 @@
               </ui:Target>
             </ui:TypeInto.Target>
           </ui:TypeInto>
-          <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DelayMS="500" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="SendHotkey_17" Key="enter" KeyModifiers="None" SpecialKey="True">
+          <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DelayMS="500" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="SendHotkey_17" Key="enter" KeyModifiers="None" SpecialKey="True">
             <ui:SendHotkey.Target>
               <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="91fb1ae8-ae12-4d56-bf1c-0ae44772719c">
                 <ui:Target.TimeoutMS>
@@ -433,7 +435,36 @@
               </ui:Target>
             </ui:SendHotkey.Target>
           </ui:SendHotkey>
-          <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="500" DisplayName="Click 'Product Title'" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="Click_41" KeyModifiers="None" MouseButton="BTN_LEFT">
+          <ui:UiElementExists DisplayName="Element Exists 'tag'" Exists="[TagExist]" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="UiElementExists_60">
+            <ui:UiElementExists.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="59e114d9-31c6-49c9-99aa-4a8163fb6b9e" InformativeScreenshot="87d18a130de6996e091f637ed82392cf" Selector="[String.Format(&quot;&lt;html app='chrome.exe' title='comproDLS | Builder | Assets' /&gt;&lt;webctrl aaname=' Segment : ' tag='DIV' /&gt;&lt;nav up='1' /&gt;&lt;webctrl tag='SPAN' aaname='*{0}*' /&gt;&quot;, Segment)]" TimeoutMS="1000">
+                <ui:Target.WaitForReady>
+                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                </ui:Target.WaitForReady>
+              </ui:Target>
+            </ui:UiElementExists.Target>
+          </ui:UiElementExists>
+          <If Condition="[TagExist = False]" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="If_6">
+            <If.Then>
+              <Sequence sap:VirtualizedContainerService.HintSize="304,243" sap2010:WorkflowViewState.IdRef="Sequence_72">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="262,51" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Error" Message="[&quot;Segment: '&quot; &amp; Segment &amp; &quot;' was not found&quot;]" />
+                <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_4">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:String">[StatusMessage]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:String">[StatusMessage &amp; "Segment: '" &amp; Segment &amp; "' was not found" &amp; vbCrLf]</InArgument>
+                  </Assign.Value>
+                </Assign>
+              </Sequence>
+            </If.Then>
+          </If>
+          <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="500" DisplayName="Click 'Product Title'" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="Click_41" KeyModifiers="None" MouseButton="BTN_LEFT">
             <ui:Click.CursorPosition>
               <ui:CursorPosition Position="Center">
                 <ui:CursorPosition.OffsetX>
@@ -445,7 +476,7 @@
               </ui:CursorPosition>
             </ui:Click.CursorPosition>
             <ui:Click.Target>
-              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6c86a76f-1f48-4b44-8b6c-c345af12b0c7" InformativeScreenshot="1583782a5483372309806411099c57d7" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Assets' /&gt;&lt;webctrl aaname=' Product Series or Family :*' tag='DIV' /&gt;">
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6c86a76f-1f48-4b44-8b6c-c345af12b0c7" InformativeScreenshot="1583782a5483372309806411099c57d7" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Assets' /&gt;&lt;webctrl aaname=' Product *eries or *amily :*' tag='DIV' /&gt;">
                 <ui:Target.TimeoutMS>
                   <InArgument x:TypeArguments="x:Int32" />
                 </ui:Target.TimeoutMS>
@@ -455,18 +486,18 @@
               </ui:Target>
             </ui:Click.Target>
           </ui:Click>
-          <ui:UiElementExists DisplayName="Element Exists 'tag'" Exists="[TagExist]" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="UiElementExists_46">
+          <ui:UiElementExists DisplayName="Element Exists 'tag'" Exists="[TagExist]" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="UiElementExists_46">
             <ui:UiElementExists.Target>
-              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="59e114d9-31c6-49c9-99aa-4a8163fb6b9e" InformativeScreenshot="bbc2a17f21e3a93b3b7fa0f71374927a" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Assets' /&gt;&lt;webctrl parentid='s2id_5ef22950b4e111e89ab8e31a551cf94d-select-metadata' tag='A' /&gt;" TimeoutMS="500">
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="59e114d9-31c6-49c9-99aa-4a8163fb6b9e" InformativeScreenshot="bbc2a17f21e3a93b3b7fa0f71374927a" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Assets' /&gt;&lt;webctrl aaname=' Product *eries or *amily : ' tag='DIV' /&gt;&lt;nav up='1' /&gt;&lt;webctrl tag='A' idx='1' /&gt;" TimeoutMS="500">
                 <ui:Target.WaitForReady>
                   <InArgument x:TypeArguments="ui:WaitForReady" />
                 </ui:Target.WaitForReady>
               </ui:Target>
             </ui:UiElementExists.Target>
           </ui:UiElementExists>
-          <ui:InterruptibleWhile DisplayName="While" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_7">
+          <ui:InterruptibleWhile DisplayName="While" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_7">
             <ui:InterruptibleWhile.Body>
-              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="242,234" sap2010:WorkflowViewState.IdRef="Sequence_56">
+              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_56">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -484,7 +515,7 @@
                     </ui:CursorPosition>
                   </ui:Click.CursorPosition>
                   <ui:Click.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8ec3e31e-4e8f-4111-98ad-b17aea1fbbcd" InformativeScreenshot="bbc2a17f21e3a93b3b7fa0f71374927a" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Assets' /&gt;&lt;webctrl parentid='s2id_5ef22950b4e111e89ab8e31a551cf94d-select-metadata' tag='A' /&gt;">
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8ec3e31e-4e8f-4111-98ad-b17aea1fbbcd" InformativeScreenshot="bbc2a17f21e3a93b3b7fa0f71374927a" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Assets' /&gt;&lt;webctrl aaname=' Product *eries or *amily : ' tag='DIV' /&gt;&lt;nav up='1' /&gt;&lt;webctrl tag='A' idx='1' /&gt;">
                       <ui:Target.TimeoutMS>
                         <InArgument x:TypeArguments="x:Int32" />
                       </ui:Target.TimeoutMS>
@@ -494,9 +525,9 @@
                     </ui:Target>
                   </ui:Click.Target>
                 </ui:Click>
-                <ui:UiElementExists DisplayName="Element Exists 'tag'" Exists="[TagExist]" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="UiElementExists_47">
+                <ui:UiElementExists DisplayName="Element Exists 'tag'" Exists="[TagExist]" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="UiElementExists_47">
                   <ui:UiElementExists.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="59e114d9-31c6-49c9-99aa-4a8163fb6b9e" InformativeScreenshot="bbc2a17f21e3a93b3b7fa0f71374927a" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Assets' /&gt;&lt;webctrl parentid='s2id_5ef22950b4e111e89ab8e31a551cf94d-select-metadata' tag='A' /&gt;" TimeoutMS="500">
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="59e114d9-31c6-49c9-99aa-4a8163fb6b9e" InformativeScreenshot="bbc2a17f21e3a93b3b7fa0f71374927a" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Assets' /&gt;&lt;webctrl aaname=' Product *eries or *amily : ' tag='DIV' /&gt;&lt;nav up='1' /&gt;&lt;webctrl tag='A' idx='1' /&gt;" TimeoutMS="500">
                       <ui:Target.WaitForReady>
                         <InArgument x:TypeArguments="ui:WaitForReady" />
                       </ui:Target.WaitForReady>
@@ -509,7 +540,7 @@
               <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="TagExist = True" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_5" />
             </ui:InterruptibleWhile.Condition>
           </ui:InterruptibleWhile>
-          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="CommentOut_13">
+          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="CommentOut_13">
             <ui:CommentOut.Body>
               <Sequence DisplayName="Ignored Activities" sap2010:WorkflowViewState.IdRef="Sequence_58">
                 <ui:InterruptibleDoWhile Condition="[TagExist = True]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_24">
@@ -557,9 +588,9 @@
               </Sequence>
             </ui:CommentOut.Body>
           </ui:CommentOut>
-          <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DelayMS="500" DisplayName="Type Into 'Product Title'" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="TypeInto_18" Text="[ProductTitle]">
+          <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DelayMS="500" DisplayName="Type Into 'Product Title'" EmptyField="True" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="TypeInto_18" Text="[ProductTitle]">
             <ui:TypeInto.Target>
-              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="620ea170-1bf6-4934-a192-ac9208d7f0e4" InformativeScreenshot="a1a23eeca5dbfc5c93107b7648caea4a" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Assets' /&gt;&lt;webctrl parentid='s2id_5ef22950b4e111e89ab8e31a551cf94d-select-metadata' tag='UL' /&gt;">
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="620ea170-1bf6-4934-a192-ac9208d7f0e4" InformativeScreenshot="a1a23eeca5dbfc5c93107b7648caea4a" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Assets' /&gt;&lt;webctrl aaname=' Product *eries or *amily : ' tag='DIV' /&gt;&lt;nav up='1' /&gt;&lt;webctrl tag='UL' idx='1' /&gt;">
                 <ui:Target.TimeoutMS>
                   <InArgument x:TypeArguments="x:Int32" />
                 </ui:Target.TimeoutMS>
@@ -569,7 +600,7 @@
               </ui:Target>
             </ui:TypeInto.Target>
           </ui:TypeInto>
-          <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DelayMS="500" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="SendHotkey_18" Key="enter" KeyModifiers="None" SpecialKey="True">
+          <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DelayMS="500" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="SendHotkey_18" Key="enter" KeyModifiers="None" SpecialKey="True">
             <ui:SendHotkey.Target>
               <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="91fb1ae8-ae12-4d56-bf1c-0ae44772719c">
                 <ui:Target.TimeoutMS>
@@ -581,7 +612,36 @@
               </ui:Target>
             </ui:SendHotkey.Target>
           </ui:SendHotkey>
-          <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="500" DisplayName="Click 'Component'" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="Click_44" KeyModifiers="None" MouseButton="BTN_LEFT">
+          <ui:UiElementExists DisplayName="Element Exists 'tag'" Exists="[TagExist]" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="UiElementExists_61">
+            <ui:UiElementExists.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="59e114d9-31c6-49c9-99aa-4a8163fb6b9e" InformativeScreenshot="87d18a130de6996e091f637ed82392cf" Selector="[String.Format(&quot;&lt;html app='chrome.exe' title='comproDLS | Builder | Assets' /&gt;&lt;webctrl aaname=' Product *eries or *amily : ' tag='DIV' /&gt;&lt;nav up='1' /&gt;&lt;webctrl tag='SPAN' aaname='*{0}*' /&gt;&quot;, ProductTitle)]" TimeoutMS="1000">
+                <ui:Target.WaitForReady>
+                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                </ui:Target.WaitForReady>
+              </ui:Target>
+            </ui:UiElementExists.Target>
+          </ui:UiElementExists>
+          <If Condition="[TagExist = False]" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="If_7">
+            <If.Then>
+              <Sequence sap:VirtualizedContainerService.HintSize="304,243" sap2010:WorkflowViewState.IdRef="Sequence_73">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="262,51" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Error" Message="[&quot;Product Title: '&quot; &amp; ProductTitle &amp; &quot;' was not found&quot;]" />
+                <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_5">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:String">[StatusMessage]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:String">[StatusMessage &amp; "Product Title: '" &amp; ProductTitle &amp; "' was not found" &amp; vbCrLf]</InArgument>
+                  </Assign.Value>
+                </Assign>
+              </Sequence>
+            </If.Then>
+          </If>
+          <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="500" DisplayName="Click 'Component'" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="Click_44" KeyModifiers="None" MouseButton="BTN_LEFT">
             <ui:Click.CursorPosition>
               <ui:CursorPosition Position="Center">
                 <ui:CursorPosition.OffsetX>
@@ -603,24 +663,24 @@
               </ui:Target>
             </ui:Click.Target>
           </ui:Click>
-          <ui:UiElementExists DisplayName="Element Exists 'tag'" Exists="[TagExist]" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="UiElementExists_49">
+          <ui:UiElementExists DisplayName="Element Exists 'tag'" Exists="[TagExist]" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="UiElementExists_49">
             <ui:UiElementExists.Target>
-              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="59e114d9-31c6-49c9-99aa-4a8163fb6b9e" InformativeScreenshot="27c0ea5321fd2e1f6e3a8e3e43239e87" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Assets' /&gt;&lt;webctrl parentid='s2id_b698bfb08e1611eab6d3370fffe5bc5b-select-metadata' tag='A' /&gt;" TimeoutMS="500">
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="59e114d9-31c6-49c9-99aa-4a8163fb6b9e" InformativeScreenshot="27c0ea5321fd2e1f6e3a8e3e43239e87" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Assets' /&gt;&lt;webctrl aaname=' Component : ' tag='DIV' /&gt;&lt;nav up='1' /&gt;&lt;webctrl tag='A' idx='1' /&gt;" TimeoutMS="500">
                 <ui:Target.WaitForReady>
                   <InArgument x:TypeArguments="ui:WaitForReady" />
                 </ui:Target.WaitForReady>
               </ui:Target>
             </ui:UiElementExists.Target>
           </ui:UiElementExists>
-          <ui:InterruptibleWhile DisplayName="While" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_8">
+          <ui:InterruptibleWhile DisplayName="While" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_8">
             <ui:InterruptibleWhile.Body>
-              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="242,234" sap2010:WorkflowViewState.IdRef="Sequence_59">
+              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_59">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="500" DisplayName="Click 'A  #'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_45" KeyModifiers="None" MouseButton="BTN_LEFT">
+                <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="500" DisplayName="Click 'A  #'" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Click_45" KeyModifiers="None" MouseButton="BTN_LEFT">
                   <ui:Click.CursorPosition>
                     <ui:CursorPosition Position="Center">
                       <ui:CursorPosition.OffsetX>
@@ -632,7 +692,7 @@
                     </ui:CursorPosition>
                   </ui:Click.CursorPosition>
                   <ui:Click.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8ec3e31e-4e8f-4111-98ad-b17aea1fbbcd" InformativeScreenshot="27c0ea5321fd2e1f6e3a8e3e43239e87" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Assets' /&gt;&lt;webctrl parentid='s2id_b698bfb08e1611eab6d3370fffe5bc5b-select-metadata' tag='A' /&gt;">
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8ec3e31e-4e8f-4111-98ad-b17aea1fbbcd" InformativeScreenshot="27c0ea5321fd2e1f6e3a8e3e43239e87" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Assets' /&gt;&lt;webctrl aaname=' Component : ' tag='DIV' /&gt;&lt;nav up='1' /&gt;&lt;webctrl tag='A' idx='1' /&gt;">
                       <ui:Target.TimeoutMS>
                         <InArgument x:TypeArguments="x:Int32" />
                       </ui:Target.TimeoutMS>
@@ -642,9 +702,9 @@
                     </ui:Target>
                   </ui:Click.Target>
                 </ui:Click>
-                <ui:UiElementExists DisplayName="Element Exists 'tag'" Exists="[TagExist]" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="UiElementExists_50">
+                <ui:UiElementExists DisplayName="Element Exists 'tag'" Exists="[TagExist]" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="UiElementExists_50">
                   <ui:UiElementExists.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="59e114d9-31c6-49c9-99aa-4a8163fb6b9e" InformativeScreenshot="27c0ea5321fd2e1f6e3a8e3e43239e87" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Assets' /&gt;&lt;webctrl parentid='s2id_b698bfb08e1611eab6d3370fffe5bc5b-select-metadata' tag='A' /&gt;" TimeoutMS="500">
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="59e114d9-31c6-49c9-99aa-4a8163fb6b9e" InformativeScreenshot="27c0ea5321fd2e1f6e3a8e3e43239e87" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Assets' /&gt;&lt;webctrl aaname=' Component : ' tag='DIV' /&gt;&lt;nav up='1' /&gt;&lt;webctrl tag='A' idx='1' /&gt;" TimeoutMS="500">
                       <ui:Target.WaitForReady>
                         <InArgument x:TypeArguments="ui:WaitForReady" />
                       </ui:Target.WaitForReady>
@@ -657,7 +717,7 @@
               <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="TagExist = True" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_6" />
             </ui:InterruptibleWhile.Condition>
           </ui:InterruptibleWhile>
-          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="CommentOut_14">
+          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="CommentOut_14">
             <ui:CommentOut.Body>
               <Sequence DisplayName="Ignored Activities" sap2010:WorkflowViewState.IdRef="Sequence_61">
                 <ui:InterruptibleDoWhile Condition="[TagExist = True]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_25">
@@ -705,9 +765,9 @@
               </Sequence>
             </ui:CommentOut.Body>
           </ui:CommentOut>
-          <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DelayMS="500" DisplayName="Type Into 'Component'" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="TypeInto_19" Text="[Component]">
+          <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DelayMS="500" DisplayName="Type Into 'Component'" EmptyField="True" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="TypeInto_19" Text="[Component]">
             <ui:TypeInto.Target>
-              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="620ea170-1bf6-4934-a192-ac9208d7f0e4" InformativeScreenshot="e055cf47a39dfa8e96d604f62e218f36" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Assets' /&gt;&lt;webctrl parentid='s2id_b698bfb08e1611eab6d3370fffe5bc5b-select-metadata' tag='UL' /&gt;">
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="620ea170-1bf6-4934-a192-ac9208d7f0e4" InformativeScreenshot="e055cf47a39dfa8e96d604f62e218f36" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Assets' /&gt;&lt;webctrl aaname=' Component : ' tag='DIV' /&gt;&lt;nav up='1' /&gt;&lt;webctrl tag='UL' idx='1' /&gt;">
                 <ui:Target.TimeoutMS>
                   <InArgument x:TypeArguments="x:Int32" />
                 </ui:Target.TimeoutMS>
@@ -717,7 +777,7 @@
               </ui:Target>
             </ui:TypeInto.Target>
           </ui:TypeInto>
-          <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DelayMS="500" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="SendHotkey_19" Key="enter" KeyModifiers="None" SpecialKey="True">
+          <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DelayMS="500" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="SendHotkey_19" Key="enter" KeyModifiers="None" SpecialKey="True">
             <ui:SendHotkey.Target>
               <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="91fb1ae8-ae12-4d56-bf1c-0ae44772719c">
                 <ui:Target.TimeoutMS>
@@ -729,7 +789,36 @@
               </ui:Target>
             </ui:SendHotkey.Target>
           </ui:SendHotkey>
-          <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="500" DisplayName="Click 'Level'" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="Click_47" KeyModifiers="None" MouseButton="BTN_LEFT">
+          <ui:UiElementExists DisplayName="Element Exists 'tag'" Exists="[TagExist]" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="UiElementExists_62">
+            <ui:UiElementExists.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="59e114d9-31c6-49c9-99aa-4a8163fb6b9e" InformativeScreenshot="87d18a130de6996e091f637ed82392cf" Selector="[String.Format(&quot;&lt;html app='chrome.exe' title='comproDLS | Builder | Assets' /&gt;&lt;webctrl aaname=' Component : ' tag='DIV' /&gt;&lt;nav up='1' /&gt;&lt;webctrl tag='SPAN' aaname='*{0}*' /&gt;&quot;, Component)]" TimeoutMS="1000">
+                <ui:Target.WaitForReady>
+                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                </ui:Target.WaitForReady>
+              </ui:Target>
+            </ui:UiElementExists.Target>
+          </ui:UiElementExists>
+          <If Condition="[TagExist = False]" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="If_8">
+            <If.Then>
+              <Sequence sap:VirtualizedContainerService.HintSize="304,243" sap2010:WorkflowViewState.IdRef="Sequence_74">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="262,51" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Error" Message="[&quot;Component: '&quot; &amp; Component &amp; &quot;' was not found&quot;]" />
+                <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_6">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:String">[StatusMessage]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:String">[StatusMessage &amp; "Component: '" &amp; Component &amp; "' was not found" &amp; vbCrLf]</InArgument>
+                  </Assign.Value>
+                </Assign>
+              </Sequence>
+            </If.Then>
+          </If>
+          <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="500" DisplayName="Click 'Level'" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="Click_47" KeyModifiers="None" MouseButton="BTN_LEFT">
             <ui:Click.CursorPosition>
               <ui:CursorPosition Position="Center">
                 <ui:CursorPosition.OffsetX>
@@ -751,18 +840,18 @@
               </ui:Target>
             </ui:Click.Target>
           </ui:Click>
-          <ui:UiElementExists DisplayName="Element Exists 'tag'" Exists="[TagExist]" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="UiElementExists_52">
+          <ui:UiElementExists DisplayName="Element Exists 'tag'" Exists="[TagExist]" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="UiElementExists_52">
             <ui:UiElementExists.Target>
-              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="59e114d9-31c6-49c9-99aa-4a8163fb6b9e" InformativeScreenshot="50860fddfc5ecc9f3b77b6c47f71253d" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Assets' /&gt;&lt;webctrl parentid='s2id_8f93abbb-f3e5-4ed8-8110-f6e3b4d13852-select-metadata' tag='A' /&gt;" TimeoutMS="500">
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="59e114d9-31c6-49c9-99aa-4a8163fb6b9e" InformativeScreenshot="50860fddfc5ecc9f3b77b6c47f71253d" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Assets' /&gt;&lt;webctrl aaname=' Level : ' tag='DIV' /&gt;&lt;nav up='1' /&gt;&lt;webctrl tag='A' idx='1' /&gt;" TimeoutMS="500">
                 <ui:Target.WaitForReady>
                   <InArgument x:TypeArguments="ui:WaitForReady" />
                 </ui:Target.WaitForReady>
               </ui:Target>
             </ui:UiElementExists.Target>
           </ui:UiElementExists>
-          <ui:InterruptibleWhile DisplayName="While" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_9">
+          <ui:InterruptibleWhile DisplayName="While" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_9">
             <ui:InterruptibleWhile.Body>
-              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="242,234" sap2010:WorkflowViewState.IdRef="Sequence_62">
+              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_62">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -780,7 +869,7 @@
                     </ui:CursorPosition>
                   </ui:Click.CursorPosition>
                   <ui:Click.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8ec3e31e-4e8f-4111-98ad-b17aea1fbbcd" InformativeScreenshot="50860fddfc5ecc9f3b77b6c47f71253d" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Assets' /&gt;&lt;webctrl parentid='s2id_8f93abbb-f3e5-4ed8-8110-f6e3b4d13852-select-metadata' tag='A' /&gt;">
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8ec3e31e-4e8f-4111-98ad-b17aea1fbbcd" InformativeScreenshot="50860fddfc5ecc9f3b77b6c47f71253d" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Assets' /&gt;&lt;webctrl aaname=' Level : ' tag='DIV' /&gt;&lt;nav up='1' /&gt;&lt;webctrl tag='A' idx='1' /&gt;">
                       <ui:Target.TimeoutMS>
                         <InArgument x:TypeArguments="x:Int32" />
                       </ui:Target.TimeoutMS>
@@ -790,9 +879,9 @@
                     </ui:Target>
                   </ui:Click.Target>
                 </ui:Click>
-                <ui:UiElementExists DisplayName="Element Exists 'tag'" Exists="[TagExist]" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="UiElementExists_53">
+                <ui:UiElementExists DisplayName="Element Exists 'tag'" Exists="[TagExist]" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="UiElementExists_53">
                   <ui:UiElementExists.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="59e114d9-31c6-49c9-99aa-4a8163fb6b9e" InformativeScreenshot="35d91a9de13fc1c5aa943877f0c8b818" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Assets' /&gt;&lt;webctrl parentid='s2id_8f93abbb-f3e5-4ed8-8110-f6e3b4d13852-select-metadata' tag='A' /&gt;" TimeoutMS="500">
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="59e114d9-31c6-49c9-99aa-4a8163fb6b9e" InformativeScreenshot="35d91a9de13fc1c5aa943877f0c8b818" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Assets' /&gt;&lt;webctrl aaname=' Level : ' tag='DIV' /&gt;&lt;nav up='1' /&gt;&lt;webctrl tag='A' idx='1' /&gt;" TimeoutMS="500">
                       <ui:Target.WaitForReady>
                         <InArgument x:TypeArguments="ui:WaitForReady" />
                       </ui:Target.WaitForReady>
@@ -805,7 +894,7 @@
               <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="TagExist = True" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_7" />
             </ui:InterruptibleWhile.Condition>
           </ui:InterruptibleWhile>
-          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="CommentOut_15">
+          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="CommentOut_15">
             <ui:CommentOut.Body>
               <Sequence DisplayName="Ignored Activities" sap2010:WorkflowViewState.IdRef="Sequence_64">
                 <ui:InterruptibleDoWhile Condition="[TagExist = True]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_26">
@@ -853,9 +942,9 @@
               </Sequence>
             </ui:CommentOut.Body>
           </ui:CommentOut>
-          <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DelayMS="500" DisplayName="Type Into 'Level'" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="TypeInto_20" Text="[LevelTag]">
+          <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DelayMS="500" DisplayName="Type Into 'Level'" EmptyField="True" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="TypeInto_20" Text="[LevelTag]">
             <ui:TypeInto.Target>
-              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="620ea170-1bf6-4934-a192-ac9208d7f0e4" InformativeScreenshot="6fb26c3e88cf597ec84700a136aa022e" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Assets' /&gt;&lt;webctrl parentid='s2id_8f93abbb-f3e5-4ed8-8110-f6e3b4d13852-select-metadata' tag='UL' /&gt;">
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="620ea170-1bf6-4934-a192-ac9208d7f0e4" InformativeScreenshot="6fb26c3e88cf597ec84700a136aa022e" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Assets' /&gt;&lt;webctrl aaname=' Level : ' tag='DIV' /&gt;&lt;nav up='1' /&gt;&lt;webctrl tag='UL' idx='1' /&gt;">
                 <ui:Target.TimeoutMS>
                   <InArgument x:TypeArguments="x:Int32" />
                 </ui:Target.TimeoutMS>
@@ -865,7 +954,7 @@
               </ui:Target>
             </ui:TypeInto.Target>
           </ui:TypeInto>
-          <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DelayMS="500" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="SendHotkey_20" Key="enter" KeyModifiers="None" SpecialKey="True">
+          <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DelayMS="500" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="SendHotkey_20" Key="enter" KeyModifiers="None" SpecialKey="True">
             <ui:SendHotkey.Target>
               <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="91fb1ae8-ae12-4d56-bf1c-0ae44772719c">
                 <ui:Target.TimeoutMS>
@@ -877,7 +966,36 @@
               </ui:Target>
             </ui:SendHotkey.Target>
           </ui:SendHotkey>
-          <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="500" DisplayName="Click 'Activity Focus'" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="Click_50" KeyModifiers="None" MouseButton="BTN_LEFT">
+          <ui:UiElementExists DisplayName="Element Exists 'tag'" Exists="[TagExist]" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="UiElementExists_63">
+            <ui:UiElementExists.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="59e114d9-31c6-49c9-99aa-4a8163fb6b9e" InformativeScreenshot="87d18a130de6996e091f637ed82392cf" Selector="[String.Format(&quot;&lt;html app='chrome.exe' title='comproDLS | Builder | Assets' /&gt;&lt;webctrl aaname=' Level : ' tag='DIV' /&gt;&lt;nav up='1' /&gt;&lt;webctrl tag='SPAN' aaname='*{0}*' /&gt;&quot;, LevelTag)]" TimeoutMS="1000">
+                <ui:Target.WaitForReady>
+                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                </ui:Target.WaitForReady>
+              </ui:Target>
+            </ui:UiElementExists.Target>
+          </ui:UiElementExists>
+          <If Condition="[TagExist = False]" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="If_9">
+            <If.Then>
+              <Sequence sap:VirtualizedContainerService.HintSize="304,243" sap2010:WorkflowViewState.IdRef="Sequence_75">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="262,51" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Error" Message="[&quot;Level: '&quot; &amp; LevelTag &amp; &quot;' was not found&quot;]" />
+                <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_7">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:String">[StatusMessage]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:String">[StatusMessage &amp; "Level: '" &amp; LevelTag &amp; "' was not found" &amp; vbCrLf]</InArgument>
+                  </Assign.Value>
+                </Assign>
+              </Sequence>
+            </If.Then>
+          </If>
+          <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="500" DisplayName="Click 'Activity Focus'" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="Click_50" KeyModifiers="None" MouseButton="BTN_LEFT">
             <ui:Click.CursorPosition>
               <ui:CursorPosition Position="Center">
                 <ui:CursorPosition.OffsetX>
@@ -889,7 +1007,7 @@
               </ui:CursorPosition>
             </ui:Click.CursorPosition>
             <ui:Click.Target>
-              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6c86a76f-1f48-4b44-8b6c-c345af12b0c7" InformativeScreenshot="e4eca5f012885e5bf2f1208c342a645a" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Assets' /&gt;&lt;webctrl aaname=' Activity Focus :*' tag='DIV' /&gt;">
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6c86a76f-1f48-4b44-8b6c-c345af12b0c7" InformativeScreenshot="e4eca5f012885e5bf2f1208c342a645a" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Assets' /&gt;&lt;webctrl aaname=' M*ctivity *ocus :*' tag='DIV' /&gt;">
                 <ui:Target.TimeoutMS>
                   <InArgument x:TypeArguments="x:Int32" />
                 </ui:Target.TimeoutMS>
@@ -899,16 +1017,16 @@
               </ui:Target>
             </ui:Click.Target>
           </ui:Click>
-          <ui:UiElementExists DisplayName="Element Exists 'tag'" Exists="[TagExist]" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="UiElementExists_55">
+          <ui:UiElementExists DisplayName="Element Exists 'tag'" Exists="[TagExist]" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="UiElementExists_55">
             <ui:UiElementExists.Target>
-              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="59e114d9-31c6-49c9-99aa-4a8163fb6b9e" InformativeScreenshot="1dc37d5af47835be441c958aa9f718f0" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Assets' /&gt;&lt;webctrl parentid='s2id_cc0667ca-c9eb-4bb4-8f95-6c27e1d0b6a5-select-metadata' tag='A' /&gt;" TimeoutMS="500">
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="59e114d9-31c6-49c9-99aa-4a8163fb6b9e" InformativeScreenshot="1dc37d5af47835be441c958aa9f718f0" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Assets' /&gt;&lt;webctrl aaname=' M*ctivity *ocus : ' tag='DIV' /&gt;&lt;nav up='1' /&gt;&lt;webctrl tag='A' idx='1' /&gt;" TimeoutMS="500">
                 <ui:Target.WaitForReady>
                   <InArgument x:TypeArguments="ui:WaitForReady" />
                 </ui:Target.WaitForReady>
               </ui:Target>
             </ui:UiElementExists.Target>
           </ui:UiElementExists>
-          <ui:InterruptibleWhile DisplayName="While" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_10">
+          <ui:InterruptibleWhile DisplayName="While" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_10">
             <ui:InterruptibleWhile.Body>
               <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="242,234" sap2010:WorkflowViewState.IdRef="Sequence_65">
                 <sap:WorkflowViewStateService.ViewState>
@@ -928,7 +1046,7 @@
                     </ui:CursorPosition>
                   </ui:Click.CursorPosition>
                   <ui:Click.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8ec3e31e-4e8f-4111-98ad-b17aea1fbbcd" InformativeScreenshot="1dc37d5af47835be441c958aa9f718f0" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Assets' /&gt;&lt;webctrl parentid='s2id_cc0667ca-c9eb-4bb4-8f95-6c27e1d0b6a5-select-metadata' tag='A' /&gt;">
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8ec3e31e-4e8f-4111-98ad-b17aea1fbbcd" InformativeScreenshot="1dc37d5af47835be441c958aa9f718f0" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Assets' /&gt;&lt;webctrl aaname=' M*ctivity *ocus : ' tag='DIV' /&gt;&lt;nav up='1' /&gt;&lt;webctrl tag='A' idx='1' /&gt;">
                       <ui:Target.TimeoutMS>
                         <InArgument x:TypeArguments="x:Int32" />
                       </ui:Target.TimeoutMS>
@@ -938,9 +1056,9 @@
                     </ui:Target>
                   </ui:Click.Target>
                 </ui:Click>
-                <ui:UiElementExists DisplayName="Element Exists 'tag'" Exists="[TagExist]" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="UiElementExists_56">
+                <ui:UiElementExists DisplayName="Element Exists 'tag'" Exists="[TagExist]" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="UiElementExists_56">
                   <ui:UiElementExists.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="59e114d9-31c6-49c9-99aa-4a8163fb6b9e" InformativeScreenshot="1dc37d5af47835be441c958aa9f718f0" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Assets' /&gt;&lt;webctrl parentid='s2id_cc0667ca-c9eb-4bb4-8f95-6c27e1d0b6a5-select-metadata' tag='A' /&gt;" TimeoutMS="500">
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="59e114d9-31c6-49c9-99aa-4a8163fb6b9e" InformativeScreenshot="1dc37d5af47835be441c958aa9f718f0" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Assets' /&gt;&lt;webctrl aaname=' M*ctivity *ocus : ' tag='DIV' /&gt;&lt;nav up='1' /&gt;&lt;webctrl tag='A' idx='1' /&gt;" TimeoutMS="500">
                       <ui:Target.WaitForReady>
                         <InArgument x:TypeArguments="ui:WaitForReady" />
                       </ui:Target.WaitForReady>
@@ -953,7 +1071,7 @@
               <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="TagExist = True" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_8" />
             </ui:InterruptibleWhile.Condition>
           </ui:InterruptibleWhile>
-          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="CommentOut_16">
+          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="CommentOut_16">
             <ui:CommentOut.Body>
               <Sequence DisplayName="Ignored Activities" sap2010:WorkflowViewState.IdRef="Sequence_67">
                 <ui:InterruptibleDoWhile Condition="[TagExist = True]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_27">
@@ -1001,9 +1119,9 @@
               </Sequence>
             </ui:CommentOut.Body>
           </ui:CommentOut>
-          <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DelayMS="500" DisplayName="Type Into 'Activity Focus'" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="TypeInto_21" Text="[ActivityFocus]">
+          <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DelayMS="500" DisplayName="Type Into 'Activity Focus'" EmptyField="True" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="TypeInto_21" Text="[ActivityFocus]">
             <ui:TypeInto.Target>
-              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="620ea170-1bf6-4934-a192-ac9208d7f0e4" InformativeScreenshot="b7712cc04def3d31d90ac3fea26921b4" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Assets' /&gt;&lt;webctrl parentid='s2id_cc0667ca-c9eb-4bb4-8f95-6c27e1d0b6a5-select-metadata' tag='UL' /&gt;">
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="620ea170-1bf6-4934-a192-ac9208d7f0e4" InformativeScreenshot="b7712cc04def3d31d90ac3fea26921b4" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Assets' /&gt;&lt;webctrl aaname=' M*ctivity *ocus : ' tag='DIV' /&gt;&lt;nav up='1' /&gt;&lt;webctrl tag='UL' idx='1' /&gt;">
                 <ui:Target.TimeoutMS>
                   <InArgument x:TypeArguments="x:Int32" />
                 </ui:Target.TimeoutMS>
@@ -1013,7 +1131,7 @@
               </ui:Target>
             </ui:TypeInto.Target>
           </ui:TypeInto>
-          <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DelayMS="500" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="SendHotkey_21" Key="enter" KeyModifiers="None" SpecialKey="True">
+          <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DelayMS="500" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="SendHotkey_21" Key="enter" KeyModifiers="None" SpecialKey="True">
             <ui:SendHotkey.Target>
               <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="91fb1ae8-ae12-4d56-bf1c-0ae44772719c">
                 <ui:Target.TimeoutMS>
@@ -1025,7 +1143,36 @@
               </ui:Target>
             </ui:SendHotkey.Target>
           </ui:SendHotkey>
-          <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="3000" DisplayName="Click 'Save'" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="Click_53" KeyModifiers="None" MouseButton="BTN_LEFT">
+          <ui:UiElementExists DisplayName="Element Exists 'tag'" Exists="[TagExist]" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="UiElementExists_64">
+            <ui:UiElementExists.Target>
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="59e114d9-31c6-49c9-99aa-4a8163fb6b9e" InformativeScreenshot="87d18a130de6996e091f637ed82392cf" Selector="[String.Format(&quot;&lt;html app='chrome.exe' title='comproDLS | Builder | Assets' /&gt;&lt;webctrl aaname=' M*ctivity *ocus : ' tag='DIV' /&gt;&lt;nav up='1' /&gt;&lt;webctrl tag='SPAN' aaname='*{0}*' /&gt;&quot;, ActivityFocus)]" TimeoutMS="1000">
+                <ui:Target.WaitForReady>
+                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                </ui:Target.WaitForReady>
+              </ui:Target>
+            </ui:UiElementExists.Target>
+          </ui:UiElementExists>
+          <If Condition="[TagExist = False]" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="If_10">
+            <If.Then>
+              <Sequence sap:VirtualizedContainerService.HintSize="304,243" sap2010:WorkflowViewState.IdRef="Sequence_76">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="262,51" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Error" Message="[&quot;Activity Focus: '&quot; &amp; ActivityFocus &amp; &quot;' was not found&quot;]" />
+                <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_8">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:String">[StatusMessage]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:String">[StatusMessage &amp; "Activity Focus: '" &amp; ActivityFocus &amp; "' was not found" &amp; vbCrLf]</InArgument>
+                  </Assign.Value>
+                </Assign>
+              </Sequence>
+            </If.Then>
+          </If>
+          <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="3000" DisplayName="Click 'Save'" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="Click_53" KeyModifiers="None" MouseButton="BTN_LEFT">
             <ui:Click.CursorPosition>
               <ui:CursorPosition Position="Center">
                 <ui:CursorPosition.OffsetX>
@@ -1047,7 +1194,7 @@
               </ui:Target>
             </ui:Click.Target>
           </ui:Click>
-          <ui:InterruptibleDoWhile DisplayName="Do While" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_28">
+          <ui:InterruptibleDoWhile DisplayName="Do While" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_28">
             <ui:InterruptibleDoWhile.Body>
               <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="242,205" sap2010:WorkflowViewState.IdRef="Sequence_68">
                 <sap:WorkflowViewStateService.ViewState>
@@ -1074,19 +1221,19 @@
         </Sequence>
       </If.Then>
       <If.Else>
-        <Sequence sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_48">
+        <Sequence sap:VirtualizedContainerService.HintSize="304,243" sap2010:WorkflowViewState.IdRef="Sequence_48">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="262,51" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Error" Message="[&quot;File &quot; &amp; FileName &amp; &quot; was not found&quot;]" />
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="262,51" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Error" Message="[&quot;File: '&quot; &amp; FileName &amp; &quot;' was not found&quot;]" />
           <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_3">
             <Assign.To>
               <OutArgument x:TypeArguments="x:String">[StatusMessage]</OutArgument>
             </Assign.To>
             <Assign.Value>
-              <InArgument x:TypeArguments="x:String">["File " &amp; FileName &amp; " was not found"]</InArgument>
+              <InArgument x:TypeArguments="x:String">["File: '" &amp; FileName &amp; "' was not found"]</InArgument>
             </Assign.Value>
           </Assign>
         </Sequence>
