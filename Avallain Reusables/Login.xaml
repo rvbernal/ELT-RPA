@@ -7,7 +7,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>854.4,1616</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1167,1608</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Login_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="56">
@@ -85,26 +85,26 @@
       <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Login" sap:VirtualizedContainerService.HintSize="584,1451.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Login" sap:VirtualizedContainerService.HintSize="586,1443" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:OpenBrowser Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" CommunicationMethod="[CommMethod.WebDriver]" DisplayName="Open Browser" Hidden="False" sap:VirtualizedContainerService.HintSize="542.4,1358.4" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" NewSession="True" Url="https://app-cup-author-prod.avallain.net/login" UserDataFolderMode="CustomFolder" UserDataFolderPath="[DataFolderPath]">
+    <ui:OpenBrowser Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" CommunicationMethod="Native" DisplayName="Open Browser" Hidden="False" sap:VirtualizedContainerService.HintSize="544,1351" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" NewSession="True" Url="https://app-cup-author-prod.avallain.net/login" UserDataFolderMode="CustomFolder" UserDataFolderPath="[DataFolderPath]">
       <ui:OpenBrowser.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'LoginAuth Page'" sap:VirtualizedContainerService.HintSize="508.8,1256" sap2010:WorkflowViewState.IdRef="BrowserScope_5" InformativeScreenshot="c5d4cddcaa1fdf6d99f76c385539ff56" Selector="&lt;html app='chrome.exe' title='Login | Author by Avallain' /&gt;">
+          <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser 'LoginAuth Page'" sap:VirtualizedContainerService.HintSize="510,1250" sap2010:WorkflowViewState.IdRef="BrowserScope_5" InformativeScreenshot="c5d4cddcaa1fdf6d99f76c385539ff56" Selector="&lt;html app='chrome.exe' title='Login | Author by Avallain' /&gt;">
             <ui:BrowserScope.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="475.2,1108.8" sap2010:WorkflowViewState.IdRef="Sequence_20">
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="476,1104" sap2010:WorkflowViewState.IdRef="Sequence_20">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="ui:Window" Name="browserWin" />
                   </Sequence.Variables>
@@ -114,24 +114,24 @@
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:WindowScope SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" ApplicationWindow="[browserWin]" DisplayName="Attach Window" sap:VirtualizedContainerService.HintSize="433.6,224" sap2010:WorkflowViewState.IdRef="WindowScope_1" Selector="&lt;html app='chrome.exe' title='Login | Author by Avallain' /&gt;">
+                  <ui:WindowScope SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" ApplicationWindow="[browserWin]" DisplayName="Attach Window" sap:VirtualizedContainerService.HintSize="434,222" sap2010:WorkflowViewState.IdRef="WindowScope_1" Selector="&lt;html app='chrome.exe' title='Login | Author by Avallain' /&gt;">
                     <ui:WindowScope.Body>
                       <ActivityAction x:TypeArguments="x:Object">
                         <ActivityAction.Argument>
                           <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                         </ActivityAction.Argument>
-                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="241.6,115.2" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="242,114" sap2010:WorkflowViewState.IdRef="Sequence_25">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:MaximizeWindow DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" Window="[browserWin]" />
+                          <ui:MaximizeWindow DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" Window="[browserWin]" />
                         </Sequence>
                       </ActivityAction>
                     </ui:WindowScope.Body>
                   </ui:WindowScope>
-                  <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'username'" sap:VirtualizedContainerService.HintSize="433.6,107.2" sap2010:WorkflowViewState.IdRef="Click_20" KeyModifiers="None" MouseButton="BTN_LEFT">
+                  <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'username'" sap:VirtualizedContainerService.HintSize="434,106" sap2010:WorkflowViewState.IdRef="Click_20" KeyModifiers="None" MouseButton="BTN_LEFT">
                     <ui:Click.CursorPosition>
                       <ui:CursorPosition Position="Center">
                         <ui:CursorPosition.OffsetX>
