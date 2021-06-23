@@ -356,7 +356,7 @@
           </ui:CursorPosition>
         </ui:Click.CursorPosition>
         <ui:Click.Target>
-          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b1f99433-fd94-4c07-9e66-e2236afca0fd" InformativeScreenshot="1b7666408ceb2fb3a309357c8cf6358f" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='*Author*' /&gt;&lt;ctrl name='Avallain Author' role='document' /&gt;&lt;ctrl role='row' /&gt;&lt;ctrl name='PREVIEW SAVE ASSIGN' role='cell' /&gt;&lt;ctrl role='row' /&gt;&lt;ctrl name='SAVE' role='cell' /&gt;&lt;ctrl name='SAVE' role='push button' /&gt;">
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b1f99433-fd94-4c07-9e66-e2236afca0fd" InformativeScreenshot="1b7666408ceb2fb3a309357c8cf6358f" Selector="&lt;wnd app='chrome.exe' omit:cls='Chrome_WidgetWin_1' title='*Author*' /&gt;&lt;ctrl omit:name='Avallain Author' role='document' /&gt;&lt;ctrl role='row' /&gt;&lt;ctrl name='PREVIEW SAVE ASSIGN' role='cell' /&gt;&lt;ctrl role='row' /&gt;&lt;ctrl name='SAVE' role='cell' /&gt;&lt;ctrl name='SAVE' role='push button' /&gt;">
             <ui:Target.TimeoutMS>
               <InArgument x:TypeArguments="x:Int32" />
             </ui:Target.TimeoutMS>
