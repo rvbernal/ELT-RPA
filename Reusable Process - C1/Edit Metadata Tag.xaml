@@ -1,4 +1,4 @@
-﻿<Activity mc:Ignorable="sap sap2010" x:Class="Edit_Metadata_Tag" this:Edit_Metadata_Tag.Segment="Adult" this:Edit_Metadata_Tag.ProductTitle="Open World" this:Edit_Metadata_Tag.Component="Practice Extra" this:Edit_Metadata_Tag.ActivityFocus="Grammar" this:Edit_Metadata_Tag.LevelTag="C1" this:Edit_Metadata_Tag.FileName="TestingMetadataTagging01" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Edit_Metadata_Tag" this:Edit_Metadata_Tag.Segment="Adult" this:Edit_Metadata_Tag.ProductTitle="Open World" this:Edit_Metadata_Tag.Component="Practice Extra" this:Edit_Metadata_Tag.ActivityFocus="Grammar" this:Edit_Metadata_Tag.LevelTag="C1" this:Edit_Metadata_Tag.FileName="TestingMetadataTagging01" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="Segment" Type="InArgument(x:String)" />
     <x:Property Name="ProductTitle" Type="InArgument(x:String)" />
@@ -11,7 +11,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>829,672</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>913,681</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Edit_Metadata_Tag_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="28">
@@ -75,7 +75,6 @@
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
       <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.Word</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <sap:WorkflowViewStateService.ViewState>
@@ -127,9 +126,9 @@
         <InArgument x:TypeArguments="x:Int32">1</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:InterruptibleDoWhile DisplayName="Do While" sap:VirtualizedContainerService.HintSize="262,51" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_29">
+    <ui:InterruptibleDoWhile Condition="[Counter &lt;=10]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="334,231" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_29">
       <ui:InterruptibleDoWhile.Body>
-        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_71">
+        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="304,334" sap2010:WorkflowViewState.IdRef="Sequence_71">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -137,7 +136,10 @@
           </sap:WorkflowViewStateService.ViewState>
           <ui:UiElementExists DisplayName="Element Exists 'SMALL'" Exists="[NoAssetExist]" sap:VirtualizedContainerService.HintSize="262,51" sap2010:WorkflowViewState.IdRef="UiElementExists_59">
             <ui:UiElementExists.Target>
-              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="68676a20-8efe-4761-9574-7d847c7cca25" InformativeScreenshot="da9219754970afc6445bb7928fdad488" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Assets' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;ui-view&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;small' isleaf='1' tag='SMALL' /&gt;" TimeoutMS="2000">
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="68676a20-8efe-4761-9574-7d847c7cca25" InformativeScreenshot="da9219754970afc6445bb7928fdad488" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Assets' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;ui-view&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;span&amp;gt;small' isleaf='1' tag='SMALL' /&gt;">
+                <ui:Target.TimeoutMS>
+                  <InArgument x:TypeArguments="x:Int32" />
+                </ui:Target.TimeoutMS>
                 <ui:Target.WaitForReady>
                   <InArgument x:TypeArguments="ui:WaitForReady" />
                 </ui:Target.WaitForReady>
@@ -159,11 +161,8 @@
           </Assign>
         </Sequence>
       </ui:InterruptibleDoWhile.Body>
-      <ui:InterruptibleDoWhile.Condition>
-        <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="Counter &lt;=5" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_1" />
-      </ui:InterruptibleDoWhile.Condition>
     </ui:InterruptibleDoWhile>
-    <If Condition="[NoAssetExist = True]" sap:VirtualizedContainerService.HintSize="484,224" sap2010:WorkflowViewState.IdRef="If_4">
+    <If Condition="[NoAssetExist = True]" sap:VirtualizedContainerService.HintSize="262,51" sap2010:WorkflowViewState.IdRef="If_4">
       <If.Then>
         <Sequence sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_69">
           <sap:WorkflowViewStateService.ViewState>
@@ -1221,7 +1220,7 @@
         </Sequence>
       </If.Then>
       <If.Else>
-        <Sequence sap:VirtualizedContainerService.HintSize="304,243" sap2010:WorkflowViewState.IdRef="Sequence_48">
+        <Sequence sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_48">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
