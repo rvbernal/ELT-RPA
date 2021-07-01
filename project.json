@@ -1,7 +1,7 @@
 {
   "name": "ELT-RPA",
   "description": "RPA Development for Avallain",
-  "main": "CAT-2 Automating Pinned objects creation in Avallain.xaml",
+  "main": "CAT-3 Avallain LOs audio and video headers creation.xaml",
   "dependencies": {
     "CQA-RPA.Library": "[1.0.27]",
     "UiPath.Excel.Activities": "[2.10.4]",
@@ -14,7 +14,7 @@
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "21.2.0.0",
-  "projectVersion": "1.0.2",
+  "projectVersion": "1.0.10",
   "runtimeOptions": {
     "autoDispose": false,
     "isPausable": true,
@@ -46,6 +46,18 @@
     {
       "filePath": "CAT-2 Automating Pinned objects creation in Avallain.xaml",
       "uniqueId": "17e4c233-fe4c-4478-a34f-9bfd5ec75f80",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "CAT-3 Avallain LOs audio and video headers creation.xaml",
+      "uniqueId": "4b520e4a-eead-4238-81ee-98506b7f75e0",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "C1 Automation.xaml",
+      "uniqueId": "adde04df-20d7-41e5-acb3-2dff40fb50b1",
       "input": [],
       "output": []
     }

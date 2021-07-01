@@ -7,7 +7,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>787,3764</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>787,3762</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ProcessHeader_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="30">
@@ -70,13 +70,13 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="ProcessHeader" sap:VirtualizedContainerService.HintSize="797,3599" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="ProcessHeader" sap:VirtualizedContainerService.HintSize="797,3597" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="755,3507" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="755,3505" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:Boolean" Name="saveMSg" />
         <Variable x:TypeArguments="ui:UiElement" Name="mediaResult" />
@@ -356,7 +356,7 @@
           </ui:CursorPosition>
         </ui:Click.CursorPosition>
         <ui:Click.Target>
-          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b1f99433-fd94-4c07-9e66-e2236afca0fd" InformativeScreenshot="1b7666408ceb2fb3a309357c8cf6358f" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='*Author*' /&gt;&lt;ctrl name='Avallain Author' role='document' /&gt;&lt;ctrl role='row' /&gt;&lt;ctrl name='PREVIEW SAVE ASSIGN' role='cell' /&gt;&lt;ctrl role='row' /&gt;&lt;ctrl name='SAVE' role='cell' /&gt;&lt;ctrl name='SAVE' role='push button' /&gt;">
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b1f99433-fd94-4c07-9e66-e2236afca0fd" InformativeScreenshot="1b7666408ceb2fb3a309357c8cf6358f" Selector="&lt;html app='chrome.exe' title='*Author*' /&gt;&lt;webctrl aaname='Save' parentid='save' tag='SPAN' /&gt;">
             <ui:Target.TimeoutMS>
               <InArgument x:TypeArguments="x:Int32" />
             </ui:Target.TimeoutMS>
@@ -379,12 +379,12 @@
           </ui:Target>
         </ui:UiElementExists.Target>
       </ui:UiElementExists>
-      <If Condition="[saveMSg]" sap:VirtualizedContainerService.HintSize="713,251" sap2010:WorkflowViewState.IdRef="If_1">
+      <If Condition="[saveMSg]" sap:VirtualizedContainerService.HintSize="713,249" sap2010:WorkflowViewState.IdRef="If_1">
         <If.Then>
-          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Activity Saved!&quot;]" />
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Activity Saved!&quot;]" />
         </If.Then>
         <If.Else>
-          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Activity was not Saved!&quot;]" />
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Activity was not Saved!&quot;]" />
         </If.Else>
       </If>
     </Sequence>
