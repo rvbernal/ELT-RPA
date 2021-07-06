@@ -1,7 +1,7 @@
 {
   "name": "ELT-RPA",
   "description": "RPA Development for Avallain",
-  "main": "CAT-3 Avallain LOs audio and video headers creation.xaml",
+  "main": "CAT-2 Automating Pinned objects creation in Avallain.xaml",
   "dependencies": {
     "CQA-RPA.Library": "[1.0.27]",
     "UiPath.Excel.Activities": "[2.10.4]",
@@ -14,7 +14,7 @@
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "21.2.0.0",
-  "projectVersion": "1.0.10",
+  "projectVersion": "1.0.11",
   "runtimeOptions": {
     "autoDispose": false,
     "isPausable": true,
