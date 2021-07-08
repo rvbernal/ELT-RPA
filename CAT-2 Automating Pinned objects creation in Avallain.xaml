@@ -1,4 +1,13 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="835,2083" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" this:Main.startingRow="14" this:Main.endingRow="16" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="startingRow" Type="InArgument(x:Int32)" />
+    <x:Property Name="endingRow" Type="InArgument(x:Int32)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>835,2259</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="30">
       <x:String>System.Activities</x:String>
@@ -67,14 +76,12 @@
       <AssemblyReference>System.Runtime.InteropServices.RuntimeInformation</AssemblyReference>
       <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="PinnedObjects" sap:VirtualizedContainerService.HintSize="845,1918" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="PinnedObjects" sap:VirtualizedContainerService.HintSize="845,2194" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Name="rowCount" />
       <Variable x:TypeArguments="sd:DataTable" Name="dataTable" />
-      <Variable x:TypeArguments="x:Int32" Default="2" Name="row" />
       <Variable x:TypeArguments="x:String" Name="prev_lo">
         <Variable.Default>
           <Literal x:TypeArguments="x:String" Value="" />
@@ -88,8 +95,8 @@
     </sap:WorkflowViewStateService.ViewState>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Login workflow" sap:VirtualizedContainerService.HintSize="803,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Avallain Reusables\Login.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="username">mrongavilla</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="password">Qm6M3zy7</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="username">abernal</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="password">SzP3ZKTh</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="DataFolderPath">C:\Avallain\Data</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
@@ -98,7 +105,7 @@
         <InArgument x:TypeArguments="x:String" x:Key="ProjectName">Parser playground</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:ExcelApplicationScope Password="{x:Null}" AutoSave="False" CreateNewFile="False" DisplayName="LOPinnedObjects" sap:VirtualizedContainerService.HintSize="803,360" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" Visible="False" WorkbookPath="https://campress.sharepoint.com/:x:/r/teams/Groups/ELT/ProductBuild/Shared%20Documents/15%20Admin/Parser/ParserMappingDocTemplate.xlsx?d=wadcc4ce8b17a49d38da9666ec9e588ef&amp;csf=1&amp;web=1&amp;e=ODqLjR">
+    <ui:ExcelApplicationScope Password="{x:Null}" AutoSave="False" CreateNewFile="False" DisplayName="LOPinnedObjects" sap:VirtualizedContainerService.HintSize="803,360" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" Visible="False" WorkbookPath="https://campress.sharepoint.com/:x:/r/teams/Groups/ELT/ProductBuild/Shared%20Documents/15%20Admin/Parser/Parser%20packages/Parser%20pack/04_ParserMappingDocTemplate.xlsx?d=w6050def1a83b424e9b2b55285d4ac27e&amp;csf=1&amp;web=1&amp;e=cheG9P">
       <ui:ExcelApplicationScope.Body>
         <ActivityAction x:TypeArguments="ui:WorkbookApplication">
           <ActivityAction.Argument>
@@ -129,9 +136,9 @@
         </ActivityAction>
       </ui:ExcelApplicationScope.Body>
     </ui:ExcelApplicationScope>
-    <ui:InterruptibleDoWhile Condition="[row&lt;=rowCount]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="803,970" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+    <ui:InterruptibleDoWhile Condition="[startingRow&lt;=endingRow]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="803,1246" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
       <ui:InterruptibleDoWhile.Body>
-        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="767,805" sap2010:WorkflowViewState.IdRef="Sequence_4">
+        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="767,1081" sap2010:WorkflowViewState.IdRef="Sequence_4">
           <Sequence.Variables>
             <Variable x:TypeArguments="x:String" Name="out_lo" />
             <Variable x:TypeArguments="x:String" Name="out_attachment" />
@@ -143,11 +150,23 @@
           </sap:WorkflowViewStateService.ViewState>
           <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="725,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Avallain Reusables\ReadTestDataPinnedObject.xaml">
             <ui:InvokeWorkflowFile.Arguments>
-              <InArgument x:TypeArguments="x:String" x:Key="rowArg">["A" + row.ToString]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="rowArg">["A" + startingRow.ToString]</InArgument>
               <OutArgument x:TypeArguments="x:String" x:Key="LearningObject">[out_lo]</OutArgument>
               <OutArgument x:TypeArguments="x:String" x:Key="Attachment">[out_attachment]</OutArgument>
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
+          <If Condition="[endingRow=0]" sap:VirtualizedContainerService.HintSize="725,236" sap2010:WorkflowViewState.IdRef="If_2">
+            <If.Then>
+              <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_6">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:Int32">[endingRow]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:Int32">[rowCount]</InArgument>
+                </Assign.Value>
+              </Assign>
+            </If.Then>
+          </If>
           <If Condition="[prev_lo.Equals(out_lo)  OR out_attachment.Equals(&quot;&quot;)]" sap:VirtualizedContainerService.HintSize="725,561" sap2010:WorkflowViewState.IdRef="If_1">
             <If.Then>
               <Sequence sap:VirtualizedContainerService.HintSize="304,252" sap2010:WorkflowViewState.IdRef="Sequence_6">
@@ -158,10 +177,10 @@
                 </sap:WorkflowViewStateService.ViewState>
                 <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_3">
                   <Assign.To>
-                    <OutArgument x:TypeArguments="x:Int32">[row]</OutArgument>
+                    <OutArgument x:TypeArguments="x:Int32">[startingRow]</OutArgument>
                   </Assign.To>
                   <Assign.Value>
-                    <InArgument x:TypeArguments="x:Int32">[row + 1]</InArgument>
+                    <InArgument x:TypeArguments="x:Int32">[startingRow + 1]</InArgument>
                   </Assign.Value>
                 </Assign>
                 <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_4">
@@ -189,10 +208,10 @@
                 </ui:InvokeWorkflowFile>
                 <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_2">
                   <Assign.To>
-                    <OutArgument x:TypeArguments="x:Int32">[row]</OutArgument>
+                    <OutArgument x:TypeArguments="x:Int32">[startingRow]</OutArgument>
                   </Assign.To>
                   <Assign.Value>
-                    <InArgument x:TypeArguments="x:Int32">[row + 1]</InArgument>
+                    <InArgument x:TypeArguments="x:Int32">[startingRow + 1]</InArgument>
                   </Assign.Value>
                 </Assign>
                 <Assign sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_5">

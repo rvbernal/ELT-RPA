@@ -2,16 +2,22 @@
   <x:Members>
     <x:Property Name="rowArg" Type="InArgument(x:String)" />
     <x:Property Name="LearningObject" Type="OutArgument(x:String)" />
-    <x:Property Name="MediaHeader" Type="OutArgument(x:String)" />
-    <x:Property Name="MediaHeaderInfo" Type="OutArgument(x:String)" />
-    <x:Property Name="Feedback1" Type="OutArgument(x:String)" />
-    <x:Property Name="Feedback2" Type="OutArgument(x:String)" />
-    <x:Property Name="Threshold" Type="OutArgument(x:String)" />
+    <x:Property Name="Attachment" Type="OutArgument(x:String)" />
+    <x:Property Name="Screen" Type="OutArgument(x:String)" />
+    <x:Property Name="LOTitle" Type="OutArgument(x:String)" />
+    <x:Property Name="ActivityTypeName" Type="OutArgument(x:String)" />
+    <x:Property Name="LayoutInfo" Type="OutArgument(x:String)" />
+    <x:Property Name="Rubric" Type="OutArgument(x:String)" />
+    <x:Property Name="Contents" Type="OutArgument(x:String)" />
+    <x:Property Name="SupplementArea" Type="OutArgument(x:String)" />
+    <x:Property Name="MediaInHeader" Type="OutArgument(x:String)" />
+    <x:Property Name="MediaInHeaderScreenInfo" Type="OutArgument(x:String)" />
+    <x:Property Name="FeedbackBand1" Type="OutArgument(x:String)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>913,710</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>697,896</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ReadTestData_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="27">
@@ -45,7 +51,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="33">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="34">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -81,30 +87,32 @@
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="ReadTestData" sap:VirtualizedContainerService.HintSize="476,645" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="ReadTestData" sap:VirtualizedContainerService.HintSize="476,831" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="lo_tbl" />
-      <Variable x:TypeArguments="scg:IEnumerable(x:Object)" Name="dataRowValues" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ExcelApplicationScope Password="{x:Null}" AutoSave="False" CreateNewFile="False" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="434,553" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_2" InstanceCachePeriod="3000" Visible="False" WorkbookPath="https://campress.sharepoint.com/:x:/r/teams/Groups/ELT/ProductBuild/Shared%20Documents/15%20Admin/Parser/Parser%20packages/Parser%20pack/04_ParserMappingDocTemplate.xlsx?d=w6050def1a83b424e9b2b55285d4ac27e&amp;csf=1&amp;web=1&amp;e=1RCblQ">
+    <ui:ExcelApplicationScope Password="{x:Null}" AutoSave="False" CreateNewFile="False" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="434,739" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_2" InstanceCachePeriod="3000" Visible="False" WorkbookPath="https://campress.sharepoint.com/:x:/r/teams/Groups/ELT/ProductBuild/Shared%20Documents/15%20Admin/Parser/Parser%20packages/Parser%20pack/04_ParserMappingDocTemplate.xlsx?d=w6050def1a83b424e9b2b55285d4ac27e&amp;csf=1&amp;web=1&amp;e=cheG9P">
       <ui:ExcelApplicationScope.Body>
         <ActivityAction x:TypeArguments="ui:WorkbookApplication">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,444" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,630" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="scg:IEnumerable(x:Object)" Name="dataRowValues" />
+            </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <ui:ExcelReadRow DisplayName="Read Row" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="ExcelReadRow_2" Result="[dataRowValues]" SheetName="Learning Objects" StartingCell="[rowArg]" />
-            <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="334,253" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+            <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="334,439" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
               <ui:MultipleAssign.AssignOperations>
                 <scg:List x:TypeArguments="ui:AssignOperation" Capacity="32">
                   <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
@@ -115,44 +123,92 @@
                       <InArgument x:TypeArguments="x:String">[dataRowValues.ToArray(0).ToString()]</InArgument>
                     </ui:AssignOperation.Value>
                   </ui:AssignOperation>
-                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
                     <ui:AssignOperation.To>
-                      <OutArgument x:TypeArguments="x:String">[MediaHeader]</OutArgument>
+                      <OutArgument x:TypeArguments="x:String">[Attachment]</OutArgument>
                     </ui:AssignOperation.To>
                     <ui:AssignOperation.Value>
-                      <InArgument x:TypeArguments="x:String">[dataRowValues.ToArray(11).ToString()]</InArgument>
+                      <InArgument x:TypeArguments="x:String">[dataRowValues.ToArray(8).ToString()]</InArgument>
                     </ui:AssignOperation.Value>
                   </ui:AssignOperation>
-                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
                     <ui:AssignOperation.To>
-                      <OutArgument x:TypeArguments="x:String">[MediaHeaderInfo]</OutArgument>
+                      <OutArgument x:TypeArguments="x:String">[Screen]</OutArgument>
                     </ui:AssignOperation.To>
                     <ui:AssignOperation.Value>
-                      <InArgument x:TypeArguments="x:String">[dataRowValues.ToArray(12).ToString()]</InArgument>
+                      <InArgument x:TypeArguments="x:String">[dataRowValues.ToArray(1).ToString]</InArgument>
                     </ui:AssignOperation.Value>
                   </ui:AssignOperation>
                   <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_8">
                     <ui:AssignOperation.To>
-                      <OutArgument x:TypeArguments="x:String">[Feedback1]</OutArgument>
+                      <OutArgument x:TypeArguments="x:String">[LOTitle]</OutArgument>
                     </ui:AssignOperation.To>
                     <ui:AssignOperation.Value>
-                      <InArgument x:TypeArguments="x:String">[dataRowValues.ToArray(13).ToString()]</InArgument>
+                      <InArgument x:TypeArguments="x:String">[dataRowValues.ToArray(2).ToString]</InArgument>
                     </ui:AssignOperation.Value>
                   </ui:AssignOperation>
                   <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_9">
                     <ui:AssignOperation.To>
-                      <OutArgument x:TypeArguments="x:String">[Feedback2]</OutArgument>
+                      <OutArgument x:TypeArguments="x:String">[ActivityTypeName]</OutArgument>
                     </ui:AssignOperation.To>
                     <ui:AssignOperation.Value>
-                      <InArgument x:TypeArguments="x:String">[dataRowValues.ToArray(14).ToString()]</InArgument>
+                      <InArgument x:TypeArguments="x:String">[dataRowValues.ToArray(3).ToString]</InArgument>
                     </ui:AssignOperation.Value>
                   </ui:AssignOperation>
                   <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_10">
                     <ui:AssignOperation.To>
-                      <OutArgument x:TypeArguments="x:String">[Threshold]</OutArgument>
+                      <OutArgument x:TypeArguments="x:String">[LayoutInfo]</OutArgument>
                     </ui:AssignOperation.To>
                     <ui:AssignOperation.Value>
-                      <InArgument x:TypeArguments="x:String">[dataRowValues.ToArray(15).ToString()]</InArgument>
+                      <InArgument x:TypeArguments="x:String">[dataRowValues.ToArray(4).ToString]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_11">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[Rubric]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[dataRowValues.ToArray(5).ToString]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_12">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[Contents]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[dataRowValues.ToArray(6).ToString]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_13">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[SupplementArea]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[dataRowValues.ToArray(7).ToString]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_14">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[MediaInHeader]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[dataRowValues.ToArray(11).ToString]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_15">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[MediaInHeaderScreenInfo]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[dataRowValues.ToArray(12).ToString]</InArgument>
+                    </ui:AssignOperation.Value>
+                  </ui:AssignOperation>
+                  <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_16">
+                    <ui:AssignOperation.To>
+                      <OutArgument x:TypeArguments="x:String">[FeedbackBand1]</OutArgument>
+                    </ui:AssignOperation.To>
+                    <ui:AssignOperation.Value>
+                      <InArgument x:TypeArguments="x:String">[dataRowValues.ToArray(13).ToString]</InArgument>
                     </ui:AssignOperation.Value>
                   </ui:AssignOperation>
                 </scg:List>
