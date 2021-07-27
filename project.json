@@ -1,7 +1,7 @@
 {
   "name": "ELT-RPA",
   "description": "RPA Development for Avallain",
-  "main": "CAT-2 Automating Pinned objects creation in Avallain.xaml",
+  "main": "C1 Automation.xaml",
   "dependencies": {
     "CQA-RPA.Library": "[1.0.27]",
     "UiPath.Excel.Activities": "[2.10.4]",
@@ -14,7 +14,7 @@
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "21.2.0.0",
-  "projectVersion": "1.0.11",
+  "projectVersion": "1.0.13",
   "runtimeOptions": {
     "autoDispose": false,
     "isPausable": true,
@@ -58,6 +58,12 @@
     {
       "filePath": "C1 Automation.xaml",
       "uniqueId": "adde04df-20d7-41e5-acb3-2dff40fb50b1",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "CAT-5  Activity Feedback and threshold automation.xaml",
+      "uniqueId": "6a35048e-d7e7-4bf2-aa4f-a4c962d89a50",
       "input": [],
       "output": []
     }
