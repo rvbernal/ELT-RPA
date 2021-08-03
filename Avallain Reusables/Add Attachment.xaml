@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1299,8005</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>971,8067</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>SelectLO_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="31">
@@ -77,13 +77,13 @@
       <AssemblyReference>UiPath.Word</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="SelectLO" sap:VirtualizedContainerService.HintSize="981,7940" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="SelectLO" sap:VirtualizedContainerService.HintSize="981,8002" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="939,7848" sap2010:WorkflowViewState.IdRef="Sequence_3">
+    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="939,7910" sap2010:WorkflowViewState.IdRef="Sequence_3">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:Boolean" Name="saveMSg" />
         <Variable x:TypeArguments="x:String" Name="getLOTitle" />
@@ -167,7 +167,7 @@
         </ui:CommentOut.Body>
       </ui:CommentOut>
       <r:Wait_for_Element elementresult="{x:Null}" DisplayName="Wait for Element" sap:VirtualizedContainerService.HintSize="897,22" sap2010:WorkflowViewState.IdRef="Wait_for_Element_6" element="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='*Author*' /&gt;&#xA;&lt;ctrl name='Avallain Author' role='document' /&gt;&#xA;&lt;ctrl role='row' /&gt;&#xA;&lt;ctrl name='LO OPTIONS METADATA COMMENTS HEADER MEDIA LO ASSETS Design packa*' role='cell' /&gt;&#xA;&lt;ctrl role='row' /&gt;&#xA;&lt;ctrl name='LO OPTIONS' role='cell' /&gt;&#xA;&lt;ctrl name='LO OPTIONS' role='push button' /&gt;" />
-      <Sequence DisplayName="Input Attachments Data" sap:VirtualizedContainerService.HintSize="897,4124" sap2010:WorkflowViewState.IdRef="Sequence_5">
+      <Sequence DisplayName="Input Attachments Data" sap:VirtualizedContainerService.HintSize="897,4186" sap2010:WorkflowViewState.IdRef="Sequence_5">
         <Sequence.Variables>
           <Variable x:TypeArguments="x:Int32" Default="0" Name="objectctr" />
         </Sequence.Variables>
@@ -266,6 +266,7 @@
             </ui:Target>
           </ui:Click.Target>
         </ui:Click>
+        <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="604,22" sap2010:WorkflowViewState.IdRef="Delay_1" />
         <Sequence DisplayName="Select Last Textbox" sap:VirtualizedContainerService.HintSize="604,1177" sap2010:WorkflowViewState.IdRef="Sequence_39">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
