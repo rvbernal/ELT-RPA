@@ -8,7 +8,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1299,2506</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>848,2506</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Full_Workflow__2_3_5__1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="26">
@@ -86,38 +86,22 @@
     </sap:WorkflowViewStateService.ViewState>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Login workflow" sap:VirtualizedContainerService.HintSize="816,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Avallain Reusables\Login.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="username">
-          <Literal x:TypeArguments="x:String">abernal</Literal>
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="password">
-          <Literal x:TypeArguments="x:String">SzP3ZKTh</Literal>
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="DataFolderPath">
-          <Literal x:TypeArguments="x:String">C:\Avallain\Data</Literal>
-        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="username">abernal</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="password">SzP3ZKTh</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="DataFolderPath">C:\Avallain\Data</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke SelectProject workflow" sap:VirtualizedContainerService.HintSize="816,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Avallain Reusables\SelectProject.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="ProjectName">
-          <Literal x:TypeArguments="x:String">Parser playground</Literal>
-        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="ProjectName">Parser playground</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Read Test Data Range workflow" sap:VirtualizedContainerService.HintSize="816,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Avallain Reusables\Read Test Data Range.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InOutArgument x:TypeArguments="sd:DataTable" x:Key="dataTable">
-          <mva:VisualBasicReference x:TypeArguments="sd:DataTable" ExpressionText="dataTable" />
-        </InOutArgument>
-        <OutArgument x:TypeArguments="x:Int32" x:Key="rowCount">
-          <mva:VisualBasicReference x:TypeArguments="x:Int32" ExpressionText="rowCount" />
-        </OutArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="TestDataURL">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TestDataURL" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="Worksheet">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Worksheet" />
-        </InArgument>
+        <InOutArgument x:TypeArguments="sd:DataTable" x:Key="dataTable">[dataTable]</InOutArgument>
+        <OutArgument x:TypeArguments="x:Int32" x:Key="rowCount">[rowCount]</OutArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="TestDataURL">[TestDataURL]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="Worksheet">[Worksheet]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <Assign sap:VirtualizedContainerService.HintSize="816,60" sap2010:WorkflowViewState.IdRef="Assign_6">
@@ -158,60 +142,24 @@
           </sap:WorkflowViewStateService.ViewState>
           <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke ReadTestDataLOReplacement workflow" sap:VirtualizedContainerService.HintSize="738,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Avallain Reusables\ReadTestDataLOReplacement.xaml">
             <ui:InvokeWorkflowFile.Arguments>
-              <InArgument x:TypeArguments="x:String" x:Key="rowArg">
-                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="&quot;A&quot; &amp; startingRow" />
-              </InArgument>
-              <OutArgument x:TypeArguments="x:String" x:Key="LearningObject">
-                <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="LearningObject" />
-              </OutArgument>
-              <OutArgument x:TypeArguments="x:String" x:Key="Attachment">
-                <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="Attachment" />
-              </OutArgument>
-              <OutArgument x:TypeArguments="x:String" x:Key="Screen">
-                <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="Screen" />
-              </OutArgument>
-              <OutArgument x:TypeArguments="x:String" x:Key="LOTitle">
-                <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="LOTitle" />
-              </OutArgument>
-              <OutArgument x:TypeArguments="x:String" x:Key="ActivityTypeName">
-                <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="ActivityTypeName" />
-              </OutArgument>
-              <OutArgument x:TypeArguments="x:String" x:Key="LayoutInfo">
-                <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="LayoutInfo" />
-              </OutArgument>
-              <OutArgument x:TypeArguments="x:String" x:Key="Rubric">
-                <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="Rubric" />
-              </OutArgument>
-              <OutArgument x:TypeArguments="x:String" x:Key="Contents">
-                <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="Contents" />
-              </OutArgument>
-              <OutArgument x:TypeArguments="x:String" x:Key="SupplementArea">
-                <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="SupplementArea" />
-              </OutArgument>
-              <OutArgument x:TypeArguments="x:String" x:Key="MediaInHeader">
-                <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="MediaInHeader" />
-              </OutArgument>
-              <OutArgument x:TypeArguments="x:String" x:Key="MediaInHeaderScreenInfo">
-                <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="MediaInHeaderScreenInfo" />
-              </OutArgument>
-              <OutArgument x:TypeArguments="x:String" x:Key="FeedbackBand1">
-                <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="FeedbackBand1" />
-              </OutArgument>
-              <OutArgument x:TypeArguments="x:String" x:Key="FeedbackBand2">
-                <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="FeedbackBand2" />
-              </OutArgument>
-              <OutArgument x:TypeArguments="x:String" x:Key="automationprocess">
-                <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="automationprocess" />
-              </OutArgument>
-              <OutArgument x:TypeArguments="x:String" x:Key="Treshold">
-                <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="Treshold" />
-              </OutArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="TestDataURL">
-                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TestDataURL" />
-              </InArgument>
-              <InArgument x:TypeArguments="x:String" x:Key="Worksheet">
-                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Worksheet" />
-              </InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="rowArg">["A" &amp; startingRow]</InArgument>
+              <OutArgument x:TypeArguments="x:String" x:Key="LearningObject">[LearningObject]</OutArgument>
+              <OutArgument x:TypeArguments="x:String" x:Key="Attachment">[Attachment]</OutArgument>
+              <OutArgument x:TypeArguments="x:String" x:Key="Screen">[Screen]</OutArgument>
+              <OutArgument x:TypeArguments="x:String" x:Key="LOTitle">[LOTitle]</OutArgument>
+              <OutArgument x:TypeArguments="x:String" x:Key="ActivityTypeName">[ActivityTypeName]</OutArgument>
+              <OutArgument x:TypeArguments="x:String" x:Key="LayoutInfo">[LayoutInfo]</OutArgument>
+              <OutArgument x:TypeArguments="x:String" x:Key="Rubric">[Rubric]</OutArgument>
+              <OutArgument x:TypeArguments="x:String" x:Key="Contents">[Contents]</OutArgument>
+              <OutArgument x:TypeArguments="x:String" x:Key="SupplementArea">[SupplementArea]</OutArgument>
+              <OutArgument x:TypeArguments="x:String" x:Key="MediaInHeader">[MediaInHeader]</OutArgument>
+              <OutArgument x:TypeArguments="x:String" x:Key="MediaInHeaderScreenInfo">[MediaInHeaderScreenInfo]</OutArgument>
+              <OutArgument x:TypeArguments="x:String" x:Key="FeedbackBand1">[FeedbackBand1]</OutArgument>
+              <OutArgument x:TypeArguments="x:String" x:Key="FeedbackBand2">[FeedbackBand2]</OutArgument>
+              <OutArgument x:TypeArguments="x:String" x:Key="automationprocess">[automationprocess]</OutArgument>
+              <OutArgument x:TypeArguments="x:String" x:Key="Treshold">[Treshold]</OutArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="TestDataURL">[TestDataURL]</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="Worksheet">[Worksheet]</InArgument>
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
           <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="738,51" sap2010:WorkflowViewState.IdRef="CommentOut_1">
@@ -250,7 +198,7 @@
               </Assign>
             </If.Then>
           </If>
-          <If Condition="[prev_lo.Equals(out_lo)  OR out_attachment.Equals(&quot;&quot;)]" sap:VirtualizedContainerService.HintSize="738,1017" sap2010:WorkflowViewState.IdRef="If_2">
+          <If Condition="[automationprocess.ToLower.Equals(&quot;done&quot;)  OR Attachment.Equals(&quot;&quot;) or MediaInHeader.Equals(&quot;&quot;) or MediaInHeaderScreenInfo.Equals(&quot;&quot;) or FeedbackBand1.Equals(&quot;&quot;) or FeedbackBand2.Equals(&quot;&quot;)]" sap:VirtualizedContainerService.HintSize="738,1017" sap2010:WorkflowViewState.IdRef="If_2">
             <If.Then>
               <Sequence sap:VirtualizedContainerService.HintSize="304,252" sap2010:WorkflowViewState.IdRef="Sequence_2">
                 <sap:WorkflowViewStateService.ViewState>
@@ -290,9 +238,7 @@
                 </ui:InvokeWorkflowFile>
                 <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Search for LO workflow" sap:VirtualizedContainerService.HintSize="347,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Avallain Reusables\Search for LO.xaml">
                   <ui:InvokeWorkflowFile.Arguments>
-                    <InArgument x:TypeArguments="x:String" x:Key="in_lo">
-                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="LearningObject" />
-                    </InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_lo">[LearningObject]</InArgument>
                   </ui:InvokeWorkflowFile.Arguments>
                 </ui:InvokeWorkflowFile>
                 <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Click Edit Link for LO workflow" sap:VirtualizedContainerService.HintSize="347,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Avallain Reusables\Click Edit Link for LO.xaml">
@@ -302,8 +248,12 @@
                 </ui:InvokeWorkflowFile>
                 <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="CAT-2" sap:VirtualizedContainerService.HintSize="347,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Avallain Reusables\Add Attachment.xaml">
                   <ui:InvokeWorkflowFile.Arguments>
-                    <InArgument x:TypeArguments="x:String" x:Key="in_lo">[out_lo]</InArgument>
-                    <InArgument x:TypeArguments="x:String" x:Key="in_attachment">[out_attachment]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_lo">
+                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="LearningObject" />
+                    </InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_attachment">
+                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Attachment" />
+                    </InArgument>
                   </ui:InvokeWorkflowFile.Arguments>
                 </ui:InvokeWorkflowFile>
                 <Assign sap:VirtualizedContainerService.HintSize="347,60" sap2010:WorkflowViewState.IdRef="Assign_4">
