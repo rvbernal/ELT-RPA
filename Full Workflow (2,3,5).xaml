@@ -8,7 +8,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>880,2862</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>880,3014</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Full_Workflow__2_3_5__1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="26">
@@ -72,7 +72,7 @@
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Full_Workflow__2_3_5_" sap:VirtualizedContainerService.HintSize="890,2797" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Full_Workflow__2_3_5_" sap:VirtualizedContainerService.HintSize="890,2949" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dataTable" />
       <Variable x:TypeArguments="x:Int32" Name="rowCount" />
@@ -280,5 +280,10 @@
         <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="startingRow&lt;=endingRow" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_1" />
       </ui:InterruptibleDoWhile.Condition>
     </ui:InterruptibleDoWhile>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Logout workflow" sap:VirtualizedContainerService.HintSize="848,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_13" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Avallain Reusables\Logout.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <scg:Dictionary x:TypeArguments="x:String, Argument" />
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
   </Sequence>
 </Activity>
