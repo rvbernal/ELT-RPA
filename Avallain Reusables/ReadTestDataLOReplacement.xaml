@@ -15,9 +15,9 @@
     <x:Property Name="FeedbackBand1" Type="OutArgument(x:String)" />
     <x:Property Name="FeedbackBand2" Type="OutArgument(x:String)" />
     <x:Property Name="automationprocess" Type="OutArgument(x:String)" />
-    <x:Property Name="Treshold" Type="OutArgument(x:String)" />
     <x:Property Name="TestDataURL" Type="InArgument(x:String)" />
     <x:Property Name="Worksheet" Type="InArgument(x:String)" />
+    <x:Property Name="Threshold" Type="OutArgument(x:String)" />
   </x:Members>
   <this:ReadTestData.TestDataURL>
     <InArgument x:TypeArguments="x:String" />
@@ -705,7 +705,7 @@
               <TryCatch.Try>
                 <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_32">
                   <Assign.To>
-                    <OutArgument x:TypeArguments="x:String">[Treshold]</OutArgument>
+                    <OutArgument x:TypeArguments="x:String">[Threshold]</OutArgument>
                   </Assign.To>
                   <Assign.Value>
                     <InArgument x:TypeArguments="x:String">[dataRowValues.ToArray(15).ToString()]</InArgument>
@@ -726,7 +726,7 @@
                     </ActivityAction.Argument>
                     <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_33">
                       <Assign.To>
-                        <OutArgument x:TypeArguments="x:String">[Treshold]</OutArgument>
+                        <OutArgument x:TypeArguments="x:String">[Threshold]</OutArgument>
                       </Assign.To>
                       <Assign.Value>
                         <InArgument x:TypeArguments="x:String">
