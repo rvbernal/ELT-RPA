@@ -6,7 +6,9 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
+
   <sap:VirtualizedContainerService.HintSize>1334,8943</sap:VirtualizedContainerService.HintSize>
+
   <sap2010:WorkflowViewState.IdRef>SelectLO_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="31">
@@ -77,13 +79,17 @@
       <AssemblyReference>UiPath.Word</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
+
   <Sequence DisplayName="SelectLO" sap:VirtualizedContainerService.HintSize="1344,8878" sap2010:WorkflowViewState.IdRef="Sequence_1">
+
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
+
     <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1302,8786" sap2010:WorkflowViewState.IdRef="Sequence_3">
+
       <Sequence.Variables>
         <Variable x:TypeArguments="x:Boolean" Name="saveMSg" />
         <Variable x:TypeArguments="x:String" Name="getLOTitle" />
@@ -166,8 +172,10 @@
           </Sequence>
         </ui:CommentOut.Body>
       </ui:CommentOut>
+
       <r:Wait_for_Element elementresult="{x:Null}" DisplayName="Wait for Element" sap:VirtualizedContainerService.HintSize="1260,22" sap2010:WorkflowViewState.IdRef="Wait_for_Element_6" element="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='*Author*' /&gt;&#xA;&lt;ctrl name='Avallain Author' role='document' /&gt;&#xA;&lt;ctrl role='row' /&gt;&#xA;&lt;ctrl name='LO OPTIONS METADATA COMMENTS HEADER MEDIA LO ASSETS Design packa*' role='cell' /&gt;&#xA;&lt;ctrl role='row' /&gt;&#xA;&lt;ctrl name='LO OPTIONS' role='cell' /&gt;&#xA;&lt;ctrl name='LO OPTIONS' role='push button' /&gt;" />
       <Sequence DisplayName="Input Attachments Data" sap:VirtualizedContainerService.HintSize="1260,4626" sap2010:WorkflowViewState.IdRef="Sequence_5">
+
         <Sequence.Variables>
           <Variable x:TypeArguments="x:Int32" Default="0" Name="objectctr" />
         </Sequence.Variables>
@@ -273,7 +281,9 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
+
           <r:Wait_for_Element elementresult="{x:Null}" DisplayName="Wait for Element" sap:VirtualizedContainerService.HintSize="562,22" sap2010:WorkflowViewState.IdRef="Wait_for_Element_16" element="&lt;html app='chrome.exe' title='Avallain Author' /&gt;&#xA;&lt;webctrl aria-role='tabpanel' id='tabs:tabActions' tag='DIV' /&gt;" />
+
           <ui:FindChildren Children="[objects]" DisplayName="Find Children 'SPAN  tabs:attlistWrap'" Filter="&lt;webctrl aria-role='textbox' id='tabs:attlist:*:text' tag='INPUT' type='text' /&gt;" sap:VirtualizedContainerService.HintSize="562,106" sap2010:WorkflowViewState.IdRef="FindChildren_1" Scope="FIND_DESCENDANTS">
             <ui:FindChildren.Target>
               <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="936c12e4-4e1a-4fb6-b6bf-079e30592f4a" InformativeScreenshot="ab30b64527b1778b69020166ba82a69b" Selector="&lt;html app='chrome.exe' title='Avallain Author' /&gt;&lt;webctrl aria-role='tabpanel' id='tabs:tabActions' tag='DIV' /&gt;">
@@ -353,7 +363,9 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
+
           <r:Wait_for_Element elementresult="{x:Null}" DisplayName="Wait for Element" sap:VirtualizedContainerService.HintSize="562,22" sap2010:WorkflowViewState.IdRef="Wait_for_Element_17" element="&lt;html app='chrome.exe' title='Avallain Author' /&gt;&#xA;&lt;webctrl aria-role='grid' tag='TABLE' /&gt;" />
+
           <ui:FindChildren Children="[objects]" DisplayName="Find Children 'TD'" Filter="&lt;webctrl parentid='tabs:attlist:*:editAttachmentButton' tag='SPAN' /&gt;" sap:VirtualizedContainerService.HintSize="562,106" sap2010:WorkflowViewState.IdRef="FindChildren_2" Scope="FIND_DESCENDANTS">
             <ui:FindChildren.Target>
               <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2f660431-85f9-46f8-8ae5-9c3a86631625" InformativeScreenshot="6beef8915dff48d6a3cc4585e4d65a2c" Selector="&lt;html app='chrome.exe' title='Avallain Author' /&gt;&lt;webctrl aria-role='grid' tag='TABLE' /&gt;">
@@ -435,7 +447,9 @@
             </ui:ForEach.Body>
           </ui:ForEach>
         </Sequence>
+ 
         <r:Wait_for_Element elementresult="{x:Null}" DisplayName="Wait for Element" sap:VirtualizedContainerService.HintSize="604,22" sap2010:WorkflowViewState.IdRef="Wait_for_Element_1" element="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='Avallain Author - Google Chrome' /&gt;&#xA;&lt;ctrl name='Avallain Author' role='document' /&gt;&#xA;&lt;ctrl idx='6' role='row' /&gt;&#xA;&lt;ctrl idx='2' role='editable text' /&gt;" />
+
         <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayBefore="2000" DelayMS="1000" DisplayName="Click Type" sap:VirtualizedContainerService.HintSize="604,106" sap2010:WorkflowViewState.IdRef="Click_8" KeyModifiers="None" MouseButton="BTN_LEFT">
           <ui:Click.CursorPosition>
             <ui:CursorPosition Position="Center">
@@ -604,15 +618,19 @@
           </ui:Click.Target>
         </ui:Click>
       </Sequence>
+
       <If Condition="[(in_attachment.ToString.Substring(in_attachment.Length-4)=&quot;.jpg&quot; OR in_attachment.ToString.Substring(in_attachment.Length-4)=&quot;.mp3&quot; OR in_attachment.ToString.Substring(in_attachment.Length-4)=&quot;.mp4&quot;) AND in_attachment.Length&gt;4]" DisplayName="Check If attachment is media or text" sap:VirtualizedContainerService.HintSize="1260,1736" sap2010:WorkflowViewState.IdRef="If_2">
         <If.Then>
           <Sequence DisplayName="Insert Media" sap:VirtualizedContainerService.HintSize="839,1578" sap2010:WorkflowViewState.IdRef="Sequence_35">
+
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
+
             <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="3000" DisplayName="Click 'InsertMediaIcon'" sap:VirtualizedContainerService.HintSize="797,106" sap2010:WorkflowViewState.IdRef="Click_9" KeyModifiers="None" MouseButton="BTN_LEFT">
+
               <ui:Click.CursorPosition>
                 <ui:CursorPosition Position="Center">
                   <ui:CursorPosition.OffsetX>
@@ -706,6 +724,7 @@
                 </ActivityAction>
               </ui:BrowserScope.Body>
             </ui:BrowserScope>
+
             <If Condition="[in_attachment.ToString.Substring(in_attachment.Length-4)=&quot;.mp4&quot;]" sap:VirtualizedContainerService.HintSize="797,418" sap2010:WorkflowViewState.IdRef="If_6">
               <If.Then>
                 <Sequence sap:VirtualizedContainerService.HintSize="376,260" sap2010:WorkflowViewState.IdRef="Sequence_49">
@@ -772,6 +791,7 @@
                 </Sequence>
               </If.Else>
             </If>
+
           </Sequence>
         </If.Then>
         <If.Else>
@@ -818,8 +838,10 @@
           </Sequence>
         </If.Else>
       </If>
+
       <r:Wait_for_Element elementresult="{x:Null}" DisplayName="Wait for Element" sap:VirtualizedContainerService.HintSize="1260,22" sap2010:WorkflowViewState.IdRef="Wait_for_Element_18" element="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='*Author*' /&gt;&#xA;&lt;ctrl name='Avallain Author' role='document' /&gt;&#xA;&lt;ctrl idx='30' role='grouping' /&gt;" />
       <Sequence DisplayName="Drag and Drop" sap:VirtualizedContainerService.HintSize="1260,490" sap2010:WorkflowViewState.IdRef="Sequence_33">
+
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -892,8 +914,10 @@
           </ui:Click.Target>
         </ui:Click>
       </Sequence>
+
       <r:Wait_for_Element elementresult="{x:Null}" DisplayName="Wait for Element" sap:VirtualizedContainerService.HintSize="1260,22" sap2010:WorkflowViewState.IdRef="Wait_for_Element_19" element="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='*Author*' /&gt;&#xA;&lt;ctrl name='Avallain Author' role='document' /&gt;&#xA;&lt;ctrl name='OK' role='push button' /&gt;" />
       <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="3000" DisplayName="Click 'OK'" sap:VirtualizedContainerService.HintSize="1260,106" sap2010:WorkflowViewState.IdRef="Click_41" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+
         <ui:Click.CursorPosition>
           <ui:CursorPosition Position="Center">
             <ui:CursorPosition.OffsetX>
