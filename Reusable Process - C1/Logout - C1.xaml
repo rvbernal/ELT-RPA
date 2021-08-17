@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Logout" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="935,657" sap2010:WorkflowViewState.IdRef="Logout_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Logout" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="982,681" sap2010:WorkflowViewState.IdRef="Logout_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="26">
       <x:String>System.Activities</x:String>
@@ -57,7 +57,7 @@
       <x:Boolean x:Key="ShouldCollapseAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Logout" sap:VirtualizedContainerService.HintSize="242,416" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Logout" sap:VirtualizedContainerService.HintSize="376,471" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="LoginExist" />
     </Sequence.Variables>
@@ -67,7 +67,7 @@
         <x:Boolean x:Key="IsPinned">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="500" DisplayName="Click 'B'" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+    <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="500" DisplayName="Click 'B'" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
       <ui:Click.CursorPosition>
         <ui:CursorPosition Position="Center">
           <ui:CursorPosition.OffsetX>
@@ -79,7 +79,7 @@
         </ui:CursorPosition>
       </ui:Click.CursorPosition>
       <ui:Click.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4eb01c68-232e-4377-9c33-08d50f86d2b1" InformativeScreenshot="54a0a4166910c149547afbeeb0dec577" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Assets' /&gt;&lt;webctrl parentid='app' tag='A' parentclass='dropdown' aaname='*(author) ' /&gt;">
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4eb01c68-232e-4377-9c33-08d50f86d2b1" InformativeScreenshot="54a0a4166910c149547afbeeb0dec577" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | *' /&gt;&lt;webctrl parentid='app' tag='A' parentclass='dropdown' aaname='*(author) ' /&gt;">
           <ui:Target.TimeoutMS>
             <InArgument x:TypeArguments="x:Int32" />
           </ui:Target.TimeoutMS>
@@ -89,7 +89,7 @@
         </ui:Target>
       </ui:Click.Target>
     </ui:Click>
-    <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="3000" DisplayName="Click 'A'" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
+    <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="3000" DisplayName="Click 'A'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
       <ui:Click.CursorPosition>
         <ui:CursorPosition Position="Center">
           <ui:CursorPosition.OffsetX>
@@ -101,7 +101,7 @@
         </ui:CursorPosition>
       </ui:Click.CursorPosition>
       <ui:Click.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="cff05bb1-9553-4efd-a088-9baae7f2bd4a" InformativeScreenshot="5c8894170af6b26ce7b7517fb58f9f43" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Assets' /&gt;&lt;webctrl aaname='*Log Out' parentid='app' tag='A' /&gt;">
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="cff05bb1-9553-4efd-a088-9baae7f2bd4a" InformativeScreenshot="5c8894170af6b26ce7b7517fb58f9f43" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | *' /&gt;&lt;webctrl aaname='*Log Out' parentid='app' tag='A' /&gt;">
           <ui:Target.TimeoutMS>
             <InArgument x:TypeArguments="x:Int32" />
           </ui:Target.TimeoutMS>
@@ -110,6 +110,11 @@
           </ui:Target.WaitForReady>
         </ui:Target>
       </ui:Click.Target>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
     </ui:Click>
     <ui:InterruptibleDoWhile Condition="[LoginExist = False]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="334,231" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
       <ui:InterruptibleDoWhile.Body>
@@ -119,7 +124,7 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:UiElementExists DisplayName="Element Exists 'A'" Exists="[LoginExist]" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+          <ui:UiElementExists DisplayName="Element Exists 'A'" Exists="[LoginExist]" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
             <ui:UiElementExists.Target>
               <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4d0ab44c-5265-49b0-9c93-4e1233cc0ded" InformativeScreenshot="a7bdf20f0b2553c6a627fa0e18e6781f" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Login' /&gt;&lt;webctrl tag='A' aaname='Login' /&gt;" TimeoutMS="3000">
                 <ui:Target.WaitForReady>
@@ -132,6 +137,6 @@
         </Sequence>
       </ui:InterruptibleDoWhile.Body>
     </ui:InterruptibleDoWhile>
-    <ui:CloseWindow TimeoutMS="{x:Null}" UseWindow="{x:Null}" DisplayName="Close Window 'chrome.exe comproDLS'" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="CloseWindow_1" InformativeScreenshot="e406aa1e7f3f420d8a712f5db3e71509" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Login' /&gt;" WaitForReady="INTERACTIVE" />
+    <ui:CloseWindow TimeoutMS="{x:Null}" UseWindow="{x:Null}" DisplayName="Close Window 'chrome.exe comproDLS'" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="CloseWindow_1" InformativeScreenshot="e406aa1e7f3f420d8a712f5db3e71509" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Login' /&gt;" WaitForReady="INTERACTIVE" />
   </Sequence>
 </Activity>
