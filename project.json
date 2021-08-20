@@ -36,7 +36,9 @@
       "privateWorkflows": []
     },
     "processOptions": {
-      "ignoredFiles": []
+      "ignoredFiles": [
+        "Full Avallain Parser (6,2,3,5).xaml"
+      ]
     },
     "fileInfoCollection": [],
     "modernBehavior": false
