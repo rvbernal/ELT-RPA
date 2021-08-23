@@ -1,4 +1,4 @@
-﻿<Activity mc:Ignorable="sap sap2010" x:Class="Full_Workflow__2_3_5_" this:Full_Workflow__2_3_5_.startingRow="6" this:Full_Workflow__2_3_5_.endingRow="6" this:Full_Workflow__2_3_5_.TestDataURL="https://campress.sharepoint.com/:x:/r/teams/Groups/ELT/ProductBuild/Shared%20Documents/15%20Admin/Parser/Parser%20packages/Parser%20pack/04_ParserMappingDocTemplate.xlsx?d=w6050def1a83b424e9b2b55285d4ac27e&amp;csf=1&amp;web=1&amp;e=cheG9P" this:Full_Workflow__2_3_5_.Worksheet="Learning Objects" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:r="clr-namespace:Reusable_Steps_Library;assembly=Reusable Steps Library" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Full_Workflow__2_3_5_" this:Full_Workflow__2_3_5_.startingRow="6" this:Full_Workflow__2_3_5_.endingRow="6" this:Full_Workflow__2_3_5_.TestDataURL="https://campress.sharepoint.com/:x:/r/teams/Groups/ELT/ProductBuild/Shared%20Documents/15%20Admin/Parser/Parser%20packages/Parser%20pack/04_ParserMappingDocTemplate.xlsx?d=w6050def1a83b424e9b2b55285d4ac27e&amp;csf=1&amp;web=1&amp;e=cheG9P" this:Full_Workflow__2_3_5_.Worksheet="Learning Objects" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:r="clr-namespace:Reusable_Steps_Library;assembly=Reusable Steps Library" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="startingRow" Type="InArgument(x:Int32)" />
     <x:Property Name="endingRow" Type="InArgument(x:Int32)" />
@@ -79,6 +79,7 @@
       <AssemblyReference>Reusable Steps Library</AssemblyReference>
       <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
       <AssemblyReference>System.Runtime.InteropServices.RuntimeInformation</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="Full_Workflow__2_3_5_" sap:VirtualizedContainerService.HintSize="995,3685" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -246,8 +247,12 @@
                   <If.Then>
                     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="CAT-2" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Avallain Reusables\Add Attachment.xaml">
                       <ui:InvokeWorkflowFile.Arguments>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_lo">[LearningObject]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_attachment">[Attachment]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_lo">
+                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="LearningObject" />
+                        </InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_attachment">
+                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Attachment" />
+                        </InArgument>
                       </ui:InvokeWorkflowFile.Arguments>
                     </ui:InvokeWorkflowFile>
                   </If.Then>
@@ -256,9 +261,24 @@
                   <If.Then>
                     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="CAT-3" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Avallain Reusables\ProcessHeader.xaml">
                       <ui:InvokeWorkflowFile.Arguments>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_lo">[LearningObject]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_mediaheader">[MediaInHeader]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_mediaheaderinfo">[MediaInHeaderScreenInfo]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_lo">
+                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="LearningObject" />
+                        </InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_mediaheader">
+                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="MediaInHeader" />
+                        </InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_mediaheaderinfo">
+                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="MediaInHeaderScreenInfo" />
+                        </InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="TestDataURL">
+                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TestDataURL" />
+                        </InArgument>
+                        <InArgument x:TypeArguments="x:Int32" x:Key="startingRow">
+                          <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="startingRow" />
+                        </InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="Worksheet">
+                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Worksheet" />
+                        </InArgument>
                       </ui:InvokeWorkflowFile.Arguments>
                     </ui:InvokeWorkflowFile>
                   </If.Then>
@@ -290,21 +310,42 @@
                   <If.Then>
                     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="CAT-5" sap:VirtualizedContainerService.HintSize="379,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Avallain Reusables\ProcessFeedbackAndThreshold.xaml">
                       <ui:InvokeWorkflowFile.Arguments>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_lo">[LearningObject]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_mediaheader">[MediaInHeader]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_mediaheaderinfo">[MediaInHeaderScreenInfo]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_feedback1">[FeedbackBand1]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_feedback2">[FeedbackBand2]</InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="in_threshold">[Threshold]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_lo">
+                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="LearningObject" />
+                        </InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_mediaheader">
+                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="MediaInHeader" />
+                        </InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_mediaheaderinfo">
+                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="MediaInHeaderScreenInfo" />
+                        </InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_feedback1">
+                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="FeedbackBand1" />
+                        </InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_feedback2">
+                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="FeedbackBand2" />
+                        </InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="in_threshold">
+                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Threshold" />
+                        </InArgument>
                       </ui:InvokeWorkflowFile.Arguments>
                     </ui:InvokeWorkflowFile>
                   </If.Then>
                 </If>
                 <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Save LO workflow" sap:VirtualizedContainerService.HintSize="484,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Avallain Reusables\Save LO.xaml">
                   <ui:InvokeWorkflowFile.Arguments>
-                    <InArgument x:TypeArguments="x:String" x:Key="TestDataURL">[TestDataURL]</InArgument>
-                    <InArgument x:TypeArguments="x:Int32" x:Key="startingRow">[startingRow]</InArgument>
-                    <InArgument x:TypeArguments="x:String" x:Key="Worksheet">[Worksheet]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="TestDataURL">
+                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TestDataURL" />
+                    </InArgument>
+                    <InArgument x:TypeArguments="x:Int32" x:Key="startingRow">
+                      <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="startingRow" />
+                    </InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="Worksheet">
+                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Worksheet" />
+                    </InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="rowArg">
+                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="&quot;A&quot; &amp; startingRow" />
+                    </InArgument>
                   </ui:InvokeWorkflowFile.Arguments>
                 </ui:InvokeWorkflowFile>
                 <Assign sap:VirtualizedContainerService.HintSize="484,60" sap2010:WorkflowViewState.IdRef="Assign_4">
