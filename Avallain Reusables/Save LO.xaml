@@ -1,13 +1,17 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Save_LO" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:r="clr-namespace:Reusable_Steps_Library;assembly=Reusable Steps Library" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Save_LO" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:r="clr-namespace:Reusable_Steps_Library;assembly=Reusable Steps Library" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="TestDataURL" Type="InArgument(x:String)" />
     <x:Property Name="startingRow" Type="InArgument(x:Int32)" />
     <x:Property Name="Worksheet" Type="InArgument(x:String)" />
+    <x:Property Name="rowArg" Type="InArgument(x:String)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>982,1225</sap:VirtualizedContainerService.HintSize>
+  <this:Save_LO.rowArg>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Save_LO.rowArg>
+  <sap:VirtualizedContainerService.HintSize>1657,2092</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="64">
+    <scg:List x:TypeArguments="x:String" Capacity="66">
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System</x:String>
@@ -41,10 +45,11 @@
       <x:String>Microsoft.VisualBasic.Activities</x:String>
       <x:String>System.Windows.Markup</x:String>
       <x:String>UiPath.Core.Activities.Orchestrator</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="64">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="37">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -84,17 +89,19 @@
       <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="909,1160" sap2010:WorkflowViewState.IdRef="Sequence_41">
+  <Sequence sap:VirtualizedContainerService.HintSize="1667,2027" sap2010:WorkflowViewState.IdRef="Sequence_41">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="resultstring" />
       <Variable x:TypeArguments="x:Boolean" Name="saveresult" />
+      <Variable x:TypeArguments="x:String" Name="ExecutionStatus" />
+      <Variable x:TypeArguments="scg:IEnumerable(x:Object)" Name="dataRowValues" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="3000" DisplayName="Click Save" sap:VirtualizedContainerService.HintSize="867,106" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+    <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="3000" DisplayName="Click Save" sap:VirtualizedContainerService.HintSize="1625,106" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
       <ui:Click.CursorPosition>
         <ui:CursorPosition Position="Center">
           <ui:CursorPosition.OffsetX>
@@ -122,8 +129,8 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:Click>
-    <r:Wait_for_Element DisplayName="Wait for Element" sap:VirtualizedContainerService.HintSize="867,22" sap2010:WorkflowViewState.IdRef="Wait_for_Element_1" element="&lt;html app='chrome.exe' title='Avallain Author' /&gt;&lt;webctrl tag='LI' /&gt;" elementresult="[saveresult]" />
-    <If Condition="[saveresult]" sap:VirtualizedContainerService.HintSize="867,860" sap2010:WorkflowViewState.IdRef="If_14">
+    <r:Wait_for_Element DisplayName="Wait for Element" sap:VirtualizedContainerService.HintSize="1625,22" sap2010:WorkflowViewState.IdRef="Wait_for_Element_1" element="&lt;html app='chrome.exe' title='Avallain Author' /&gt;&lt;webctrl tag='LI' /&gt;" elementresult="[saveresult]" />
+    <If Condition="[saveresult]" sap:VirtualizedContainerService.HintSize="1625,1727" sap2010:WorkflowViewState.IdRef="If_14">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -131,13 +138,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <Sequence sap:VirtualizedContainerService.HintSize="831,683" sap2010:WorkflowViewState.IdRef="Sequence_43">
+        <Sequence sap:VirtualizedContainerService.HintSize="1589,1550" sap2010:WorkflowViewState.IdRef="Sequence_43">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'LI'" sap:VirtualizedContainerService.HintSize="789,106" sap2010:WorkflowViewState.IdRef="GetValue_1">
+          <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Get Text 'LI'" sap:VirtualizedContainerService.HintSize="1547,106" sap2010:WorkflowViewState.IdRef="GetValue_1">
             <ui:GetValue.Target>
               <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5771a8dc-a875-4a62-947c-f64149562c58" InformativeScreenshot="970a0cc991830849f66677a38b60f0aa" Selector="&lt;html app='chrome.exe' title='Avallain Author' /&gt;&lt;webctrl tag='LI' /&gt;">
                 <ui:Target.TimeoutMS>
@@ -152,22 +159,79 @@
               <OutArgument x:TypeArguments="x:String">[resultstring]</OutArgument>
             </ui:GetValue.Value>
           </ui:GetValue>
-          <ui:ExcelApplicationScope Password="{x:Null}" AutoSave="False" CreateNewFile="False" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="789,445" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_2" InstanceCachePeriod="3000" Visible="False" WorkbookPath="[TestDataURL]">
+          <ui:ExcelApplicationScope Password="{x:Null}" AutoSave="False" CreateNewFile="False" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="1547,1312" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_2" InstanceCachePeriod="3000" Visible="False" WorkbookPath="[TestDataURL]">
             <ui:ExcelApplicationScope.Body>
               <ActivityAction x:TypeArguments="ui:WorkbookApplication">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="755,336" sap2010:WorkflowViewState.IdRef="Sequence_42">
-                  <Sequence.Variables>
-                    <Variable x:TypeArguments="scg:IEnumerable(x:Object)" Name="dataRowValues" />
-                  </Sequence.Variables>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1513,1203" sap2010:WorkflowViewState.IdRef="Sequence_42">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <If Condition="[resultstring.Contains(&quot;Activity saved&quot;)]" sap:VirtualizedContainerService.HintSize="713,244" sap2010:WorkflowViewState.IdRef="If_13">
+                  <ui:ExcelReadRow DisplayName="Read Row" sap:VirtualizedContainerService.HintSize="1471,59" sap2010:WorkflowViewState.IdRef="ExcelReadRow_1" Result="[dataRowValues]" SheetName="[Worksheet]" StartingCell="[rowArg]" />
+                  <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="1471,287" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                    <TryCatch.Try>
+                      <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:String">[ExecutionStatus]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:String">[dataRowValues.ToArray(0).ToString()]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                    </TryCatch.Try>
+                    <TryCatch.Catches>
+                      <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ActivityAction x:TypeArguments="s:Exception">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                          </ActivityAction.Argument>
+                          <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:String">[ExecutionStatus]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:String">
+                                <Literal x:TypeArguments="x:String" Value="" />
+                              </InArgument>
+                            </Assign.Value>
+                          </Assign>
+                        </ActivityAction>
+                      </Catch>
+                    </TryCatch.Catches>
+                  </TryCatch>
+                  <If Condition="[ExecutionStatus = &quot;&quot;]" sap:VirtualizedContainerService.HintSize="1471,401" sap2010:WorkflowViewState.IdRef="If_17">
+                    <If.Then>
+                      <If Condition="[resultstring.Contains(&quot;Activity saved&quot;)]" sap:VirtualizedContainerService.HintSize="713,244" sap2010:WorkflowViewState.IdRef="If_15">
+                        <If.Then>
+                          <ui:ExcelWriteCell Cell="[&quot;R&quot; &amp; startingRow.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_3" SheetName="[Worksheet]" Text="Done" />
+                        </If.Then>
+                        <If.Else>
+                          <ui:ExcelWriteCell Cell="[&quot;R&quot; &amp; startingRow.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_4" SheetName="[Worksheet]" Text="Save Error" />
+                        </If.Else>
+                      </If>
+                    </If.Then>
+                    <If.Else>
+                      <If Condition="[resultstring.Contains(&quot;Activity saved&quot;)]" sap:VirtualizedContainerService.HintSize="713,244" sap2010:WorkflowViewState.IdRef="If_16">
+                        <If.Then>
+                          <ui:ExcelWriteCell Cell="[&quot;R&quot; &amp; startingRow.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_5" SheetName="[Worksheet]" Text="[ExecutionStatus &amp; vbNewLine &amp; &quot;Done&quot;]" />
+                        </If.Then>
+                        <If.Else>
+                          <ui:ExcelWriteCell Cell="[&quot;R&quot; &amp; startingRow.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_6" SheetName="[Worksheet]" Text="[ExecutionStatus &amp; vbNewLine &amp; &quot;Save Error&quot;]" />
+                        </If.Else>
+                      </If>
+                    </If.Else>
+                  </If>
+                  <If Condition="[resultstring.Contains(&quot;Activity saved&quot;)]" sap:VirtualizedContainerService.HintSize="1471,244" sap2010:WorkflowViewState.IdRef="If_13">
                     <If.Then>
                       <ui:ExcelWriteCell Cell="[&quot;R&quot; &amp; startingRow.ToString]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteCell_1" SheetName="[Worksheet]" Text="Done" />
                     </If.Then>
