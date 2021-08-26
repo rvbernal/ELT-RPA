@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="SelectLO" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:r="clr-namespace:Reusable_Steps_Library;assembly=Reusable Steps Library" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+﻿<Activity mc:Ignorable="sap sap2010" x:Class="SelectLO" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:r="clr-namespace:Reusable_Steps_Library;assembly=Reusable Steps Library" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_lo" Type="InArgument(x:String)" />
     <x:Property Name="in_attachment" Type="InArgument(x:String)" />
@@ -670,7 +670,7 @@
                         </ui:Target>
                       </ui:SendHotkey.Target>
                     </ui:SendHotkey>
-                    <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="1000" DisplayName="Click 'Insert Media'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_38" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                    <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" ClickType="CLICK_SINGLE" DelayBefore="3000" DelayMS="1000" DisplayName="Click 'Insert Media'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_38" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
                       <ui:Click.CursorPosition>
                         <ui:CursorPosition OffsetX="22" OffsetY="18" Position="TopLeft" />
                       </ui:Click.CursorPosition>
@@ -886,8 +886,8 @@
           </Sequence>
         </If.Else>
       </If>
-      <r:Wait_for_Element elementresult="{x:Null}" DisplayName="Wait for Element" sap:VirtualizedContainerService.HintSize="1260,22" sap2010:WorkflowViewState.IdRef="Wait_for_Element_18" element="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='*Author*' /&gt;&#xA;&lt;ctrl name='Avallain Author' role='document' /&gt;&#xA;&lt;ctrl idx='30' role='grouping' /&gt;" />
-      <Sequence DisplayName="Drag and Drop" sap:VirtualizedContainerService.HintSize="1260,490" sap2010:WorkflowViewState.IdRef="Sequence_33">
+      <r:Wait_for_Element elementresult="{x:Null}" DisplayName="Wait for Element" sap:VirtualizedContainerService.HintSize="1488,22" sap2010:WorkflowViewState.IdRef="Wait_for_Element_18" element="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='*Author*' /&gt;&#xA;&lt;ctrl name='Avallain Author' role='document' /&gt;&#xA;&lt;ctrl idx='30' role='grouping' /&gt;" />
+      <Sequence DisplayName="Drag and Drop" sap:VirtualizedContainerService.HintSize="1488,490" sap2010:WorkflowViewState.IdRef="Sequence_33">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -960,8 +960,8 @@
           </ui:Click.Target>
         </ui:Click>
       </Sequence>
-      <r:Wait_for_Element elementresult="{x:Null}" DisplayName="Wait for Element" sap:VirtualizedContainerService.HintSize="1260,22" sap2010:WorkflowViewState.IdRef="Wait_for_Element_19" element="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='*Author*' /&gt;&#xA;&lt;ctrl name='Avallain Author' role='document' /&gt;&#xA;&lt;ctrl name='OK' role='push button' /&gt;" />
-      <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="3000" DisplayName="Click 'OK'" sap:VirtualizedContainerService.HintSize="1260,106" sap2010:WorkflowViewState.IdRef="Click_41" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+      <r:Wait_for_Element elementresult="{x:Null}" DisplayName="Wait for Element" sap:VirtualizedContainerService.HintSize="1488,22" sap2010:WorkflowViewState.IdRef="Wait_for_Element_19" element="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='*Author*' /&gt;&#xA;&lt;ctrl name='Avallain Author' role='document' /&gt;&#xA;&lt;ctrl name='OK' role='push button' /&gt;" />
+      <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="3000" DisplayName="Click 'OK'" sap:VirtualizedContainerService.HintSize="1488,106" sap2010:WorkflowViewState.IdRef="Click_41" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
         <ui:Click.CursorPosition>
           <ui:CursorPosition Position="Center">
             <ui:CursorPosition.OffsetX>
