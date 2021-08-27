@@ -19,7 +19,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1083,3821</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1346,3821</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ProcessHeader_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="60">
@@ -315,7 +315,7 @@
       </ui:Click>
       <ui:UiElementExists DisplayName="Element Exists 'Alert'" Exists="[AlertExist]" sap:VirtualizedContainerService.HintSize="512,106" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
         <ui:UiElementExists.Target>
-          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d0901f79-b692-458f-bd1f-4da8dc7f9286" InformativeScreenshot="d1170882f94afc3cd57e6e57e7e00ca1" Selector="&lt;html app='chrome.exe' title='Avallain Author' /&gt;&lt;webctrl aria-role='alert' tag='LI' innertext='Activity (*) not found in this Learning Object. This Learning Object contains * activities' /&gt;" TimeoutMS="5000">
+          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d0901f79-b692-458f-bd1f-4da8dc7f9286" InformativeScreenshot="d1170882f94afc3cd57e6e57e7e00ca1" Selector="&lt;html app='chrome.exe' title='Avallain Author' /&gt;&lt;webctrl aria-role='alert' tag='LI' innertext='Activity (*) not found in this Learning Object. This Learning Object contains * activities' /&gt;" TimeoutMS="10000">
             <ui:Target.WaitForReady>
               <InArgument x:TypeArguments="ui:WaitForReady" />
             </ui:Target.WaitForReady>
