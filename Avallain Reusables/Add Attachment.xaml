@@ -729,7 +729,7 @@
                       </ui:CursorPosition>
                     </ui:Click.CursorPosition>
                     <ui:Click.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="40304cca-b006-4c92-8152-6384e11de713" InformativeScreenshot="864f108697b132ac9e7af892f52c2947" Selector="&lt;html app='chrome.exe' title='Avallain Author' /&gt;&lt;webctrl id='j_idt16*' tag='BUTTON' type='submit' idx='1' /&gt;">
+                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="40304cca-b006-4c92-8152-6384e11de713" InformativeScreenshot="864f108697b132ac9e7af892f52c2947" Selector="&lt;html app='chrome.exe' title='Avallain Author' /&gt;&lt;webctrl id='j_idt16*' tag='BUTTON' type='submit' idx='3' /&gt;">
                         <ui:Target.TimeoutMS>
                           <InArgument x:TypeArguments="x:Int32" />
                         </ui:Target.TimeoutMS>
