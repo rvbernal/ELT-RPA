@@ -366,7 +366,7 @@
         </ui:CursorPosition>
       </ui:Click.CursorPosition>
       <ui:Click.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="92ef7c36-3220-4dbe-8ddb-1eddd8aa5619" InformativeScreenshot="d5279a6b94f0f5631192c3b4ffa1c1e7" Selector="[String.Format(&quot;&lt;html app='chrome.exe' title='comproDLS | Builder | Courses' /&gt;&lt;webctrl aria-role='option' tag='DIV' aaname='{0}' /&gt;&quot;, ParentTile)]">
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="92ef7c36-3220-4dbe-8ddb-1eddd8aa5619" InformativeScreenshot="d5279a6b94f0f5631192c3b4ffa1c1e7" Selector="[String.Format(&quot;&lt;html app='chrome.exe' title='comproDLS | Builder | Courses' /&gt;&lt;webctrl aria-role='option' tag='DIV' aaname='{0}*' /&gt;&quot;, ParentTile)]">
           <ui:Target.TimeoutMS>
             <InArgument x:TypeArguments="x:Int32" />
           </ui:Target.TimeoutMS>
