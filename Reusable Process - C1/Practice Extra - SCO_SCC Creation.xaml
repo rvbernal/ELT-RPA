@@ -1,4 +1,6 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Practice_Extra___SCO_SCC_Creation" this:Practice_Extra___SCO_SCC_Creation.ContributesToCompletion="Yes" this:Practice_Extra___SCO_SCC_Creation.ContributesToScore="Yes" this:Practice_Extra___SCO_SCC_Creation.Content="CATT_PE_IN_L1_U01_l01_x01_xyz_SCO" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:r="clr-namespace:Reusable_Steps_Library;assembly=Reusable Steps Library" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+<Activity mc:Ignorable="sap sap2010" x:Class="Practice_Extra___SCO_SCC_Creation" this:Practice_Extra___SCO_SCC_Creation.CustomerFacingInfo="Scorable LO info" this:Practice_Extra___SCO_SCC_Creation.ContributesToCompletion="Yes" this:Practice_Extra___SCO_SCC_Creation.ContributesToScore="Yes" this:Practice_Extra___SCO_SCC_Creation.TargetRole="All users" this:Practice_Extra___SCO_SCC_Creation.Content="CATT_PE_IN_L1_U01_l01_x01_xyz_SCO" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:r="clr-namespace:Reusable_Steps_Library;assembly=Reusable Steps Library" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
   <x:Members>
     <x:Property Name="CustomerFacingInfo" Type="InArgument(x:String)" />
     <x:Property Name="Description" Type="InArgument(x:String)" />
@@ -7,25 +9,18 @@
     <x:Property Name="TargetRole" Type="InArgument(x:String)" />
     <x:Property Name="Content" Type="InArgument(x:String)" />
   </x:Members>
-  <this:Practice_Extra___SCO_SCC_Creation.CustomerFacingInfo>
-    <InArgument x:TypeArguments="x:String">
-      <Literal x:TypeArguments="x:String">Scorable LO info</Literal>
-    </InArgument>
-  </this:Practice_Extra___SCO_SCC_Creation.CustomerFacingInfo>
+
   <this:Practice_Extra___SCO_SCC_Creation.Description>
     <InArgument x:TypeArguments="x:String">
       <Literal x:TypeArguments="x:String" Value="" />
     </InArgument>
   </this:Practice_Extra___SCO_SCC_Creation.Description>
-  <this:Practice_Extra___SCO_SCC_Creation.TargetRole>
-    <InArgument x:TypeArguments="x:String">
-      <Literal x:TypeArguments="x:String">All users</Literal>
-    </InArgument>
-  </this:Practice_Extra___SCO_SCC_Creation.TargetRole>
+
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1208,4869</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1208,4856</sap:VirtualizedContainerService.HintSize>
+
   <sap2010:WorkflowViewState.IdRef>Practice_Extra___SCO_SCC_Creation_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="31">
@@ -89,7 +84,9 @@
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Practice_Extra___SCO_SCC_Creation" sap:VirtualizedContainerService.HintSize="1218,4804" sap2010:WorkflowViewState.IdRef="Sequence_1">
+
+  <Sequence DisplayName="Practice_Extra___SCO_SCC_Creation" sap:VirtualizedContainerService.HintSize="1218,4791" sap2010:WorkflowViewState.IdRef="Sequence_1">
+
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="LoadingExist" />
       <Variable x:TypeArguments="x:Boolean" Name="SearchExist" />
@@ -145,7 +142,9 @@
         </ui:Target>
       </ui:Click.Target>
     </ui:Click>
-    <r:Wait_for_Element elementresult="{x:Null}" DisplayName="Wait for Element" sap:VirtualizedContainerService.HintSize="1176,22" sap2010:WorkflowViewState.IdRef="Wait_for_Element_1" element="&lt;html app='chrome.exe' title='comproDLS | Builder | Courses' /&gt;&#xD;&#xA;&lt;webctrl tag='H3' aaname='Add New Activities (Scoreable)' /&gt;" />
+
+    <r:Wait_for_Element elementresult="{x:Null}" DisplayName="Wait for Element" sap:VirtualizedContainerService.HintSize="1176,22" sap2010:WorkflowViewState.IdRef="Wait_for_Element_1" element="&lt;html app='chrome.exe' title='comproDLS | Builder | Courses' /&gt;&#xA;&lt;webctrl tag='H3' aaname='Add New Activities (Scoreable)' /&gt;" />
+
     <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DelayMS="1000" DisplayName="Type Into 'INPUT'" EmptyField="True" sap:VirtualizedContainerService.HintSize="1176,134" sap2010:WorkflowViewState.IdRef="TypeInto_1" Text="[CustomerFacingInfo]">
       <ui:TypeInto.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="9c6ec586-faab-4d44-af4a-16b975630970" InformativeScreenshot="8abf5793de0a6d74694cc06dd9ef6471" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Courses' /&gt;&lt;webctrl tag='INPUT' class='editable ng-*' parentid='new-item-form' /&gt;">
@@ -160,7 +159,9 @@
     </ui:TypeInto>
     <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DelayMS="1000" DisplayName="Type Into 'INPUT'" EmptyField="True" sap:VirtualizedContainerService.HintSize="1176,134" sap2010:WorkflowViewState.IdRef="TypeInto_2" Text="[CustomerFacingInfo]">
       <ui:TypeInto.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="9c6ec586-faab-4d44-af4a-16b975630970" InformativeScreenshot="b53cb1d26b12efc69bb25932c74cf78a" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Courses' /&gt;&lt;webctrl id='input-widget-external-activity-title' tag='INPUT' parentid='add-ext-container' /&gt;">
+
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="9c6ec586-faab-4d44-af4a-16b975630970" InformativeScreenshot="b53cb1d26b12efc69bb25932c74cf78a" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Courses' /&gt;&lt;webctrl id='input-widget-external-activity-title' tag='INPUT' parentid='add-ext-c*ontainer' /&gt;">
+
           <ui:Target.TimeoutMS>
             <InArgument x:TypeArguments="x:Int32" />
           </ui:Target.TimeoutMS>
@@ -182,7 +183,9 @@
         </ui:Target>
       </ui:TypeInto.Target>
     </ui:TypeInto>
-    <If Condition="[ContributesToCompletion.ToLower &lt;&gt; &quot;yes&quot;]" sap:VirtualizedContainerService.HintSize="1176,286" sap2010:WorkflowViewState.IdRef="If_1">
+
+    <If Condition="[ContributesToCompletion.ToLower &lt;&gt; &quot;yes&quot;]" sap:VirtualizedContainerService.HintSize="1176,283" sap2010:WorkflowViewState.IdRef="If_1">
+
       <If.Then>
         <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="1000" DisplayName="Click 'SPAN'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
           <ui:Click.CursorPosition>
@@ -196,7 +199,9 @@
             </ui:CursorPosition>
           </ui:Click.CursorPosition>
           <ui:Click.Target>
-            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b7c0cf96-cbb2-4854-83ed-47b9dc3ac6d7" InformativeScreenshot="659545b16e4bd63ef7c8b8c3e55a6232" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Courses' /&gt;&lt;webctrl aaname='Contributes to completion' parentid='add-ext-container' tag='DIV' /&gt;&lt;nav up='2' /&gt;&lt;webctrl parentid='add-ext-container' tag='SPAN' idx='1' /&gt;">
+
+            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b7c0cf96-cbb2-4854-83ed-47b9dc3ac6d7" InformativeScreenshot="659545b16e4bd63ef7c8b8c3e55a6232" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Courses' /&gt;&lt;webctrl aaname='Contributes to completion' parentid='add-ext*-container' tag='DIV' /&gt;&lt;nav up='2' /&gt;&lt;webctrl parentid='add-ext*-container' tag='SPAN' idx='1' /&gt;">
+
               <ui:Target.TimeoutMS>
                 <InArgument x:TypeArguments="x:Int32" />
               </ui:Target.TimeoutMS>
@@ -208,7 +213,9 @@
         </ui:Click>
       </If.Then>
     </If>
-    <If Condition="[ContributesToScore.ToLower &lt;&gt; &quot;yes&quot;]" sap:VirtualizedContainerService.HintSize="1176,286" sap2010:WorkflowViewState.IdRef="If_2">
+
+    <If Condition="[ContributesToScore.ToLower &lt;&gt; &quot;yes&quot;]" sap:VirtualizedContainerService.HintSize="1176,283" sap2010:WorkflowViewState.IdRef="If_2">
+
       <If.Then>
         <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'SPAN'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_4" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
           <ui:Click.CursorPosition>
@@ -222,7 +229,9 @@
             </ui:CursorPosition>
           </ui:Click.CursorPosition>
           <ui:Click.Target>
-            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b7c0cf96-cbb2-4854-83ed-47b9dc3ac6d7" InformativeScreenshot="659545b16e4bd63ef7c8b8c3e55a6232" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Courses' /&gt;&lt;webctrl aaname='Contributes to Score' parentid='add-ext-container' tag='DIV' /&gt;&lt;nav up='2' /&gt;&lt;webctrl parentid='add-ext-container' tag='SPAN' idx='1' /&gt;">
+
+            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b7c0cf96-cbb2-4854-83ed-47b9dc3ac6d7" InformativeScreenshot="659545b16e4bd63ef7c8b8c3e55a6232" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Courses' /&gt;&lt;webctrl aaname='Contributes to Score' parentid='add-ext*-container' tag='DIV' /&gt;&lt;nav up='2' /&gt;&lt;webctrl parentid='add-ext*-container' tag='SPAN' idx='1' /&gt;">
+
               <ui:Target.TimeoutMS>
                 <InArgument x:TypeArguments="x:Int32" />
               </ui:Target.TimeoutMS>
@@ -290,7 +299,9 @@
         </ui:CursorPosition>
       </ui:Click.CursorPosition>
       <ui:Click.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="52cefa66-dda1-45ad-9805-4d7ce280e3b9" InformativeScreenshot="80bda632f5bd233fdd77c1db405c28f7" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Courses' /&gt;&lt;webctrl parentid='add-ext-container' tag='A' aaname='Launch Library' /&gt;">
+
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="52cefa66-dda1-45ad-9805-4d7ce280e3b9" InformativeScreenshot="80bda632f5bd233fdd77c1db405c28f7" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Courses' /&gt;&lt;webctrl parentid='add-ext*-container' tag='A' aaname='Launch Library' /&gt;">
+
           <ui:Target.TimeoutMS>
             <InArgument x:TypeArguments="x:Int32" />
           </ui:Target.TimeoutMS>
@@ -300,7 +311,9 @@
         </ui:Target>
       </ui:Click.Target>
     </ui:Click>
-    <r:Wait_for_Element elementresult="{x:Null}" DisplayName="Wait for Element" sap:VirtualizedContainerService.HintSize="1176,22" sap2010:WorkflowViewState.IdRef="Wait_for_Element_2" element="&lt;html app='chrome.exe' title='comproDLS | Builder | Courses' /&gt;&#xD;&#xA;&lt;webctrl aaname='Select Scoreable' tag='SPAN' /&gt;" />
+
+    <r:Wait_for_Element elementresult="{x:Null}" DisplayName="Wait for Element" sap:VirtualizedContainerService.HintSize="1176,22" sap2010:WorkflowViewState.IdRef="Wait_for_Element_2" element="&lt;html app='chrome.exe' title='comproDLS | Builder | Courses' /&gt;&#xA;&lt;webctrl aaname='Select Scoreable' tag='SPAN' /&gt;" />
+
     <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" ClickBeforeTyping="True" DelayMS="1000" DisplayName="Type Into 'INPUT'" EmptyField="True" sap:VirtualizedContainerService.HintSize="1176,134" sap2010:WorkflowViewState.IdRef="TypeInto_4" SimulateType="True" Text="[Content]">
       <ui:TypeInto.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e143245f-4a93-4046-ad24-e0379cabf1a7" InformativeScreenshot="ed69bd0f59d07959aa54eefecfeea3ee" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Courses' /&gt;&lt;webctrl parentid='component-modal-scrollbar-id' tag='INPUT' /&gt;">
@@ -313,7 +326,9 @@
         </ui:Target>
       </ui:TypeInto.Target>
     </ui:TypeInto>
-    <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DelayMS="1000" DisplayName="Send Hotkey 'INPUT'" sap:VirtualizedContainerService.HintSize="1176,155" sap2010:WorkflowViewState.IdRef="SendHotkey_2" Key="enter" KeyModifiers="None" SpecialKey="True">
+
+    <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DelayMS="1000" DisplayName="Send Hotkey 'INPUT'" sap:VirtualizedContainerService.HintSize="1176,154" sap2010:WorkflowViewState.IdRef="SendHotkey_2" Key="enter" KeyModifiers="None" SpecialKey="True">
+
       <ui:SendHotkey.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ac775290-bf4d-442f-be8a-598ea659ca93" InformativeScreenshot="1ea7a0d11641df5776771cca1a548610" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Courses' /&gt;&lt;webctrl parentid='component-modal-scrollbar-id' tag='INPUT' /&gt;">
           <ui:Target.TimeoutMS>
@@ -334,7 +349,9 @@
         </ui:Target>
       </ui:UiElementExists.Target>
     </ui:UiElementExists>
-    <ui:InterruptibleWhile Condition="[LoadingExist = True]" DisplayName="While" sap:VirtualizedContainerService.HintSize="1176,365" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+
+    <ui:InterruptibleWhile Condition="[LoadingExist = True]" DisplayName="While" sap:VirtualizedContainerService.HintSize="1176,363" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+
       <ui:InterruptibleWhile.Body>
         <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,198" sap2010:WorkflowViewState.IdRef="Sequence_3">
           <sap:WorkflowViewStateService.ViewState>
@@ -363,9 +380,11 @@
         </ui:Target>
       </ui:UiElementExists.Target>
     </ui:UiElementExists>
-    <If Condition="[SearchExist = True]" sap:VirtualizedContainerService.HintSize="1176,1618" sap2010:WorkflowViewState.IdRef="If_4">
+
+    <If Condition="[SearchExist = True]" sap:VirtualizedContainerService.HintSize="1176,1614" sap2010:WorkflowViewState.IdRef="If_4">
       <If.Then>
-        <Sequence sap:VirtualizedContainerService.HintSize="755,1458" sap2010:WorkflowViewState.IdRef="Sequence_5">
+        <Sequence sap:VirtualizedContainerService.HintSize="755,1456" sap2010:WorkflowViewState.IdRef="Sequence_5">
+
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -393,7 +412,9 @@
               </ui:Target>
             </ui:Click.Target>
           </ui:Click>
-          <r:Wait_for_Element elementresult="{x:Null}" DisplayName="Wait for Element" sap:VirtualizedContainerService.HintSize="713,22" sap2010:WorkflowViewState.IdRef="Wait_for_Element_3" element="&lt;html app='chrome.exe' title='comproDLS | Builder | Courses' /&gt;&#xD;&#xA;&lt;webctrl aaname='Add Scoreable(s)' tag='A' /&gt;" />
+
+          <r:Wait_for_Element elementresult="{x:Null}" DisplayName="Wait for Element" sap:VirtualizedContainerService.HintSize="713,22" sap2010:WorkflowViewState.IdRef="Wait_for_Element_3" element="&lt;html app='chrome.exe' title='comproDLS | Builder | Courses' /&gt;&#xA;&lt;webctrl aaname='Add Scoreable(s)' tag='A' /&gt;" />
+
           <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="1000" DisplayName="Click 'Add Scorable'" sap:VirtualizedContainerService.HintSize="713,106" sap2010:WorkflowViewState.IdRef="Click_10" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
             <ui:Click.CursorPosition>
               <ui:CursorPosition Position="Center">
@@ -425,7 +446,9 @@
               </ui:Target>
             </ui:UiElementExists.Target>
           </ui:UiElementExists>
-          <ui:InterruptibleDoWhile Condition="[SelectAssetExist = True]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="713,365" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+
+          <ui:InterruptibleDoWhile Condition="[SelectAssetExist = True]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="713,363" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+
             <ui:InterruptibleDoWhile.Body>
               <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,198" sap2010:WorkflowViewState.IdRef="Sequence_4">
                 <sap:WorkflowViewStateService.ViewState>
@@ -433,9 +456,11 @@
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:UiElementExists DisplayName="Element Exists 'SPAN'" Exists="[SelectAssetExist]" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="UiElementExists_5">
+
+                <ui:UiElementExists DisplayName="Element Exists 'SPAN'" Exists="[SelectAssetExist]" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="UiElementExists_6">
                   <ui:UiElementExists.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8b01fde6-8804-44d7-94f8-1d9f96a77e10" InformativeScreenshot="83f8dc764c95b81ef45b15c8a684e2a8" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Courses' /&gt;&lt;webctrl aaname='Select an Asset' tag='SPAN' /&gt;" TimeoutMS="1000">
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8b01fde6-8804-44d7-94f8-1d9f96a77e10" InformativeScreenshot="b29e4733a6dc9c6bb6058c916a0cd1a6" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Courses' /&gt;&lt;webctrl aaname='Select Scoreable' tag='SPAN' /&gt;" TimeoutMS="1000">
+
                       <ui:Target.WaitForReady>
                         <InArgument x:TypeArguments="ui:WaitForReady" />
                       </ui:Target.WaitForReady>
@@ -479,13 +504,17 @@
         </Sequence>
       </If.Then>
       <If.Else>
-        <Sequence sap:VirtualizedContainerService.HintSize="376,331" sap2010:WorkflowViewState.IdRef="Sequence_6">
+
+        <Sequence sap:VirtualizedContainerService.HintSize="376,329" sap2010:WorkflowViewState.IdRef="Sequence_6">
+
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,93" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Error" Message="[&quot;'&quot; &amp; Content &amp; &quot;' was not found&quot;]" />
+
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Error" Message="[&quot;'&quot; &amp; Content &amp; &quot;' was not found&quot;]" />
+
           <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="3000" DisplayName="Click 'I'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_12" KeyModifiers="None" MouseButton="BTN_LEFT">
             <ui:Click.CursorPosition>
               <ui:CursorPosition Position="Center">
