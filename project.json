@@ -4,11 +4,11 @@
   "main": "CAT-6 Parser Avallain LO Replacement.xaml",
   "dependencies": {
     "CQA-RPA.Library": "[1.0.27]",
-    "UiPath.Excel.Activities": "[2.10.4]",
-    "UiPath.Mail.Activities": "[1.10.4]",
-    "UiPath.MicrosoftOffice365.Activities": "[1.6.0]",
-    "UiPath.System.Activities": "[21.4.1]",
-    "UiPath.UIAutomation.Activities": "[21.4.4]"
+    "UiPath.Excel.Activities": "[2.11.3]",
+    "UiPath.Mail.Activities": "[1.12.1]",
+    "UiPath.MicrosoftOffice365.Activities": "[1.11.0-preview]",
+    "UiPath.System.Activities": "[21.10.0]",
+    "UiPath.UIAutomation.Activities": "[21.10.1]"
   },
   "webServices": [],
   "entitiesStores": [],
@@ -18,6 +18,7 @@
   "runtimeOptions": {
     "autoDispose": false,
     "isPausable": true,
+    "isAttended": false,
     "requiresUserInteraction": true,
     "supportsPersistence": false,
     "excludedLoggedData": [
@@ -26,7 +27,8 @@
     ],
     "executionType": "Workflow",
     "readyForPiP": false,
-    "startsInPiP": false
+    "startsInPiP": false,
+    "mustRestoreAllDependencies": false
   },
   "designOptions": {
     "projectProfile": "Developement",
