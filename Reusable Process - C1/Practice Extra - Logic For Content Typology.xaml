@@ -1,0 +1,270 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Practice_Extra___Logic_For_Content_Typology" this:Practice_Extra___Logic_For_Content_Typology.CustomerFacingInfo="Scorable LO info" this:Practice_Extra___Logic_For_Content_Typology.ContributesToCompletion="Yes" this:Practice_Extra___Logic_For_Content_Typology.ContributesToScore="Yes" this:Practice_Extra___Logic_For_Content_Typology.TargetRole="All users" this:Practice_Extra___Logic_For_Content_Typology.Content="CATT_PE_IN_L1_U01_l01_x01_xyz_SCO" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="CustomerFacingInfo" Type="InArgument(x:String)" />
+    <x:Property Name="Description" Type="InArgument(x:String)" />
+    <x:Property Name="ContributesToCompletion" Type="InArgument(x:String)" />
+    <x:Property Name="ContributesToScore" Type="InArgument(x:String)" />
+    <x:Property Name="TargetRole" Type="InArgument(x:String)" />
+    <x:Property Name="Content" Type="InArgument(x:String)" />
+    <x:Property Name="TestDataURL" Type="InArgument(x:String)" />
+  </x:Members>
+  <this:Practice_Extra___Logic_For_Content_Typology.Description>
+    <InArgument x:TypeArguments="x:String">
+      <Literal x:TypeArguments="x:String" Value="" />
+    </InArgument>
+  </this:Practice_Extra___Logic_For_Content_Typology.Description>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1051,1946</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Practice_Extra___Logic_For_Content_Typology_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices.RuntimeInformation</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Word</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Practice_Extra___Logic_For_Content_Typology" sap:VirtualizedContainerService.HintSize="526,1881" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <If Condition="[Right(Content,4).ToLower = &quot;_sco&quot; OR Right(Content,4).ToLower = &quot;_scc&quot;]" DisplayName="SCO" sap:VirtualizedContainerService.HintSize="484,381" sap2010:WorkflowViewState.IdRef="If_1">
+      <If.Then>
+        <Sequence sap:VirtualizedContainerService.HintSize="421,204" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Practice Extra - SCO_SCC Creation workflow" sap:VirtualizedContainerService.HintSize="379,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Reusable Process - C1\Practice Extra - SCO_SCC Creation.xaml">
+            <ui:InvokeWorkflowFile.Arguments>
+              <InArgument x:TypeArguments="x:String" x:Key="Content">
+                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Content" />
+              </InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="CustomerFacingInfo">
+                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="CustomerFacingInfo" />
+              </InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="Description">
+                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Description" />
+              </InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="ContributesToCompletion">
+                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ContributesToCompletion" />
+              </InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="ContributesToScore">
+                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ContributesToScore" />
+              </InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="TargetRole">
+                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TargetRole" />
+              </InArgument>
+            </ui:InvokeWorkflowFile.Arguments>
+          </ui:InvokeWorkflowFile>
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <Sequence sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </Sequence>
+      </If.Else>
+    </If>
+    <If Condition="[Right(Content,4).ToLower = &quot;_nsc&quot;]" DisplayName="NSC" sap:VirtualizedContainerService.HintSize="484,381" sap2010:WorkflowViewState.IdRef="If_2">
+      <If.Then>
+        <Sequence sap:VirtualizedContainerService.HintSize="421,204" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Practice Extra - NSC_AKS Creation workflow" sap:VirtualizedContainerService.HintSize="379,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Reusable Process - C1\Practice Extra - NSC_AKS Creation.xaml">
+            <ui:InvokeWorkflowFile.Arguments>
+              <InArgument x:TypeArguments="x:String" x:Key="CustomerFacingInfo">
+                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="CustomerFacingInfo" />
+              </InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="Description">
+                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Description" />
+              </InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="ContributesToCompletion">
+                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ContributesToCompletion" />
+              </InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="TargetRole">
+                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TargetRole" />
+              </InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="Content">
+                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Content" />
+              </InArgument>
+            </ui:InvokeWorkflowFile.Arguments>
+          </ui:InvokeWorkflowFile>
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <Sequence sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </Sequence>
+      </If.Else>
+    </If>
+    <If Condition="[Right(Content,4).ToLower = &quot;_gam&quot;]" DisplayName="GAM" sap:VirtualizedContainerService.HintSize="484,289" sap2010:WorkflowViewState.IdRef="If_3">
+      <If.Then>
+        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Practice Extra - Games Creation workflow" sap:VirtualizedContainerService.HintSize="379,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="Reusable Process - C1\Practice Extra - Games Creation.xaml">
+          <ui:InvokeWorkflowFile.Arguments>
+            <InArgument x:TypeArguments="x:String" x:Key="CustomerFacingInfo">
+              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="CustomerFacingInfo" />
+            </InArgument>
+            <InArgument x:TypeArguments="x:String" x:Key="Description">
+              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Description" />
+            </InArgument>
+            <InArgument x:TypeArguments="x:String" x:Key="ContributesToCompletion">
+              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ContributesToCompletion" />
+            </InArgument>
+            <InArgument x:TypeArguments="x:String" x:Key="TargetRole">
+              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TargetRole" />
+            </InArgument>
+            <InArgument x:TypeArguments="x:String" x:Key="Content">
+              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Content" />
+            </InArgument>
+          </ui:InvokeWorkflowFile.Arguments>
+        </ui:InvokeWorkflowFile>
+      </If.Then>
+      <If.Else>
+        <Sequence sap2010:WorkflowViewState.IdRef="Sequence_7">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </Sequence>
+      </If.Else>
+    </If>
+    <If Condition="[Right(Content,4).ToLower = &quot;_wor&quot;]" DisplayName="WOR" sap:VirtualizedContainerService.HintSize="484,289" sap2010:WorkflowViewState.IdRef="If_4">
+      <If.Then>
+        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Practice Extra - Productive Skills Creation workflow" sap:VirtualizedContainerService.HintSize="379,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="Reusable Process - C1\Practice Extra - Productive Skills Creation.xaml">
+          <ui:InvokeWorkflowFile.Arguments>
+            <InArgument x:TypeArguments="x:String" x:Key="TestDataURL">
+              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TestDataURL" />
+            </InArgument>
+            <InArgument x:TypeArguments="x:String" x:Key="CustomerFacingInfo">
+              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="CustomerFacingInfo" />
+            </InArgument>
+            <InArgument x:TypeArguments="x:String" x:Key="Description">
+              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Description" />
+            </InArgument>
+            <InArgument x:TypeArguments="x:String" x:Key="Content">
+              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Content" />
+            </InArgument>
+            <InArgument x:TypeArguments="x:String" x:Key="Worksheet2">
+              <Literal x:TypeArguments="x:String">Productive Skills&amp;Collab Tasks</Literal>
+            </InArgument>
+          </ui:InvokeWorkflowFile.Arguments>
+        </ui:InvokeWorkflowFile>
+      </If.Then>
+      <If.Else>
+        <Sequence sap2010:WorkflowViewState.IdRef="Sequence_8">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </Sequence>
+      </If.Else>
+    </If>
+    <If Condition="[Right(Content,4).ToLower = &quot;_col&quot;]" DisplayName="COL" sap:VirtualizedContainerService.HintSize="484,289" sap2010:WorkflowViewState.IdRef="If_5">
+      <If.Then>
+        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Practice Extra - Collaborative Task Creation workflow" sap:VirtualizedContainerService.HintSize="379,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="Reusable Process - C1\Practice Extra - Collaborative Task Creation.xaml">
+          <ui:InvokeWorkflowFile.Arguments>
+            <InArgument x:TypeArguments="x:String" x:Key="TestDataURL">
+              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TestDataURL" />
+            </InArgument>
+            <InArgument x:TypeArguments="x:String" x:Key="CustomerFacingInfo">
+              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="CustomerFacingInfo" />
+            </InArgument>
+            <InArgument x:TypeArguments="x:String" x:Key="Description">
+              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Description" />
+            </InArgument>
+            <InArgument x:TypeArguments="x:String" x:Key="Content">
+              <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Content" />
+            </InArgument>
+            <InArgument x:TypeArguments="x:String" x:Key="Worksheet2">
+              <Literal x:TypeArguments="x:String">Productive Skills&amp;Collab Tasks</Literal>
+            </InArgument>
+          </ui:InvokeWorkflowFile.Arguments>
+        </ui:InvokeWorkflowFile>
+      </If.Then>
+      <If.Else>
+        <Sequence sap2010:WorkflowViewState.IdRef="Sequence_9">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </Sequence>
+      </If.Else>
+    </If>
+  </Sequence>
+</Activity>
