@@ -1,8 +1,16 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Practice_Extra___Collaborative_Task_Creation" this:Practice_Extra___Collaborative_Task_Creation.TestDataURL="https://cambridgeorg.sharepoint.com/:x:/r/teams/Groups/ELT/ProductBuild/Shared%20Documents/15%20Admin/Parser/Development/CambridgeOne_HandoverDocument_Dev.xlsx?d=w9c497ae273e748bd9e8b172fdc9d59d3&amp;csf=1&amp;web=1&amp;e=Pb4Lw4" this:Practice_Extra___Collaborative_Task_Creation.Worksheet="Productive Skills&amp;Collab Tasks" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:r="clr-namespace:Reusable_Steps_Library;assembly=Reusable Steps Library" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Practice_Extra___Collaborative_Task_Creation" this:Practice_Extra___Collaborative_Task_Creation.TestDataURL="https://cambridgeorg.sharepoint.com/:x:/r/teams/Groups/ELT/ProductBuild/Shared%20Documents/15%20Admin/Parser/Development/CambridgeOne_HandoverDocument_Dev.xlsx?d=w9c497ae273e748bd9e8b172fdc9d59d3&amp;csf=1&amp;web=1&amp;e=Pb4Lw4" this:Practice_Extra___Collaborative_Task_Creation.CustomerFacingInfo="Collaborative task" this:Practice_Extra___Collaborative_Task_Creation.Content="CATT_PE_IN_L1_U02_l03_x01_xyz_Col" this:Practice_Extra___Collaborative_Task_Creation.Worksheet2="Productive Skills&amp;Collab Tasks" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:r="clr-namespace:Reusable_Steps_Library;assembly=Reusable Steps Library" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="TestDataURL" Type="InArgument(x:String)" />
-    <x:Property Name="Worksheet" Type="InArgument(x:String)" />
+    <x:Property Name="CustomerFacingInfo" Type="InArgument(x:String)" />
+    <x:Property Name="Description" Type="InArgument(x:String)" />
+    <x:Property Name="Content" Type="InArgument(x:String)" />
+    <x:Property Name="Worksheet2" Type="InArgument(x:String)" />
   </x:Members>
+  <this:Practice_Extra___Collaborative_Task_Creation.Description>
+    <InArgument x:TypeArguments="x:String">
+      <Literal x:TypeArguments="x:String" Value="" />
+    </InArgument>
+  </this:Practice_Extra___Collaborative_Task_Creation.Description>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
@@ -107,13 +115,6 @@
       <Variable x:TypeArguments="x:String" Name="AllowSubmissionToTeacher" />
       <Variable x:TypeArguments="x:String" Name="SetupContentNotification" />
       <Variable x:TypeArguments="x:String" Name="GroupTask" />
-      <Variable x:TypeArguments="x:String" Default="Collaborative task" Name="CustomerFacingInfo" />
-      <Variable x:TypeArguments="x:String" Name="Description">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:String" Value="" />
-        </Variable.Default>
-      </Variable>
-      <Variable x:TypeArguments="x:String" Default="CATT_PE_IN_L1_U02_l03_x01_xyz_Col" Name="Content" />
       <Variable x:TypeArguments="x:String" Name="SearchValue" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
@@ -165,26 +166,60 @@
         </ui:Target>
       </ui:Click.Target>
     </ui:Click>
-    <r:Wait_for_Element elementresult="{x:Null}" DisplayName="Wait for Element" sap:VirtualizedContainerService.HintSize="1176,22" sap2010:WorkflowViewState.IdRef="Wait_for_Element_1" element="&lt;html app='chrome.exe' title='comproDLS | Builder | Courses' /&gt;&#xD;&#xA;&lt;webctrl tag='H3' aaname='New Collaborative Task' /&gt;" />
+    <r:Wait_for_Element elementresult="{x:Null}" DisplayName="Wait for Element" sap:VirtualizedContainerService.HintSize="1176,22" sap2010:WorkflowViewState.IdRef="Wait_for_Element_1" element="&lt;html app='chrome.exe' title='comproDLS | Builder | Courses' /&gt;&#xA;&lt;webctrl tag='H3' aaname='New Collaborative Task' /&gt;" />
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Read Test Data - C1 Practice Extra - Productive Skills&amp;Collab Tasks workflow" sap:VirtualizedContainerService.HintSize="1176,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Reusable Process - C1\Read Test Data - C1 Practice Extra - Productive Skills&amp;Collab Tasks.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="TestDataURL">[TestDataURL]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="Worksheet">[Worksheet]</InArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="Title">[Title]</OutArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="Content">[Content]</InArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="Instructions">[Instructions]</OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="SubmissionType">[SubmissionType]</OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="MaximumCharactersAllowed">[MaximumCharactersAllowed]</OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="HelpTitle">[HelpTitle]</OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="HelpText">[HelpText]</OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="Images">[Images]</OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="Audio">[Audio]</OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="ContributesToCompletion">[ContributesToCompletion]</OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="ContributesToScore">[ContributesToScore]</OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="TargetRole">[TargetRole]</OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="AllowSubmissionToTeacher">[AllowSubmissionToTeacher]</OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="GroupTask">[GroupTask]</OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="SetupContentNotification">[SetupContentNotification]</OutArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="TestDataURL">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TestDataURL" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="Worksheet">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Worksheet2" />
+        </InArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="Title">
+          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="Title" />
+        </OutArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="Content">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Content" />
+        </InArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="Instructions">
+          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="Instructions" />
+        </OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="SubmissionType">
+          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="SubmissionType" />
+        </OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="MaximumCharactersAllowed">
+          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="MaximumCharactersAllowed" />
+        </OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="HelpTitle">
+          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="HelpTitle" />
+        </OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="HelpText">
+          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="HelpText" />
+        </OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="Images">
+          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="Images" />
+        </OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="Audio">
+          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="Audio" />
+        </OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="ContributesToCompletion">
+          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="ContributesToCompletion" />
+        </OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="ContributesToScore">
+          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="ContributesToScore" />
+        </OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="TargetRole">
+          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="TargetRole" />
+        </OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="AllowSubmissionToTeacher">
+          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="AllowSubmissionToTeacher" />
+        </OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="GroupTask">
+          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="GroupTask" />
+        </OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="SetupContentNotification">
+          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="SetupContentNotification" />
+        </OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DelayMS="1000" DisplayName="Type Into 'INPUT'" EmptyField="True" sap:VirtualizedContainerService.HintSize="1176,134" sap2010:WorkflowViewState.IdRef="TypeInto_1" Text="[CustomerFacingInfo]">
@@ -639,7 +674,7 @@
         </ui:Target>
       </ui:Click.Target>
     </ui:Click>
-    <r:Wait_for_Element elementresult="{x:Null}" DisplayName="Wait for Element" sap:VirtualizedContainerService.HintSize="1176,22" sap2010:WorkflowViewState.IdRef="Wait_for_Element_2" element="&lt;html app='chrome.exe' title='comproDLS | Builder | Courses' /&gt;&#xD;&#xA;&lt;webctrl aaname='Select*' tag='SPAN' /&gt;" />
+    <r:Wait_for_Element elementresult="{x:Null}" DisplayName="Wait for Element" sap:VirtualizedContainerService.HintSize="1176,22" sap2010:WorkflowViewState.IdRef="Wait_for_Element_2" element="&lt;html app='chrome.exe' title='comproDLS | Builder | Courses' /&gt;&#xA;&lt;webctrl aaname='Select*' tag='SPAN' /&gt;" />
     <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" ClickBeforeTyping="True" DelayMS="1000" DisplayName="Type Into 'INPUT'" EmptyField="True" sap:VirtualizedContainerService.HintSize="1176,134" sap2010:WorkflowViewState.IdRef="TypeInto_4" SimulateType="True" Text="[SearchValue]">
       <ui:TypeInto.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e143245f-4a93-4046-ad24-e0379cabf1a7" InformativeScreenshot="ed69bd0f59d07959aa54eefecfeea3ee" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Courses' /&gt;&lt;webctrl parentid='component-modal-scrollbar-id' tag='INPUT' /&gt;">

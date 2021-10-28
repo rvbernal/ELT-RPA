@@ -1,12 +1,20 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Practice_Extra___Productive_Skills_Creation" this:Practice_Extra___Productive_Skills_Creation.TestDataURL="https://cambridgeorg.sharepoint.com/:x:/r/teams/Groups/ELT/ProductBuild/Shared%20Documents/15%20Admin/Parser/Development/CambridgeOne_HandoverDocument_Dev.xlsx?d=w9c497ae273e748bd9e8b172fdc9d59d3&amp;csf=1&amp;web=1&amp;e=Pb4Lw4" this:Practice_Extra___Productive_Skills_Creation.Worksheet="Productive Skills&amp;Collab Tasks" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:r="clr-namespace:Reusable_Steps_Library;assembly=Reusable Steps Library" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Practice_Extra___Productive_Skills_Creation" this:Practice_Extra___Productive_Skills_Creation.TestDataURL="https://cambridgeorg.sharepoint.com/:x:/r/teams/Groups/ELT/ProductBuild/Shared%20Documents/15%20Admin/Parser/Development/CambridgeOne_HandoverDocument_Dev.xlsx?d=w9c497ae273e748bd9e8b172fdc9d59d3&amp;csf=1&amp;web=1&amp;e=Pb4Lw4" this:Practice_Extra___Productive_Skills_Creation.CustomerFacingInfo="Productive skills info" this:Practice_Extra___Productive_Skills_Creation.Content="CATT_PE_IN_L1_U01_l02_x02_xyz_Wor" this:Practice_Extra___Productive_Skills_Creation.Worksheet2="Productive Skills&amp;Collab Tasks" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:r="clr-namespace:Reusable_Steps_Library;assembly=Reusable Steps Library" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="TestDataURL" Type="InArgument(x:String)" />
-    <x:Property Name="Worksheet" Type="InArgument(x:String)" />
+    <x:Property Name="CustomerFacingInfo" Type="InArgument(x:String)" />
+    <x:Property Name="Description" Type="InArgument(x:String)" />
+    <x:Property Name="Content" Type="InArgument(x:String)" />
+    <x:Property Name="Worksheet2" Type="InArgument(x:String)" />
   </x:Members>
+  <this:Practice_Extra___Productive_Skills_Creation.Description>
+    <InArgument x:TypeArguments="x:String">
+      <Literal x:TypeArguments="x:String" Value="" />
+    </InArgument>
+  </this:Practice_Extra___Productive_Skills_Creation.Description>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1208,6408</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1208,7050</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Practice_Extra___SCO_SCC_Creation_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="36">
@@ -80,11 +88,11 @@
       <AssemblyReference>UiPath.MicrosoftOffice365.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>UiPath.Word</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
       <AssemblyReference>UiPath.CV</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.CV.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="Practice_Extra___Productive_Skills_Creation" sap:VirtualizedContainerService.HintSize="1218,6985" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -107,17 +115,6 @@
       <Variable x:TypeArguments="x:String" Name="AllowSubmissionToTeacher" />
       <Variable x:TypeArguments="x:String" Name="SetupContentNotification" />
       <Variable x:TypeArguments="x:String" Name="GroupTask" />
-      <Variable x:TypeArguments="x:String" Default="Productive skills info" Name="CustomerFacingInfo" />
-      <Variable x:TypeArguments="x:String" Name="Description">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:String" Value="" />
-        </Variable.Default>
-      </Variable>
-      <Variable x:TypeArguments="x:String" Name="Content">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:String">CATT_PE_IN_L1_U01_l02_x02_xyz_Wor</Literal>
-        </Variable.Default>
-      </Variable>
       <Variable x:TypeArguments="x:String" Name="SearchValue" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
@@ -176,7 +173,7 @@
           <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TestDataURL" />
         </InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="Worksheet">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Worksheet" />
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Worksheet2" />
         </InArgument>
         <OutArgument x:TypeArguments="x:String" x:Key="Title">
           <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="Title" />
@@ -629,7 +626,7 @@
         </ui:Target>
       </ui:Click.Target>
     </ui:Click>
-    <r:Wait_for_Element elementresult="{x:Null}" DisplayName="Wait for Element" sap:VirtualizedContainerService.HintSize="1176,22" sap2010:WorkflowViewState.IdRef="Wait_for_Element_2" element="&lt;html app='chrome.exe' title='comproDLS | Builder | Courses' /&gt;&#xD;&#xA;&lt;webctrl aaname='Select*' tag='SPAN' /&gt;" />
+    <r:Wait_for_Element elementresult="{x:Null}" DisplayName="Wait for Element" sap:VirtualizedContainerService.HintSize="1176,22" sap2010:WorkflowViewState.IdRef="Wait_for_Element_2" element="&lt;html app='chrome.exe' title='comproDLS | Builder | Courses' /&gt;&#xA;&lt;webctrl aaname='Select*' tag='SPAN' /&gt;" />
     <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" ClickBeforeTyping="True" DelayMS="1000" DisplayName="Type Into 'INPUT'" EmptyField="True" sap:VirtualizedContainerService.HintSize="1176,134" sap2010:WorkflowViewState.IdRef="TypeInto_4" SimulateType="True" Text="[SearchValue]">
       <ui:TypeInto.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e143245f-4a93-4046-ad24-e0379cabf1a7" InformativeScreenshot="ed69bd0f59d07959aa54eefecfeea3ee" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Courses' /&gt;&lt;webctrl parentid='component-modal-scrollbar-id' tag='INPUT' /&gt;">
@@ -722,7 +719,7 @@
               </ui:Target>
             </ui:Click.Target>
           </ui:Click>
-          <r:Wait_for_Element elementresult="{x:Null}" DisplayName="Wait for Element" sap:VirtualizedContainerService.HintSize="713,22" sap2010:WorkflowViewState.IdRef="Wait_for_Element_3" element="&lt;html app='chrome.exe' title='comproDLS | Builder | Courses' /&gt;&#xD;&#xA;&lt;webctrl aaname='Add*' tag='A' /&gt;" />
+          <r:Wait_for_Element elementresult="{x:Null}" DisplayName="Wait for Element" sap:VirtualizedContainerService.HintSize="713,22" sap2010:WorkflowViewState.IdRef="Wait_for_Element_3" element="&lt;html app='chrome.exe' title='comproDLS | Builder | Courses' /&gt;&#xA;&lt;webctrl aaname='Add*' tag='A' /&gt;" />
           <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="1000" DisplayName="Click 'Add Non-Scorable'" sap:VirtualizedContainerService.HintSize="713,106" sap2010:WorkflowViewState.IdRef="Click_10" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
             <ui:Click.CursorPosition>
               <ui:CursorPosition Position="Center">
