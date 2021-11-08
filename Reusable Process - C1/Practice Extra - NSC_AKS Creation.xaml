@@ -1,4 +1,21 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Practice_Extra___NSC_AKS_Creation" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1208,4529" sap2010:WorkflowViewState.IdRef="Practice_Extra___SCO_SCC_Creation_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:r="clr-namespace:Reusable_Steps_Library;assembly=Reusable Steps Library" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Practice_Extra___NSC_AKS_Creation" this:Practice_Extra___NSC_AKS_Creation.CustomerFacingInfo="Non-Scorable LO info" this:Practice_Extra___NSC_AKS_Creation.ContributesToCompletion="Yes" this:Practice_Extra___NSC_AKS_Creation.TargetRole="All users" this:Practice_Extra___NSC_AKS_Creation.Content="CATT_PE_IN_L1_U01_l01_x02_xyz_NSC" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:r="clr-namespace:Reusable_Steps_Library;assembly=Reusable Steps Library" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="CustomerFacingInfo" Type="InArgument(x:String)" />
+    <x:Property Name="Description" Type="InArgument(x:String)" />
+    <x:Property Name="ContributesToCompletion" Type="InArgument(x:String)" />
+    <x:Property Name="TargetRole" Type="InArgument(x:String)" />
+    <x:Property Name="Content" Type="InArgument(x:String)" />
+  </x:Members>
+  <this:Practice_Extra___NSC_AKS_Creation.Description>
+    <InArgument x:TypeArguments="x:String">
+      <Literal x:TypeArguments="x:String" Value="" />
+    </InArgument>
+  </this:Practice_Extra___NSC_AKS_Creation.Description>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1208,4529</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Practice_Extra___SCO_SCC_Creation_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="31">
       <x:String>System.Activities</x:String>
@@ -67,15 +84,6 @@
       <Variable x:TypeArguments="x:Boolean" Name="SearchExist" />
       <Variable x:TypeArguments="x:Boolean" Name="SelectAssetExist" />
       <Variable x:TypeArguments="x:Boolean" Name="ChangesSaved" />
-      <Variable x:TypeArguments="x:String" Default="Non-Scorable LO info" Name="CustomerFacingInfo" />
-      <Variable x:TypeArguments="x:String" Name="Description">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:String" Value="" />
-        </Variable.Default>
-      </Variable>
-      <Variable x:TypeArguments="x:String" Default="Yes" Name="ContributesToCompletion" />
-      <Variable x:TypeArguments="x:String" Default="All users" Name="TargetRole" />
-      <Variable x:TypeArguments="x:String" Default="CATT_PE_IN_L1_U01_l01_x02_xyz_NSC" Name="Content" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
