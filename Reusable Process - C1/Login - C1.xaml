@@ -135,12 +135,14 @@
         </Sequence>
       </ui:CommentOut.Body>
     </ui:CommentOut>
-    <ui:GetAttribute ContinueOnError="{x:Null}" Attribute="relativeVisibility" DisplayName="Get Attribute 'push button  Maximize'" sap:VirtualizedContainerService.HintSize="467,51" sap2010:WorkflowViewState.IdRef="GetAttribute_1">
+
+    <ui:GetAttribute ContinueOnError="{x:Null}" Attribute="relativeVisibility" DisplayName="Get Attribute 'push button  Maximize'" sap:VirtualizedContainerService.HintSize="334,202" sap2010:WorkflowViewState.IdRef="GetAttribute_1">
+
       <ui:GetAttribute.Result>
         <OutArgument x:TypeArguments="x:Boolean">[MaximizeExist]</OutArgument>
       </ui:GetAttribute.Result>
       <ui:GetAttribute.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="33f8fa39-ccb0-43d9-87a5-663e290dffd8" InformativeScreenshot="9042ff3b24ef7e65e0b79e744bdf1856" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='comproDLS | Builder | Login - Google Chrome' /&gt;&lt;ctrl name='comproDLS | Builder | Login - Google Chrome' role='pane' /&gt;&lt;ctrl name='Google Chrome' role='pane' /&gt;&lt;ctrl name='Maximize' role='push button' /&gt;">
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="33f8fa39-ccb0-43d9-87a5-663e290dffd8" InformativeScreenshot="9042ff3b24ef7e65e0b79e744bdf1856" Selector="&lt;wnd app='chrome.exe' title='comproDLS | Builder | Login - Google Chrome*' /&gt;&lt;ctrl name='comproDLS | Builder | Login - Google Chrome*' role='pane' /&gt;&lt;ctrl name='*Google Chrome*' role='pane' /&gt;&lt;ctrl name='Maximize' role='push button' /&gt;">
           <ui:Target.TimeoutMS>
             <InArgument x:TypeArguments="x:Int32" />
           </ui:Target.TimeoutMS>
@@ -150,7 +152,7 @@
         </ui:Target>
       </ui:GetAttribute.Target>
     </ui:GetAttribute>
-    <If Condition="[MaximizeExist = True]" sap:VirtualizedContainerService.HintSize="484,237" sap2010:WorkflowViewState.IdRef="If_2">
+    <If Condition="[MaximizeExist = True]" sap:VirtualizedContainerService.HintSize="467,51" sap2010:WorkflowViewState.IdRef="If_2">
       <If.Then>
         <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="1500" DisplayName="Click 'push button  Maximize'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_6" KeyModifiers="None" MouseButton="BTN_LEFT">
           <ui:Click.CursorPosition>
@@ -164,7 +166,9 @@
             </ui:CursorPosition>
           </ui:Click.CursorPosition>
           <ui:Click.Target>
-            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1d9c0ee4-ea47-4c44-9621-8c11490c8bb2" InformativeScreenshot="080ef82c0bb3a51214a07973c3611daa" Selector="&lt;wnd app='chrome.exe' title='comproDLS | Builder | Login - Google Chrome*' /&gt;&lt;ctrl name='comproDLS | Builder | Login - Google Chrome*' role='pane' /&gt;&lt;ctrl name='Google Chrome' role='pane' /&gt;&lt;ctrl name='Maximize' role='push button' /&gt;" WaitForReady="COMPLETE">
+
+            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1d9c0ee4-ea47-4c44-9621-8c11490c8bb2" InformativeScreenshot="080ef82c0bb3a51214a07973c3611daa" Selector="&lt;wnd app='chrome.exe' title='comproDLS | Builder | Login - Google Chrome*' /&gt;&lt;ctrl name='comproDLS | Builder | Login - Google Chrome*' role='pane' /&gt;&lt;ctrl name='*Google Chrome*' role='pane' /&gt;&lt;ctrl name='Maximize' role='push button' /&gt;" WaitForReady="COMPLETE">
+
               <ui:Target.TimeoutMS>
                 <InArgument x:TypeArguments="x:Int32" />
               </ui:Target.TimeoutMS>
