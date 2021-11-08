@@ -1,5 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Activity mc:Ignorable="sap sap2010" x:Class="C1___Practice_Extra_Automation" this:C1___Practice_Extra_Automation.Username="[Environment.GetEnvironmentVariable(&quot;useraccount&quot;,EnvironmentVariableTarget.Machine)]" this:C1___Practice_Extra_Automation.Password="[Environment.GetEnvironmentVariable(&quot;userpass&quot;,EnvironmentVariableTarget.Machine)]" this:C1___Practice_Extra_Automation.TestDataURL="https://campress.sharepoint.com/:x:/r/teams/Groups/ELT/ProductBuild/_layouts/15/doc2.aspx?sourcedoc=%7B72A50E65-1D16-4AB6-AC78-EBA037D71901%7D&amp;file=CambridgeOne_HandoverDocument_Dev.xlsx&amp;action=default&amp;mobileredirect=true&amp;cid=47ad7a5c-b7a3-4545-a229-b5c59783fa97" this:C1___Practice_Extra_Automation.Worksheet="Practice Extra Settings" this:C1___Practice_Extra_Automation.URL="https://qa-builder.cambridgeone.org/" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="C1___Practice_Extra_Automation" this:C1___Practice_Extra_Automation.Username="[Environment.GetEnvironmentVariable(&quot;useraccount&quot;,EnvironmentVariableTarget.Machine)]" this:C1___Practice_Extra_Automation.Password="[Environment.GetEnvironmentVariable(&quot;userpass&quot;,EnvironmentVariableTarget.Machine)]" this:C1___Practice_Extra_Automation.TestDataURL="https://cambridgeorg.sharepoint.com/:x:/r/teams/Groups/ELT/ProductBuild/Shared%20Documents/15%20Admin/Parser/Development/CambridgeOne_HandoverDocument_Dev.xlsx?d=w9c497ae273e748bd9e8b172fdc9d59d3&amp;csf=1&amp;web=1&amp;e=8fgQ7J" this:C1___Practice_Extra_Automation.Worksheet="Practice Extra Settings" this:C1___Practice_Extra_Automation.URL="https://qa-builder.cambridgeone.org/" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="Username" Type="InArgument(x:String)" />
     <x:Property Name="Password" Type="InArgument(x:String)" />
@@ -10,7 +9,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1083,681</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>916,754</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>C1_Automation_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="32">
@@ -81,6 +80,7 @@
       <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Word</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities.Design</AssemblyReference>
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
@@ -89,7 +89,7 @@
       <x:Boolean x:Key="ShouldCollapseAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="C1 - Practice Extra Automation" sap:VirtualizedContainerService.HintSize="242,598" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="C1 - Practice Extra Automation" sap:VirtualizedContainerService.HintSize="242,780" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="UniqueCode" />
       <Variable x:TypeArguments="x:String" Name="CopyrightYear" />
@@ -137,243 +137,110 @@
     </sap:WorkflowViewStateService.ViewState>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Read Test Data - C1 Practice Extra workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_15" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Reusable Process - C1\Read Test Data - C1 Practice Extra Settings.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="TestDataURL">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TestDataURL" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="Worksheet">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Worksheet" />
-        </InArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="UniqueCode">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="UniqueCode" />
-        </OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="CopyrightYear">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="CopyrightYear" />
-        </OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="Program">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="Program" />
-        </OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="ProductBuildTitle">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="ProductBuildTitle" />
-        </OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="LearningMaterialsSummary">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="LearningMaterialsSummary" />
-        </OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="ClassMaterialsSummary">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="ClassMaterialsSummary" />
-        </OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="ECommerceSummary">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="ECommerceSummary" />
-        </OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="DisplayTitle">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="DisplayTitle" />
-        </OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="Entitlement">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="Entitlement" />
-        </OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="Name">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="Name" />
-        </OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="Style">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="Style" />
-        </OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="ResultDisplayType">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="ResultDisplayType" />
-        </OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="ParentTile">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="ParentTile" />
-        </OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="LearningPathway">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="LearningPathway" />
-        </OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="ResultDisplayScoreDetailFormat">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="ResultDisplayScoreDetailFormat" />
-        </OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="AssignmentLimit">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="AssignmentLimit" />
-        </OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="ActivationInstructions">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="ActivationInstructions" />
-        </OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="ActivityAttemptsAllowed">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="ActivityAttemptsAllowed" />
-        </OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="FreelyAvailableToRoles">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="FreelyAvailableToRoles" />
-        </OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="CanBeActivatedByRoles">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="CanBeActivatedByRoles" />
-        </OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="ActivitySequenceNumbers">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="ActivitySequenceNumbers" />
-        </OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="UnitNumbers">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="UnitNumbers" />
-        </OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="EnableProgressTrackingForTeachers">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="EnableProgressTrackingForTeachers" />
-        </OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="EnableGroups">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="EnableGroups" />
-        </OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="NonAssignedAccess">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="NonAssignedAccess" />
-        </OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="PublicationStatus">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="PublicationStatus" />
-        </OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="ComingSoonInstructions">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="ComingSoonInstructions" />
-        </OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="VisibilityOptions">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="VisibilityOptions" />
-        </OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="LearnerDashboard">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="LearnerDashboard" />
-        </OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="TeacherDashboard">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="TeacherDashboard" />
-        </OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="DataViews">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="DataViews" />
-        </OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="LearningPath">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="LearningPath" />
-        </OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="Assignments">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="Assignments" />
-        </OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="ProgressForNonStartedItems">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="ProgressForNonStartedItems" />
-        </OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="Icon">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="Icon" />
-        </OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="CompletionThreshold">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="CompletionThreshold" />
-        </OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="EBooks">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="EBooks" />
-        </OutArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="TestDataURL">[TestDataURL]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="Worksheet">[Worksheet]</InArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="UniqueCode">[UniqueCode]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="CopyrightYear">[CopyrightYear]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="Program">[Program]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="ProductBuildTitle">[ProductBuildTitle]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="LearningMaterialsSummary">[LearningMaterialsSummary]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="ClassMaterialsSummary">[ClassMaterialsSummary]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="ECommerceSummary">[ECommerceSummary]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="DisplayTitle">[DisplayTitle]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="Entitlement">[Entitlement]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="Name">[Name]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="Style">[Style]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="ResultDisplayType">[ResultDisplayType]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="ParentTile">[ParentTile]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="LearningPathway">[LearningPathway]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="ResultDisplayScoreDetailFormat">[ResultDisplayScoreDetailFormat]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="AssignmentLimit">[AssignmentLimit]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="ActivationInstructions">[ActivationInstructions]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="ActivityAttemptsAllowed">[ActivityAttemptsAllowed]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="FreelyAvailableToRoles">[FreelyAvailableToRoles]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="CanBeActivatedByRoles">[CanBeActivatedByRoles]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="ActivitySequenceNumbers">[ActivitySequenceNumbers]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="UnitNumbers">[UnitNumbers]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="EnableProgressTrackingForTeachers">[EnableProgressTrackingForTeachers]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="EnableGroups">[EnableGroups]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="NonAssignedAccess">[NonAssignedAccess]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="PublicationStatus">[PublicationStatus]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="ComingSoonInstructions">[ComingSoonInstructions]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="VisibilityOptions">[VisibilityOptions]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="LearnerDashboard">[LearnerDashboard]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="TeacherDashboard">[TeacherDashboard]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="DataViews">[DataViews]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="LearningPath">[LearningPath]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="Assignments">[Assignments]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="ProgressForNonStartedItems">[ProgressForNonStartedItems]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="Icon">[Icon]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="CompletionThreshold">[CompletionThreshold]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="EBooks">[EBooks]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Login workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Reusable Process - C1\Login - C1.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="Username">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Username" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="Password">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Password" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="URL">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="URL" />
-        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="Username">[Username]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="Password">[Password]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="URL">[URL]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Practice Extra - Create Component workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Reusable Process - C1\Practice Extra - Create Component.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="UniqueCode">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="UniqueCode" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="CopyrightYear">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="CopyrightYear" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="ProductBuildTitle">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ProductBuildTitle" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="DisplayTitle">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="DisplayTitle" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="Entitlement">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Entitlement" />
-        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="UniqueCode">[UniqueCode]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="CopyrightYear">[CopyrightYear]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="ProductBuildTitle">[ProductBuildTitle]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="DisplayTitle">[DisplayTitle]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="Entitlement">[Entitlement]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Practice Extra - Selecting Product workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Reusable Process - C1\Practice Extra - Selecting Product.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="ProductBuildTitle">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ProductBuildTitle" />
-        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="ProductBuildTitle">[ProductBuildTitle]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Practice Extra - Content Creation workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_13" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Reusable Process - C1\Practice Extra - Content Creation.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="LearningMaterialsSummary">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="LearningMaterialsSummary" />
+        <InArgument x:TypeArguments="x:String" x:Key="LearningMaterialsSummary">[LearningMaterialsSummary]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="ClassMaterialsSummary">[ClassMaterialsSummary]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="ECommerceSummary">[ECommerceSummary]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="Name">[Name]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="Style">[Style]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="ResultDisplayType">[ResultDisplayType]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="ParentTile">[ParentTile]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="LearningPathway">[LearningPathway]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="ResultDisplayScoreDetailFormat">[ResultDisplayScoreDetailFormat]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="CompletionThreshold">[CompletionThreshold]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="AssignmentLimit">[AssignmentLimit]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="ActivityAttemptsAllowed">[ActivityAttemptsAllowed]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="ActivationInstructions">[ActivationInstructions]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="CanBeActivatedByRoles">[CanBeActivatedByRoles]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="FreelyAvailableToRoles">[FreelyAvailableToRoles]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="ActivitySequenceNumbers">[ActivitySequenceNumbers]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="UnitNumbers">[UnitNumbers]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="EnableProgressTrackingForTeachers">[EnableProgressTrackingForTeachers]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="EnableGroups">[EnableGroups]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="NonAssignedAccess">[NonAssignedAccess]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="LearnerDashboard">[LearnerDashboard]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="TeacherDashboard">[TeacherDashboard]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="DataViews">[DataViews]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="Assignments">[Assignments]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="LearningPath">[LearningPath]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="EBooks">[EBooks]</InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Practice Extra - Click Learning Path &amp; Modules workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_17" UnSafe="False" WorkflowFileName="Reusable Process - C1\Practice Extra - Click Learning Path &amp; Modules.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <scg:Dictionary x:TypeArguments="x:String, Argument" />
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Practice Extra - Logic For Column Tiers workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_16" UnSafe="False" WorkflowFileName="Reusable Process - C1\Practice Extra - Logic For Column Tiers.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="TestDataURL">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TestDataURL" />
         </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="ClassMaterialsSummary">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ClassMaterialsSummary" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="ECommerceSummary">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ECommerceSummary" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="Name">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Name" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="Style">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Style" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="ResultDisplayType">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ResultDisplayType" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="ParentTile">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ParentTile" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="LearningPathway">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="LearningPathway" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="ResultDisplayScoreDetailFormat">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ResultDisplayScoreDetailFormat" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="CompletionThreshold">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="CompletionThreshold" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="AssignmentLimit">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="AssignmentLimit" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="ActivityAttemptsAllowed">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ActivityAttemptsAllowed" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="ActivationInstructions">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ActivationInstructions" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="CanBeActivatedByRoles">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="CanBeActivatedByRoles" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="FreelyAvailableToRoles">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="FreelyAvailableToRoles" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="ActivitySequenceNumbers">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ActivitySequenceNumbers" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="UnitNumbers">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="UnitNumbers" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="EnableProgressTrackingForTeachers">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="EnableProgressTrackingForTeachers" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="EnableGroups">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="EnableGroups" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="NonAssignedAccess">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="NonAssignedAccess" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="LearnerDashboard">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="LearnerDashboard" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="TeacherDashboard">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TeacherDashboard" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="DataViews">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="DataViews" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="Assignments">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Assignments" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="LearningPath">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="LearningPath" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="EBooks">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="EBooks" />
+        <InArgument x:TypeArguments="x:String" x:Key="Worksheet">
+          <Literal x:TypeArguments="x:String">Structure</Literal>
         </InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
