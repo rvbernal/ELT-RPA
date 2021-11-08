@@ -135,7 +135,9 @@
         </Sequence>
       </ui:CommentOut.Body>
     </ui:CommentOut>
+
     <ui:GetAttribute ContinueOnError="{x:Null}" Attribute="relativeVisibility" DisplayName="Get Attribute 'push button  Maximize'" sap:VirtualizedContainerService.HintSize="334,202" sap2010:WorkflowViewState.IdRef="GetAttribute_1">
+
       <ui:GetAttribute.Result>
         <OutArgument x:TypeArguments="x:Boolean">[MaximizeExist]</OutArgument>
       </ui:GetAttribute.Result>
@@ -164,7 +166,9 @@
             </ui:CursorPosition>
           </ui:Click.CursorPosition>
           <ui:Click.Target>
+
             <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1d9c0ee4-ea47-4c44-9621-8c11490c8bb2" InformativeScreenshot="080ef82c0bb3a51214a07973c3611daa" Selector="&lt;wnd app='chrome.exe' title='comproDLS | Builder | Login - Google Chrome*' /&gt;&lt;ctrl name='comproDLS | Builder | Login - Google Chrome*' role='pane' /&gt;&lt;ctrl name='*Google Chrome*' role='pane' /&gt;&lt;ctrl name='Maximize' role='push button' /&gt;" WaitForReady="COMPLETE">
+
               <ui:Target.TimeoutMS>
                 <InArgument x:TypeArguments="x:Int32" />
               </ui:Target.TimeoutMS>
