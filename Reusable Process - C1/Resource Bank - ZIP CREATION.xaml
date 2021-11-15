@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Resource_Bank___VIDEO_CREATION" this:Resource_Bank___VIDEO_CREATION.Content="S3_156429_THK2_L1_U07_vlg_f01.orig.mp4" this:Resource_Bank___VIDEO_CREATION.Title="S3_156429_THK2_L1_U07_vlg_f01.orig.mp4" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:r="clr-namespace:Reusable_Steps_Library;assembly=Reusable Steps Library" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Resource_Bank___ZIP_CREATION" this:Resource_Bank___ZIP_CREATION.Content="ContentServices_testCPP_PP_INT_L04SB_U01_pg012_audio_06.zip" this:Resource_Bank___ZIP_CREATION.Title="ContentServices_testCPP_PP_INT_L04SB_U01_pg012_audio_06.zip" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:r="clr-namespace:Reusable_Steps_Library;assembly=Reusable Steps Library" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="Content" Type="InArgument(x:String)" />
     <x:Property Name="Title" Type="InArgument(x:String)" />
@@ -79,7 +79,7 @@
       <AssemblyReference>UiPath.Word</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Resource_Bank___VIDEO_CREATION" sap:VirtualizedContainerService.HintSize="917,3583" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Resource_Bank___ZIP_CREATION" sap:VirtualizedContainerService.HintSize="917,3583" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="LoadingExist" />
       <Variable x:TypeArguments="x:Boolean" Name="SearchExist" />
@@ -125,7 +125,7 @@
         </ui:CursorPosition>
       </ui:Click.CursorPosition>
       <ui:Click.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d2f6a17d-6d6c-4bcd-a006-323fed1e4dd1" InformativeScreenshot="6825bc9b53bea9ae567a15c23b6d5d4e" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Courses' /&gt;&lt;webctrl aaname=' Video' parentid='widget-item-list' tag='A' /&gt;">
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d2f6a17d-6d6c-4bcd-a006-323fed1e4dd1" InformativeScreenshot="6825bc9b53bea9ae567a15c23b6d5d4e" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Courses' /&gt;&lt;webctrl aaname=' ZIP Archive' parentid='widget-item-list' tag='A' /&gt;">
           <ui:Target.TimeoutMS>
             <InArgument x:TypeArguments="x:Int32" />
           </ui:Target.TimeoutMS>
@@ -147,7 +147,7 @@
         </ui:CursorPosition>
       </ui:Click.CursorPosition>
       <ui:Click.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="52cefa66-dda1-45ad-9805-4d7ce280e3b9" InformativeScreenshot="80bda632f5bd233fdd77c1db405c28f7" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Courses' /&gt;&lt;webctrl parentid='add-video-container' tag='A' /&gt;">
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="52cefa66-dda1-45ad-9805-4d7ce280e3b9" InformativeScreenshot="80bda632f5bd233fdd77c1db405c28f7" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Courses' /&gt;&lt;webctrl parentid='add-*-container' tag='A' /&gt;">
           <ui:Target.TimeoutMS>
             <InArgument x:TypeArguments="x:Int32" />
           </ui:Target.TimeoutMS>
@@ -259,8 +259,8 @@
               </ui:Target>
             </ui:Click.Target>
           </ui:Click>
-          <r:Wait_for_Element elementresult="{x:Null}" DisplayName="Wait for Element" sap:VirtualizedContainerService.HintSize="412,22" sap2010:WorkflowViewState.IdRef="Wait_for_Element_5" element="&lt;html app='chrome.exe' title='comproDLS | Builder | Courses' /&gt;&#xA;&lt;webctrl aaname='Add Video(s)' tag='A' /&gt;" />
-          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="1000" DisplayName="Click 'Add Video'" sap:VirtualizedContainerService.HintSize="412,106" sap2010:WorkflowViewState.IdRef="Click_13" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+          <r:Wait_for_Element elementresult="{x:Null}" DisplayName="Wait for Element" sap:VirtualizedContainerService.HintSize="412,22" sap2010:WorkflowViewState.IdRef="Wait_for_Element_5" element="&lt;html app='chrome.exe' title='comproDLS | Builder | Courses' /&gt;&#xD;&#xA;&lt;webctrl aaname='Add Package(s)' tag='A' /&gt;" />
+          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="1000" DisplayName="Click 'Add Package'" sap:VirtualizedContainerService.HintSize="412,106" sap2010:WorkflowViewState.IdRef="Click_13" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
             <ui:Click.CursorPosition>
               <ui:CursorPosition Position="Center">
                 <ui:CursorPosition.OffsetX>
@@ -272,7 +272,7 @@
               </ui:CursorPosition>
             </ui:Click.CursorPosition>
             <ui:Click.Target>
-              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="05a0d6bf-bc8d-4e69-bedc-5cd4344d2fd5" InformativeScreenshot="b86018d1c544765b0121fde2154aceb5" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Courses' /&gt;&lt;webctrl aaname='Add Video(s)' tag='A' /&gt;">
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="05a0d6bf-bc8d-4e69-bedc-5cd4344d2fd5" InformativeScreenshot="cb4ad5f60b52a2590b16cb726f2076ba" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Courses' /&gt;&lt;webctrl aaname='Add Package(s)' tag='A' /&gt;">
                 <ui:Target.TimeoutMS>
                   <InArgument x:TypeArguments="x:Int32" />
                 </ui:Target.TimeoutMS>
@@ -284,7 +284,7 @@
           </ui:Click>
           <ui:UiElementExists DisplayName="Element Exists 'SPAN'" Exists="[SelectAssetExist]" sap:VirtualizedContainerService.HintSize="412,106" sap2010:WorkflowViewState.IdRef="UiElementExists_12">
             <ui:UiElementExists.Target>
-              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8b01fde6-8804-44d7-94f8-1d9f96a77e10" InformativeScreenshot="8272aa23b943035f46e0073a2b23ab0a" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Courses' /&gt;&lt;webctrl aaname='Select Audio' tag='SPAN' /&gt;" TimeoutMS="1000">
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8b01fde6-8804-44d7-94f8-1d9f96a77e10" InformativeScreenshot="b5090dacd0e266038ffa6b4666d5d26c" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Courses' /&gt;&lt;webctrl aaname='Select Package' tag='SPAN' /&gt;" TimeoutMS="1000">
                 <ui:Target.WaitForReady>
                   <InArgument x:TypeArguments="ui:WaitForReady" />
                 </ui:Target.WaitForReady>
@@ -301,7 +301,7 @@
                 </sap:WorkflowViewStateService.ViewState>
                 <ui:UiElementExists DisplayName="Element Exists 'SPAN'" Exists="[SelectAssetExist]" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="UiElementExists_13">
                   <ui:UiElementExists.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8b01fde6-8804-44d7-94f8-1d9f96a77e10" InformativeScreenshot="8272aa23b943035f46e0073a2b23ab0a" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Courses' /&gt;&lt;webctrl aaname='Select Audio' tag='SPAN' /&gt;" TimeoutMS="1000">
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="8b01fde6-8804-44d7-94f8-1d9f96a77e10" InformativeScreenshot="b5090dacd0e266038ffa6b4666d5d26c" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Courses' /&gt;&lt;webctrl aaname='Select Package' tag='SPAN' /&gt;" TimeoutMS="1000">
                       <ui:Target.WaitForReady>
                         <InArgument x:TypeArguments="ui:WaitForReady" />
                       </ui:Target.WaitForReady>
