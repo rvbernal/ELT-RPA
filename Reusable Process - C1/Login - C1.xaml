@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Login" this:Login.Username="[Environment.GetEnvironmentVariable(&quot;useraccount&quot;,EnvironmentVariableTarget.Machine)]" this:Login.Password="[Environment.GetEnvironmentVariable(&quot;userpass&quot;,EnvironmentVariableTarget.Machine)]" this:Login.URL="https://qa-builder.cambridgeone.org/" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+﻿<Activity mc:Ignorable="sap sap2010" x:Class="Login" this:Login.Username="[Environment.GetEnvironmentVariable(&quot;useraccount&quot;,EnvironmentVariableTarget.Machine)]" this:Login.Password="[Environment.GetEnvironmentVariable(&quot;userpass&quot;,EnvironmentVariableTarget.Machine)]" this:Login.URL="https://qa-builder.cambridgeone.org/" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="Username" Type="InArgument(x:String)" />
     <x:Property Name="Password" Type="InArgument(x:String)" />
@@ -7,7 +7,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1044,681</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>916,881</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Login_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="52">
@@ -71,7 +71,6 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.Word</AssemblyReference>
       <AssemblyReference>UiPath.MicrosoftOffice365.Activities.Design</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <sap:WorkflowViewStateService.ViewState>
@@ -80,7 +79,7 @@
       <x:Boolean x:Key="ShouldCollapseAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Login" sap:VirtualizedContainerService.HintSize="242,704" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Login" sap:VirtualizedContainerService.HintSize="509,816" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="LoginExist" />
       <Variable x:TypeArguments="x:Boolean" Name="UsernameExist" />
@@ -93,7 +92,7 @@
         <x:Boolean x:Key="IsPinned">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" NewSession="True" Url="[URL]" UserDataFolderMode="DefaultFolder">
+    <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="467,163" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" NewSession="True" Url="[URL]" UserDataFolderMode="DefaultFolder">
       <ui:OpenBrowser.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -102,8 +101,13 @@
           <Delay Duration="00:00:03" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Delay_3" />
         </ActivityAction>
       </ui:OpenBrowser.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
     </ui:OpenBrowser>
-    <ui:InterruptibleDoWhile Condition="[LoginExist = False]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_7">
+    <ui:InterruptibleDoWhile Condition="[LoginExist = False]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="467,51" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_7">
       <ui:InterruptibleDoWhile.Body>
         <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_13">
           <sap:WorkflowViewStateService.ViewState>
@@ -120,7 +124,7 @@
         </Sequence>
       </ui:InterruptibleDoWhile.Body>
     </ui:InterruptibleDoWhile>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="467,51" sap2010:WorkflowViewState.IdRef="CommentOut_2">
       <ui:CommentOut.Body>
         <Sequence DisplayName="Ignored Activities" sap2010:WorkflowViewState.IdRef="Sequence_14">
           <ui:UiElementExists DisplayName="Element Exists 'push button  Maximize'" Exists="[MaximizeExist]" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="UiElementExists_10">
@@ -131,12 +135,14 @@
         </Sequence>
       </ui:CommentOut.Body>
     </ui:CommentOut>
-    <ui:GetAttribute ContinueOnError="{x:Null}" Attribute="relativeVisibility" DisplayName="Get Attribute 'push button  Maximize'" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="GetAttribute_1">
+
+    <ui:GetAttribute ContinueOnError="{x:Null}" Attribute="relativeVisibility" DisplayName="Get Attribute 'push button  Maximize'" sap:VirtualizedContainerService.HintSize="334,202" sap2010:WorkflowViewState.IdRef="GetAttribute_1">
+
       <ui:GetAttribute.Result>
         <OutArgument x:TypeArguments="x:Boolean">[MaximizeExist]</OutArgument>
       </ui:GetAttribute.Result>
       <ui:GetAttribute.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="33f8fa39-ccb0-43d9-87a5-663e290dffd8" InformativeScreenshot="9042ff3b24ef7e65e0b79e744bdf1856" Selector="&lt;wnd app='chrome.exe' cls='Chrome_WidgetWin_1' title='comproDLS | Builder | Login - Google Chrome' /&gt;&lt;ctrl name='comproDLS | Builder | Login - Google Chrome' role='pane' /&gt;&lt;ctrl name='Google Chrome' role='pane' /&gt;&lt;ctrl name='Maximize' role='push button' /&gt;">
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="33f8fa39-ccb0-43d9-87a5-663e290dffd8" InformativeScreenshot="9042ff3b24ef7e65e0b79e744bdf1856" Selector="&lt;wnd app='chrome.exe' title='comproDLS | Builder | Login - Google Chrome*' /&gt;&lt;ctrl name='comproDLS | Builder | Login - Google Chrome*' role='pane' /&gt;&lt;ctrl name='*Google Chrome*' role='pane' /&gt;&lt;ctrl name='Maximize' role='push button' /&gt;">
           <ui:Target.TimeoutMS>
             <InArgument x:TypeArguments="x:Int32" />
           </ui:Target.TimeoutMS>
@@ -146,9 +152,9 @@
         </ui:Target>
       </ui:GetAttribute.Target>
     </ui:GetAttribute>
-    <If Condition="[MaximizeExist = True]" sap:VirtualizedContainerService.HintSize="484,237" sap2010:WorkflowViewState.IdRef="If_2">
+    <If Condition="[MaximizeExist = True]" sap:VirtualizedContainerService.HintSize="467,51" sap2010:WorkflowViewState.IdRef="If_2">
       <If.Then>
-        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="1500" DisplayName="Click 'push button  Maximize'" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Click_6" KeyModifiers="None" MouseButton="BTN_LEFT">
+        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="1500" DisplayName="Click 'push button  Maximize'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_6" KeyModifiers="None" MouseButton="BTN_LEFT">
           <ui:Click.CursorPosition>
             <ui:CursorPosition Position="Center">
               <ui:CursorPosition.OffsetX>
@@ -160,7 +166,9 @@
             </ui:CursorPosition>
           </ui:Click.CursorPosition>
           <ui:Click.Target>
-            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1d9c0ee4-ea47-4c44-9621-8c11490c8bb2" InformativeScreenshot="080ef82c0bb3a51214a07973c3611daa" Selector="&lt;wnd app='chrome.exe' title='comproDLS | Builder | Login - Google Chrome' /&gt;&lt;ctrl name='comproDLS | Builder | Login - Google Chrome' role='pane' /&gt;&lt;ctrl name='Google Chrome' role='pane' /&gt;&lt;ctrl name='Maximize' role='push button' /&gt;" WaitForReady="COMPLETE">
+
+            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1d9c0ee4-ea47-4c44-9621-8c11490c8bb2" InformativeScreenshot="080ef82c0bb3a51214a07973c3611daa" Selector="&lt;wnd app='chrome.exe' title='comproDLS | Builder | Login - Google Chrome*' /&gt;&lt;ctrl name='comproDLS | Builder | Login - Google Chrome*' role='pane' /&gt;&lt;ctrl name='*Google Chrome*' role='pane' /&gt;&lt;ctrl name='Maximize' role='push button' /&gt;" WaitForReady="COMPLETE">
+
               <ui:Target.TimeoutMS>
                 <InArgument x:TypeArguments="x:Int32" />
               </ui:Target.TimeoutMS>
@@ -169,7 +177,7 @@
         </ui:Click>
       </If.Then>
     </If>
-    <Sequence sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_11">
+    <Sequence sap:VirtualizedContainerService.HintSize="467,66" sap2010:WorkflowViewState.IdRef="Sequence_11">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -283,7 +291,7 @@
         </ui:InterruptibleDoWhile.Body>
       </ui:InterruptibleDoWhile>
     </Sequence>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="467,51" sap2010:WorkflowViewState.IdRef="CommentOut_1">
       <ui:CommentOut.Body>
         <Sequence DisplayName="Ignored Activities" sap2010:WorkflowViewState.IdRef="Sequence_12">
           <If Condition="[LoginExist = True]" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="If_1">
