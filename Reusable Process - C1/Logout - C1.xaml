@@ -79,7 +79,7 @@
         </ui:CursorPosition>
       </ui:Click.CursorPosition>
       <ui:Click.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4eb01c68-232e-4377-9c33-08d50f86d2b1" InformativeScreenshot="54a0a4166910c149547afbeeb0dec577" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | *' /&gt;&lt;webctrl parentid='app' tag='A' parentclass='dropdown' aaname='*(author) ' /&gt;">
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4eb01c68-232e-4377-9c33-08d50f86d2b1" InformativeScreenshot="54a0a4166910c149547afbeeb0dec577" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | *' /&gt;&lt;webctrl parentid='app' tag='A' parentclass='dropdown' aaname='*(*)*' /&gt;">
           <ui:Target.TimeoutMS>
             <InArgument x:TypeArguments="x:Int32" />
           </ui:Target.TimeoutMS>
