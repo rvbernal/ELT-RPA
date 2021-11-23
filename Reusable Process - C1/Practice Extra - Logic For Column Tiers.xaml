@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Practice_Extra___Logic_For_Column_Tiers" this:Practice_Extra___Logic_For_Column_Tiers.TestDataURL="https://cambridgeorg.sharepoint.com/:x:/r/teams/Groups/ELT/ProductBuild/Shared%20Documents/15%20Admin/Parser/Development/CambridgeOne_HandoverDocument_Dev.xlsx?d=w9c497ae273e748bd9e8b172fdc9d59d3&amp;csf=1&amp;web=1&amp;e=8fgQ7J" this:Practice_Extra___Logic_For_Column_Tiers.Worksheet="Structure" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Practice_Extra___Logic_For_Column_Tiers" this:Practice_Extra___Logic_For_Column_Tiers.TestDataURL="https://cambridgeorg.sharepoint.com/:x:/r/teams/Groups/ELT/ProductBuild/Shared%20Documents/15%20Admin/Parser/Development/Archive/CambridgeOne_HandoverDocument_Dev.xlsx?d=w9c497ae273e748bd9e8b172fdc9d59d3&amp;csf=1&amp;web=1&amp;e=wIRdXa" this:Practice_Extra___Logic_For_Column_Tiers.Worksheet="Structure" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="TestDataURL" Type="InArgument(x:String)" />
     <x:Property Name="Worksheet" Type="InArgument(x:String)" />
@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1051,4760</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>925,4760</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Practice_Extra___Logic_For_Column_Tiers_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="33">
@@ -276,7 +276,9 @@
                 </If>
                 <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Practice Extra - Unit Creation workflow" sap:VirtualizedContainerService.HintSize="484,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Reusable Process - C1\Practice Extra - Unit Creation.xaml">
                   <ui:InvokeWorkflowFile.Arguments>
-                    <InArgument x:TypeArguments="x:String" x:Key="Unit">[Unit]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="Unit">
+                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Unit" />
+                    </InArgument>
                   </ui:InvokeWorkflowFile.Arguments>
                 </ui:InvokeWorkflowFile>
                 <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Practice Extra - Unit Image Creation workflow" sap:VirtualizedContainerService.HintSize="484,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="Reusable Process - C1\Practice Extra - Unit Image Creation.xaml">
@@ -403,27 +405,13 @@
                 </sap:WorkflowViewStateService.ViewState>
                 <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Practice Extra - Logic For Content Typology workflow" sap:VirtualizedContainerService.HintSize="379,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_11" UnSafe="False" WorkflowFileName="Reusable Process - C1\Practice Extra - Logic For Content Typology.xaml">
                   <ui:InvokeWorkflowFile.Arguments>
-                    <InArgument x:TypeArguments="x:String" x:Key="CustomerFacingInfo">
-                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="CustomerFacingInfo" />
-                    </InArgument>
-                    <InArgument x:TypeArguments="x:String" x:Key="Description">
-                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Description" />
-                    </InArgument>
-                    <InArgument x:TypeArguments="x:String" x:Key="ContributesToCompletion">
-                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ContributesToCompletion" />
-                    </InArgument>
-                    <InArgument x:TypeArguments="x:String" x:Key="ContributesToScore">
-                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ContributesToScore" />
-                    </InArgument>
-                    <InArgument x:TypeArguments="x:String" x:Key="TargetRole">
-                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TargetRole" />
-                    </InArgument>
-                    <InArgument x:TypeArguments="x:String" x:Key="Content">
-                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Content" />
-                    </InArgument>
-                    <InArgument x:TypeArguments="x:String" x:Key="TestDataURL">
-                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TestDataURL" />
-                    </InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="CustomerFacingInfo">[CustomerFacingInfo]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="Description">[Description]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="ContributesToCompletion">[ContributesToCompletion]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="ContributesToScore">[ContributesToScore]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="TargetRole">[TargetRole]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="Content">[Content]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="TestDataURL">[TestDataURL]</InArgument>
                   </ui:InvokeWorkflowFile.Arguments>
                 </ui:InvokeWorkflowFile>
               </Sequence>
