@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Resource_Bank___PDF_CREATION" this:Resource_Bank___PDF_CREATION.Content="test45.pdf" this:Resource_Bank___PDF_CREATION.Title="test45.pdf" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:r="clr-namespace:Reusable_Steps_Library;assembly=Reusable Steps Library" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Resource_Bank___PDF_CREATION" this:Resource_Bank___PDF_CREATION.Content="test45.pdf" this:Resource_Bank___PDF_CREATION.Title="test pdf" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:r="clr-namespace:Reusable_Steps_Library;assembly=Reusable Steps Library" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="Content" Type="InArgument(x:String)" />
     <x:Property Name="Title" Type="InArgument(x:String)" />
@@ -259,7 +259,7 @@
               </ui:Target>
             </ui:Click.Target>
           </ui:Click>
-          <r:Wait_for_Element elementresult="{x:Null}" DisplayName="Wait for Element" sap:VirtualizedContainerService.HintSize="412,22" sap2010:WorkflowViewState.IdRef="Wait_for_Element_5" element="&lt;html app='chrome.exe' title='comproDLS | Builder | Courses' /&gt;&#xD;&#xA;&lt;webctrl aaname='Add PDF(s)' tag='A' /&gt;" />
+          <r:Wait_for_Element elementresult="{x:Null}" DisplayName="Wait for Element" sap:VirtualizedContainerService.HintSize="412,22" sap2010:WorkflowViewState.IdRef="Wait_for_Element_5" element="&lt;html app='chrome.exe' title='comproDLS | Builder | Courses' /&gt;&#xA;&lt;webctrl aaname='Add PDF(s)' tag='A' /&gt;" />
           <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="1000" DisplayName="Click 'Add Package'" sap:VirtualizedContainerService.HintSize="412,106" sap2010:WorkflowViewState.IdRef="Click_13" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
             <ui:Click.CursorPosition>
               <ui:CursorPosition Position="Center">
@@ -346,7 +346,7 @@
         </Sequence>
       </If.Else>
     </If>
-    <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DelayMS="1000" DisplayName="Type Into 'INPUT'" EmptyField="True" sap:VirtualizedContainerService.HintSize="875,134" sap2010:WorkflowViewState.IdRef="TypeInto_7" Text="[Title]">
+    <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" ClickBeforeTyping="True" DelayMS="1000" DisplayName="Type Into 'INPUT'" EmptyField="True" sap:VirtualizedContainerService.HintSize="875,134" sap2010:WorkflowViewState.IdRef="TypeInto_7" SimulateType="True" Text="[Title]">
       <ui:TypeInto.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="9c6ec586-faab-4d44-af4a-16b975630970" InformativeScreenshot="b53cb1d26b12efc69bb25932c74cf78a" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Courses' /&gt;&lt;webctrl id='input-widget-*-title' tag='INPUT' parentid='add-*ontainer' /&gt;">
           <ui:Target.TimeoutMS>

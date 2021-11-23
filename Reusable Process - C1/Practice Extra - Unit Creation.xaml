@@ -1,18 +1,14 @@
-
-<Activity mc:Ignorable="sap sap2010" x:Class="Practice_Extra___Unit_Creation" this:Practice_Extra___Unit_Creation.Unit="Welcome to CAT" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-
+<Activity mc:Ignorable="sap sap2010" x:Class="Practice_Extra___Unit_Creation" this:Practice_Extra___Unit_Creation.Unit="Unit 1 This year’s automation" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="Unit" Type="InArgument(x:String)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-
-  <sap:VirtualizedContainerService.HintSize>1044,1142</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>925,1178</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Practice_Extra___Unit_Creation_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="30">
-
       <x:String>System.Activities</x:String>
       <x:String>System.Activities.Statements</x:String>
       <x:String>System.Activities.Expressions</x:String>
@@ -46,9 +42,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="19">
-
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="38">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -68,22 +62,27 @@
       <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
       <AssemblyReference>Reusable Steps Library</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.MicrosoftOffice365.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Word</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-
-  <Sequence DisplayName="Practice_Extra___Unit_Creation" sap:VirtualizedContainerService.HintSize="454,1077" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Practice_Extra___Unit_Creation" sap:VirtualizedContainerService.HintSize="454,1113" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="HeaderExist" />
     </Sequence.Variables>
-
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-
     <ui:TypeInto AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" ClickBeforeTyping="True" DelayMS="1000" DisplayName="Type Into 'INPUT'" EmptyField="True" sap:VirtualizedContainerService.HintSize="412,134" sap2010:WorkflowViewState.IdRef="TypeInto_1" Text="[Unit]">
-
       <ui:TypeInto.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="9c6ec586-faab-4d44-af4a-16b975630970" InformativeScreenshot="8abf5793de0a6d74694cc06dd9ef6471" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Courses' /&gt;&lt;webctrl tag='INPUT' class='editable ng-*' parentid='new-item-form' /&gt;">
           <ui:Target.TimeoutMS>
@@ -95,11 +94,9 @@
         </ui:Target>
       </ui:TypeInto.Target>
     </ui:TypeInto>
-
-    <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DelayMS="2000" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="412,116" sap2010:WorkflowViewState.IdRef="SendHotkey_2" Key="enter" KeyModifiers="None" SpecialKey="True">
-
+    <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DelayMS="2000" DisplayName="Send Hotkey 'INPUT  input-6200'" sap:VirtualizedContainerService.HintSize="412,152" sap2010:WorkflowViewState.IdRef="SendHotkey_2" Key="enter" KeyModifiers="None" SpecialKey="True">
       <ui:SendHotkey.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="dd9c4df9-aa6f-4223-b7e7-7f24173426b0">
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="dd9c4df9-aa6f-4223-b7e7-7f24173426b0" InformativeScreenshot="83c93d6b3ecbde1bf34ba7085a0d5ebc" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Courses' /&gt;&lt;webctrl tag='INPUT' class='editable ng-*' parentid='new-item-form' /&gt;">
           <ui:Target.TimeoutMS>
             <InArgument x:TypeArguments="x:Int32" />
           </ui:Target.TimeoutMS>
@@ -109,9 +106,7 @@
         </ui:Target>
       </ui:SendHotkey.Target>
     </ui:SendHotkey>
-
-    <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="1000" DisplayName="Click 'Generated Child'" sap:VirtualizedContainerService.HintSize="412,106" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
-
+    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="1000" DisplayName="Click 'Generated Child'" sap:VirtualizedContainerService.HintSize="412,106" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
       <ui:Click.CursorPosition>
         <ui:CursorPosition Position="Center">
           <ui:CursorPosition.OffsetX>
@@ -133,7 +128,6 @@
         </ui:Target>
       </ui:Click.Target>
     </ui:Click>
-
     <ui:UiElementExists DisplayName="Element Exists 'H2'" Exists="[HeaderExist]" sap:VirtualizedContainerService.HintSize="412,106" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
       <ui:UiElementExists.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2187c757-5c8b-4461-81ec-6f35b533e385" InformativeScreenshot="b9894a42e39df61e8b752cc02de86550" Selector="[String.Format(&quot;&lt;html app='chrome.exe' title='comproDLS | Builder | Courses' /&gt;&lt;webctrl tag='H2' innertext='*{0}' aaname='*{0}' /&gt;&quot;, Unit)]" TimeoutMS="1000">
@@ -143,7 +137,7 @@
         </ui:Target>
       </ui:UiElementExists.Target>
     </ui:UiElementExists>
-    <ui:InterruptibleWhile DisplayName="While" sap:VirtualizedContainerService.HintSize="412,363" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+    <ui:InterruptibleWhile Condition="[HeaderExist = False]" DisplayName="While" sap:VirtualizedContainerService.HintSize="412,363" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
       <ui:InterruptibleWhile.Body>
         <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,198" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <sap:WorkflowViewStateService.ViewState>
@@ -162,10 +156,6 @@
           </ui:UiElementExists>
         </Sequence>
       </ui:InterruptibleWhile.Body>
-      <ui:InterruptibleWhile.Condition>
-        <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="HeaderExist = False" />
-      </ui:InterruptibleWhile.Condition>
     </ui:InterruptibleWhile>
-
   </Sequence>
 </Activity>
