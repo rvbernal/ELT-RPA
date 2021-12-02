@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1044,1142</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>925,1140</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Practice_Extra___Unit_Creation_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="30">
@@ -64,7 +64,7 @@
       <AssemblyReference>Reusable Steps Library</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Practice_Extra___Lesson_Creation" sap:VirtualizedContainerService.HintSize="454,1077" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Practice_Extra___Lesson_Creation" sap:VirtualizedContainerService.HintSize="454,1075" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="HeaderExist" />
     </Sequence.Variables>
@@ -85,7 +85,7 @@
         </ui:Target>
       </ui:TypeInto.Target>
     </ui:TypeInto>
-    <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DelayMS="2000" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="412,116" sap2010:WorkflowViewState.IdRef="SendHotkey_2" Key="enter" KeyModifiers="None" SpecialKey="True">
+    <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DelayMS="2000" DisplayName="Send Hotkey" sap:VirtualizedContainerService.HintSize="412,114" sap2010:WorkflowViewState.IdRef="SendHotkey_2" Key="enter" KeyModifiers="None" SpecialKey="True">
       <ui:SendHotkey.Target>
         <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="dd9c4df9-aa6f-4223-b7e7-7f24173426b0">
           <ui:Target.TimeoutMS>
@@ -97,7 +97,7 @@
         </ui:Target>
       </ui:SendHotkey.Target>
     </ui:SendHotkey>
-    <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="1000" DisplayName="Click 'Generated Child'" sap:VirtualizedContainerService.HintSize="412,106" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
+    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DelayMS="1000" DisplayName="Click 'Generated Child'" sap:VirtualizedContainerService.HintSize="412,106" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT" SimulateClick="True">
       <ui:Click.CursorPosition>
         <ui:CursorPosition Position="Center">
           <ui:CursorPosition.OffsetX>
@@ -109,7 +109,7 @@
         </ui:CursorPosition>
       </ui:Click.CursorPosition>
       <ui:Click.Target>
-        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="601e6fef-5a00-4be9-8fd1-89a6f4271a2e" InformativeScreenshot="1842918a48dfae0d3d0171cf6ec1c244" Selector="[String.Format(&quot;&lt;html app='chrome.exe' title='comproDLS | Builder | Courses' /&gt;&lt;webctrl tag='INPUT' type='text' value='{0}' /&gt;&lt;nav up='6' /&gt;&lt;webctrl parentid='content' tag='I' class='fa fa-chevron-right medium-icon' parentclass='pull-right actions' /&gt;&quot;, Lesson)]">
+        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="601e6fef-5a00-4be9-8fd1-89a6f4271a2e" InformativeScreenshot="1842918a48dfae0d3d0171cf6ec1c244" Selector="[String.Format(&quot;&lt;html app='chrome.exe' title='comproDLS | Builder | Courses' /&gt;&lt;webctrl tag='INPUT' type='text' value='*{0}*' /&gt;&lt;nav up='6' /&gt;&lt;webctrl parentid='content' tag='I' class='fa fa-chevron-right medium-icon' parentclass='pull-right actions' /&gt;&quot;, Lesson)]">
           <ui:Target.TimeoutMS>
             <InArgument x:TypeArguments="x:Int32" />
           </ui:Target.TimeoutMS>
