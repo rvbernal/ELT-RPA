@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>935,657</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1074,473.333333333333</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Write_Test_Data_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -87,7 +87,7 @@
       <x:Boolean x:Key="ShouldCollapseAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Write_Test_Data" sap:VirtualizedContainerService.HintSize="242,143" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Write_Test_Data" sap:VirtualizedContainerService.HintSize="242,144.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Default="[Environment.GetEnvironmentVariable(&quot;useraccount&quot;,EnvironmentVariableTarget.Machine)]" Name="UserID" />
       <Variable x:TypeArguments="x:String" Default="[Environment.GetEnvironmentVariable(&quot;userpass&quot;,EnvironmentVariableTarget.Machine)]" Name="UserPassword" />
@@ -100,13 +100,13 @@
         <x:Boolean x:Key="IsPinned">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uma:Office365ApplicationScope ApplicationSecret="{x:Null}" ContinueOnError="{x:Null}" SecureApplicationSecret="{x:Null}" SecurePassword="{x:Null}" Timeout="{x:Null}" ApplicationId="[AppID]" AuthenticationType="InteractiveToken" DisplayName="Microsoft Office 365 Scope" sap:VirtualizedContainerService.HintSize="434,152" sap2010:WorkflowViewState.IdRef="Office365ApplicationScope_1" OAuthApplication="UiPath" Password="[UserPassword]" Services="Files, Shared" Tenant="[TenantID]" Username="[UserID + &quot;@cambridge.org&quot;]">
+    <uma:Office365ApplicationScope ApplicationSecret="{x:Null}" CertificateAsBase64="{x:Null}" CertificatePassword="{x:Null}" ContinueOnError="{x:Null}" SecureApplicationSecret="{x:Null}" SecurePassword="{x:Null}" Timeout="{x:Null}" ApplicationId="[AppID]" AuthenticationType="InteractiveToken" DisplayName="Microsoft Office 365 Scope" Environment="Global" sap:VirtualizedContainerService.HintSize="434,155.333333333333" sap2010:WorkflowViewState.IdRef="Office365ApplicationScope_1" OAuthApplication="UiPath" Password="[UserPassword]" Services="Files, Shared" Tenant="[TenantID]" Username="[UserID + &quot;@cambridge.org&quot;]">
       <uma:Office365ApplicationScope.Body>
         <ActivityAction x:TypeArguments="mg:GraphServiceClient">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="mg:GraphServiceClient" Name="ParentScope" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="242,234" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="242,237.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <Sequence.Variables>
               <Variable x:TypeArguments="mg:DriveItem" Name="dataFile" />
             </Sequence.Variables>
@@ -115,10 +115,10 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <umaf:FindFilesAndFolders Results="{x:Null}" Subfolder="{x:Null}" DisplayName="Find Files And Folders" DriveName="Documents" First="[dataFile]" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="FindFilesAndFolders_1" Query="01_Metadata_Template.xlsx" SiteUrl="https://campress.sharepoint.com/sites/ELTAutomation" />
-            <If Condition="[ExecutionStatus&lt;&gt;&quot;&quot;]" sap:VirtualizedContainerService.HintSize="484,237" sap2010:WorkflowViewState.IdRef="If_2">
+            <umaf:FindFilesAndFolders DriveMetadata="{x:Null}" Results="{x:Null}" Subfolder="{x:Null}" DisplayName="Find Files And Folders" DriveName="Documents" First="[dataFile]" sap:VirtualizedContainerService.HintSize="334,88.6666666666667" sap2010:WorkflowViewState.IdRef="FindFilesAndFolders_1" Query="01_Metadata_Template.xlsx" SiteUrl="https://cambridgeorg.sharepoint.com/sites/ELTAutomation" />
+            <If Condition="[ExecutionStatus&lt;&gt;&quot;&quot;]" sap:VirtualizedContainerService.HintSize="200,52.6666666666667" sap2010:WorkflowViewState.IdRef="If_2">
               <If.Then>
-                <umae:WriteCell CellAddress="[cellArg]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="WriteCell_2" SheetName="Level" Value="[ExecutionStatus]" Workbook="[dataFile]" />
+                <umae:WriteCell CellAddress="[cellArg]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="334,194" sap2010:WorkflowViewState.IdRef="WriteCell_2" SheetName="Level" Value="[ExecutionStatus]" Workbook="[dataFile]" />
               </If.Then>
             </If>
           </Sequence>
