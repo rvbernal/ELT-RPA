@@ -1,7 +1,7 @@
 {
   "name": "ELT-RPA",
   "description": "RPA Development for Avallain",
-  "main": "CAT-6 Parser Avallain LO Replacement.xaml",
+  "main": "C1 - Metadata Automation.xaml",
   "dependencies": {
     "CQA-RPA.Library": "[1.0.27]",
     "UiPath.Excel.Activities": "[2.11.3]",
@@ -17,6 +17,7 @@
   "projectVersion": "1.0.32",
   "runtimeOptions": {
     "autoDispose": false,
+    "netFrameworkLazyLoading": false,
     "isPausable": true,
     "isAttended": false,
     "requiresUserInteraction": true,
@@ -60,12 +61,6 @@
       "output": []
     },
     {
-      "filePath": "C1 Automation.xaml",
-      "uniqueId": "adde04df-20d7-41e5-acb3-2dff40fb50b1",
-      "input": [],
-      "output": []
-    },
-    {
       "filePath": "CAT-5  Activity Feedback and threshold automation.xaml",
       "uniqueId": "6a35048e-d7e7-4bf2-aa4f-a4c962d89a50",
       "input": [],
@@ -74,6 +69,12 @@
     {
       "filePath": "CAT-6 Parser Avallain LO Replacement.xaml",
       "uniqueId": "cebd444e-60bf-4105-8f43-8a9f9ad2fe72",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "C1 - Metadata Automation.xaml",
+      "uniqueId": "110a3276-f6f2-4548-a00f-8215f3d3e85f",
       "input": [],
       "output": []
     }
