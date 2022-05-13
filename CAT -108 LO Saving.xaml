@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="CAT_LO_Saving" this:CAT_LO_Saving.Username="[Environment.GetEnvironmentVariable(&quot;useraccount&quot;,EnvironmentVariableTarget.Machine)]" this:CAT_LO_Saving.startingRow="12" this:CAT_LO_Saving.endingRow="14" this:CAT_LO_Saving.TestDataURL="https://cambridgeorg.sharepoint.com/:x:/r/sites/ELTAutomation/Shared%20Documents/RPA%20mappings/LOSaving.xlsx?d=wcee5f18b9e4a4ae7a510ffcbba5b2896&amp;csf=1&amp;web=1&amp;e=aR1f5i" this:CAT_LO_Saving.Worksheet="LO Saving" this:CAT_LO_Saving.Password="[Environment.GetEnvironmentVariable(&quot;AvallainUserPass&quot;,EnvironmentVariableTarget.Machine)]" this:CAT_LO_Saving.URL="https://app-cup-author-stage.avallain.net/" this:CAT_LO_Saving.ProjectName="JQs API playground" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="CAT_LO_Saving" this:CAT_LO_Saving.Username="[Environment.GetEnvironmentVariable(&quot;useraccount&quot;,EnvironmentVariableTarget.Machine)]" this:CAT_LO_Saving.startingRow="9" this:CAT_LO_Saving.endingRow="9" this:CAT_LO_Saving.TestDataURL="https://cambridgeorg.sharepoint.com/:x:/r/sites/ELTAutomation/Shared%20Documents/RPA%20mappings/LOSaving.xlsx?d=wcee5f18b9e4a4ae7a510ffcbba5b2896&amp;csf=1&amp;web=1&amp;e=aR1f5i" this:CAT_LO_Saving.Worksheet="LO Saving" this:CAT_LO_Saving.Password="[Environment.GetEnvironmentVariable(&quot;AvallainUserPass&quot;,EnvironmentVariableTarget.Machine)]" this:CAT_LO_Saving.URL="https://app-cup-author-stage.avallain.net/" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="Username" Type="InArgument(x:String)" />
     <x:Property Name="startingRow" Type="InArgument(x:Int32)" />
@@ -7,12 +7,11 @@
     <x:Property Name="Worksheet" Type="InArgument(x:String)" />
     <x:Property Name="Password" Type="InArgument(x:String)" />
     <x:Property Name="URL" Type="InArgument(x:String)" />
-    <x:Property Name="ProjectName" Type="InArgument(x:String)" />
   </x:Members>
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1284,2514</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1284,2668</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>CAT_LO_Saving_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -82,16 +81,17 @@
       <AssemblyReference>UiPath.MicrosoftOffice365.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>UiPath.Word</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="CAT_LO_Saving" sap:VirtualizedContainerService.HintSize="856,2449.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="CAT_LO_Saving" sap:VirtualizedContainerService.HintSize="856,2603.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Name="rowCount" />
       <Variable x:TypeArguments="sd:DataTable" Name="dataTable" />
       <Variable x:TypeArguments="x:String" Name="SavingLO" />
       <Variable x:TypeArguments="x:String" Name="LOName" />
+      <Variable x:TypeArguments="x:String" Name="ProjectName" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -106,9 +106,24 @@
         <InArgument x:TypeArguments="x:String" x:Key="URL">[URL]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke SelectProject workflow" sap:VirtualizedContainerService.HintSize="814,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_13" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Avallain Reusables\ReadTestProjectName.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="Worksheet">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Worksheet" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="TestDataURL">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TestDataURL" />
+        </InArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="ProjectName">
+          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="ProjectName" />
+        </OutArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke SelectProject workflow" sap:VirtualizedContainerService.HintSize="814,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Avallain Reusables\SelectProject.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="ProjectName">[ProjectName]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="ProjectName">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ProjectName" />
+        </InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Read Test Data Range workflow" sap:VirtualizedContainerService.HintSize="814,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Avallain Reusables\Read Test Data Range.xaml">
@@ -201,9 +216,7 @@
                 </ui:InvokeWorkflowFile>
                 <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Search for LO workflow" sap:VirtualizedContainerService.HintSize="343.333333333333,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Avallain Reusables\Search for LO.xaml">
                   <ui:InvokeWorkflowFile.Arguments>
-                    <InArgument x:TypeArguments="x:String" x:Key="in_lo">
-                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="LOName" />
-                    </InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_lo">[LOName]</InArgument>
                   </ui:InvokeWorkflowFile.Arguments>
                 </ui:InvokeWorkflowFile>
                 <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Click Edit Link for LO workflow" sap:VirtualizedContainerService.HintSize="343.333333333333,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Avallain Reusables\Click Edit Link for LO.xaml">
@@ -213,18 +226,10 @@
                 </ui:InvokeWorkflowFile>
                 <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Click Edit Link for LO workflow" sap:VirtualizedContainerService.HintSize="343.333333333333,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Avallain Reusables\Save LO - CAT 108.xaml">
                   <ui:InvokeWorkflowFile.Arguments>
-                    <InArgument x:TypeArguments="x:String" x:Key="TestDataURL">
-                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TestDataURL" />
-                    </InArgument>
-                    <InArgument x:TypeArguments="x:Int32" x:Key="startingRow">
-                      <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="startingRow" />
-                    </InArgument>
-                    <InArgument x:TypeArguments="x:String" x:Key="Worksheet">
-                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Worksheet" />
-                    </InArgument>
-                    <InArgument x:TypeArguments="x:String" x:Key="rowArg">
-                      <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="&quot;A&quot; &amp; startingRow" />
-                    </InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="TestDataURL">[TestDataURL]</InArgument>
+                    <InArgument x:TypeArguments="x:Int32" x:Key="startingRow">[startingRow]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="Worksheet">[Worksheet]</InArgument>
+                    <InArgument x:TypeArguments="x:String" x:Key="rowArg">["A" &amp; startingRow]</InArgument>
                   </ui:InvokeWorkflowFile.Arguments>
                 </ui:InvokeWorkflowFile>
                 <Assign sap:VirtualizedContainerService.HintSize="343.333333333333,62" sap2010:WorkflowViewState.IdRef="Assign_4">
