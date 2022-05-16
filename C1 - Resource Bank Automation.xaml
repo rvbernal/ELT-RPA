@@ -9,7 +9,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>916,663</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1078,1333</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>C1_Automation_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="32">
@@ -86,10 +86,11 @@
   </TextExpression.ReferencesForImplementation>
   <sap:WorkflowViewStateService.ViewState>
     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-      <x:Boolean x:Key="ShouldCollapseAll">True</x:Boolean>
+      <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
+      <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="C1 - Resource Bank Automation" sap:VirtualizedContainerService.HintSize="242,598" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="C1 - Resource Bank Automation" sap:VirtualizedContainerService.HintSize="421,1268" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="UniqueCode" />
       <Variable x:TypeArguments="x:String" Name="CopyrightYear" />
@@ -105,102 +106,71 @@
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-        <x:Boolean x:Key="IsPinned">True</x:Boolean>
+        <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Read Test Data - C1 Resource Bank Settings workflow" sap:VirtualizedContainerService.HintSize="379,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_16" UnSafe="False" WorkflowFileName="Reusable Process - C1\Read Test Data - C1 Resource Bank Settings.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="TestDataURL">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TestDataURL" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="Worksheet">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Worksheet" />
-        </InArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="UniqueCode">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="UniqueCode" />
-        </OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="CopyrightYear">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="CopyrightYear" />
-        </OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="ProductBuildTitle">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="ProductBuildTitle" />
-        </OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="LearningMaterialsSummary">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="LearningMaterialsSummary" />
-        </OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="DisplayTitle">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="DisplayTitle" />
-        </OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="Entitlement">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="Entitlement" />
-        </OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="ParentTile">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="ParentTile" />
-        </OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="ActivationInstructions">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="ActivationInstructions" />
-        </OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="FreelyAvailableToRoles">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="FreelyAvailableToRoles" />
-        </OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="CanBeActivatedByRoles">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="CanBeActivatedByRoles" />
-        </OutArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="TestDataURL">[TestDataURL]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="Worksheet">[Worksheet]</InArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="UniqueCode">[UniqueCode]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="CopyrightYear">[CopyrightYear]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="ProductBuildTitle">[ProductBuildTitle]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="LearningMaterialsSummary">[LearningMaterialsSummary]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="DisplayTitle">[DisplayTitle]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="Entitlement">[Entitlement]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="ParentTile">[ParentTile]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="ActivationInstructions">[ActivationInstructions]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="FreelyAvailableToRoles">[FreelyAvailableToRoles]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="CanBeActivatedByRoles">[CanBeActivatedByRoles]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Login workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Reusable Process - C1\Login - C1.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Login workflow" sap:VirtualizedContainerService.HintSize="379,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Reusable Process - C1\Login - C1.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="Username">[Username]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="Password">[Password]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="URL">[URL]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Resource Bank - Create Component workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_17" UnSafe="False" WorkflowFileName="Reusable Process - C1\Resource Bank - Create Component.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Resource Bank - Create Component workflow" sap:VirtualizedContainerService.HintSize="379,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_17" UnSafe="False" WorkflowFileName="Reusable Process - C1\Resource Bank - Create Component.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="UniqueCode">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="UniqueCode" />
+        <InArgument x:TypeArguments="x:String" x:Key="UniqueCode">[UniqueCode]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="CopyrightYear">[CopyrightYear]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="ProductBuildTitle">[ProductBuildTitle]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="DisplayTitle">[DisplayTitle]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="Entitlement">[Entitlement]</InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Resource Bank - Selecting Product workflow" sap:VirtualizedContainerService.HintSize="379,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_18" UnSafe="False" WorkflowFileName="Reusable Process - C1\Resource Bank - Selecting Product.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="ProductBuildTitle">[ProductBuildTitle]</InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Resource Bank - Content Creation workflow" sap:VirtualizedContainerService.HintSize="379,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_19" UnSafe="False" WorkflowFileName="Reusable Process - C1\Resource Bank - Content Creation.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="LearningMaterialsSummary">[LearningMaterialsSummary]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="ParentTile">[ParentTile]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="ActivationInstructions">[ActivationInstructions]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="CanBeActivatedByRoles">[CanBeActivatedByRoles]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="FreelyAvailableToRoles">[FreelyAvailableToRoles]</InArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Resource Bank - Click Learning Path &amp; Modules workflow" sap:VirtualizedContainerService.HintSize="379,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_20" UnSafe="False" WorkflowFileName="Reusable Process - C1\Resource Bank - Click Learning Path &amp; Modules.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <scg:Dictionary x:TypeArguments="x:String, Argument" />
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Resource Bank - Logic for 4 Tier levels CREATION workflow" sap:VirtualizedContainerService.HintSize="379,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_21" UnSafe="False" WorkflowFileName="Reusable Process - C1\Resource Bank - Logic for 4 Tier levels CREATION.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="TestDataURL">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TestDataURL" />
         </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="CopyrightYear">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="CopyrightYear" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="ProductBuildTitle">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ProductBuildTitle" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="DisplayTitle">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="DisplayTitle" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="Entitlement">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Entitlement" />
+        <InArgument x:TypeArguments="x:String" x:Key="Worksheet">
+          <Literal x:TypeArguments="x:String">Structure</Literal>
         </InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Resource Bank - Selecting Product workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_18" UnSafe="False" WorkflowFileName="Reusable Process - C1\Resource Bank - Selecting Product.xaml">
-      <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="ProductBuildTitle">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ProductBuildTitle" />
-        </InArgument>
-      </ui:InvokeWorkflowFile.Arguments>
-    </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Resource Bank - Content Creation workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_19" UnSafe="False" WorkflowFileName="Reusable Process - C1\Resource Bank - Content Creation.xaml">
-      <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="LearningMaterialsSummary">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="LearningMaterialsSummary" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="ParentTile">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ParentTile" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="ActivationInstructions">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ActivationInstructions" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="CanBeActivatedByRoles">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="CanBeActivatedByRoles" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="FreelyAvailableToRoles">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="FreelyAvailableToRoles" />
-        </InArgument>
-      </ui:InvokeWorkflowFile.Arguments>
-    </ui:InvokeWorkflowFile>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Logout workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Reusable Process - C1\Logout - C1.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Logout workflow" sap:VirtualizedContainerService.HintSize="379,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Reusable Process - C1\Logout - C1.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <scg:Dictionary x:TypeArguments="x:String, Argument" />
       </ui:InvokeWorkflowFile.Arguments>
