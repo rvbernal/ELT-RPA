@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="C1___Practice_Extra_Automation" this:C1___Practice_Extra_Automation.Username="[Environment.GetEnvironmentVariable(&quot;useraccount&quot;,EnvironmentVariableTarget.Machine)]" this:C1___Practice_Extra_Automation.Password="[Environment.GetEnvironmentVariable(&quot;userpass&quot;,EnvironmentVariableTarget.Machine)]" this:C1___Practice_Extra_Automation.TestDataURL="https://cambridgeorg.sharepoint.com/:x:/r/teams/Groups/ELT/ProductBuild/Shared%20Documents/15%20Admin/Parser/Development/Archive/CambridgeOne_HandoverDocument_Dev.xlsx?d=w9c497ae273e748bd9e8b172fdc9d59d3&amp;csf=1&amp;web=1&amp;e=wIRdXa" this:C1___Practice_Extra_Automation.Worksheet="Practice Extra Settings" this:C1___Practice_Extra_Automation.URL="https://qa-builder.cambridgeone.org/" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="C1___Practice_Extra_Automation" this:C1___Practice_Extra_Automation.Username="[Environment.GetEnvironmentVariable(&quot;useraccount&quot;,EnvironmentVariableTarget.Machine)]" this:C1___Practice_Extra_Automation.Password="[Environment.GetEnvironmentVariable(&quot;userpass&quot;,EnvironmentVariableTarget.Machine)]" this:C1___Practice_Extra_Automation.TestDataURL="https://cambridgeorg.sharepoint.com/:x:/r/sites/ELTAutomation/Shared%20Documents/RPA%20mappings/CambridgeOneComponentLevel_HandoverDocument_Template.xlsx?d=w422e1f9255284e699f8937d0f594bccd&amp;csf=1&amp;web=1&amp;e=0Lo4eW" this:C1___Practice_Extra_Automation.Worksheet="Practice Extra-2" this:C1___Practice_Extra_Automation.URL="https://qa-builder.cambridgeone.org/" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="Username" Type="InArgument(x:String)" />
     <x:Property Name="Password" Type="InArgument(x:String)" />
@@ -9,7 +9,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>925,845</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1139,1485</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>C1_Automation_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="32">
@@ -81,6 +81,7 @@
       <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Word</AssemblyReference>
       <AssemblyReference>UiPath.MicrosoftOffice365.Activities.Design</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
@@ -90,7 +91,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="C1 - Practice Extra Automation" sap:VirtualizedContainerService.HintSize="421,1268" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="C1 - Practice Extra Automation" sap:VirtualizedContainerService.HintSize="421,1420" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="UniqueCode" />
       <Variable x:TypeArguments="x:String" Name="CopyrightYear" />
@@ -136,19 +137,27 @@
         <x:Boolean x:Key="IsPinned">False</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Read Test Data - C1 Practice Extra workflow" sap:VirtualizedContainerService.HintSize="379,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_15" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Reusable Process - C1\Read Test Data - C1 Practice Extra Settings.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Read Test Data - C1 Practice Extra workflow" sap:VirtualizedContainerService.HintSize="379,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_15" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Reusable Process - C1\Read Test Data - C1 Practice Extra-A.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="x:String" x:Key="TestDataURL">[TestDataURL]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="Worksheet">[Worksheet]</InArgument>
         <OutArgument x:TypeArguments="x:String" x:Key="UniqueCode">[UniqueCode]</OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="CopyrightYear">[CopyrightYear]</OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="Program">[Program]</OutArgument>
         <OutArgument x:TypeArguments="x:String" x:Key="ProductBuildTitle">[ProductBuildTitle]</OutArgument>
         <OutArgument x:TypeArguments="x:String" x:Key="LearningMaterialsSummary">[LearningMaterialsSummary]</OutArgument>
         <OutArgument x:TypeArguments="x:String" x:Key="ClassMaterialsSummary">[ClassMaterialsSummary]</OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="ECommerceSummary">[ECommerceSummary]</OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="DisplayTitle">[DisplayTitle]</OutArgument>
         <OutArgument x:TypeArguments="x:String" x:Key="Entitlement">[Entitlement]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="PublicationStatus">[PublicationStatus]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="DisplayTitle">[DisplayTitle]</OutArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Read Test Data - C1 Practice Extra workflow" sap:VirtualizedContainerService.HintSize="379,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_18" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Reusable Process - C1\Read Test Data - C1 Practice Extra-B.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="TestDataURL">https://cambridgeorg.sharepoint.com/:x:/r/sites/ELTAutomation/Shared%20Documents/RPA%20mappings/CambridgeOne_SetUp_Document_Template.xlsx?d=w2b6761005dc048ffafbff29f499e6fca&amp;csf=1&amp;web=1&amp;e=zyomHE</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="Worksheet">C1 Set up info</InArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="CopyrightYear">[CopyrightYear]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="Program">[Program]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="ClassMaterialsSummary">[ClassMaterialsSummary]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="ECommerceSummary">[ECommerceSummary]</OutArgument>
         <OutArgument x:TypeArguments="x:String" x:Key="Name">[Name]</OutArgument>
         <OutArgument x:TypeArguments="x:String" x:Key="Style">[Style]</OutArgument>
         <OutArgument x:TypeArguments="x:String" x:Key="ResultDisplayType">[ResultDisplayType]</OutArgument>
@@ -165,7 +174,6 @@
         <OutArgument x:TypeArguments="x:String" x:Key="EnableProgressTrackingForTeachers">[EnableProgressTrackingForTeachers]</OutArgument>
         <OutArgument x:TypeArguments="x:String" x:Key="EnableGroups">[EnableGroups]</OutArgument>
         <OutArgument x:TypeArguments="x:String" x:Key="NonAssignedAccess">[NonAssignedAccess]</OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="PublicationStatus">[PublicationStatus]</OutArgument>
         <OutArgument x:TypeArguments="x:String" x:Key="ComingSoonInstructions">[ComingSoonInstructions]</OutArgument>
         <OutArgument x:TypeArguments="x:String" x:Key="VisibilityOptions">[VisibilityOptions]</OutArgument>
         <OutArgument x:TypeArguments="x:String" x:Key="LearnerDashboard">[LearnerDashboard]</OutArgument>
@@ -241,7 +249,7 @@
           <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TestDataURL" />
         </InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="Worksheet">
-          <Literal x:TypeArguments="x:String">Structure</Literal>
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Worksheet" />
         </InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
