@@ -5,6 +5,7 @@
   "dependencies": {
     "CQA-RPA.Library": "[1.0.27]",
     "UiPath.Excel.Activities": "[2.11.3]",
+    "UiPath.FTP.Activities": "[1.0.6710.16240]",
     "UiPath.Mail.Activities": "[1.12.1]",
     "UiPath.MicrosoftOffice365.Activities": "[1.11.0-preview]",
     "UiPath.System.Activities": "[21.10.0]",
