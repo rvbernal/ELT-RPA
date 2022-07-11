@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Resource_Bank___Logic_For_4_Tier_Level_Creation" this:Resource_Bank___Logic_For_4_Tier_Level_Creation.TestDataURL="https://cambridgeorg.sharepoint.com/:x:/r/teams/Groups/ELT/ProductBuild/Shared%20Documents/15%20Admin/Parser/Development/RESOURCEBANKCambridgeOne_HandoverDocument_Dev.xlsx?d=wa403b230eb994e00a300e88c65d72746&amp;csf=1&amp;web=1&amp;e=dVZaOq" this:Resource_Bank___Logic_For_4_Tier_Level_Creation.Worksheet="Structure" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Resource_Bank___Logic_For_4_Tier_Level_Creation" this:Resource_Bank___Logic_For_4_Tier_Level_Creation.TestDataURL="https://cambridgeorg.sharepoint.com/:x:/r/sites/ELTAutomation/Shared%20Documents/RPA%20mappings/CambridgeOneComponentLevel_HandoverDocument_Template.xlsx?d=w422e1f9255284e699f8937d0f594bccd&amp;csf=1&amp;web=1&amp;e=jXLVmc" this:Resource_Bank___Logic_For_4_Tier_Level_Creation.Worksheet="Resource Bank" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="TestDataURL" Type="InArgument(x:String)" />
     <x:Property Name="Worksheet" Type="InArgument(x:String)" />
@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1075,4114</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1076,6857.33333333333</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Practice_Extra___Logic_For_Column_Tiers_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="33">
@@ -83,7 +83,7 @@
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Resource_Bank___Logic_For_4_Tier_Level_Creation" sap:VirtualizedContainerService.HintSize="1085,4049" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Resource_Bank___Logic_For_4_Tier_Level_Creation" sap:VirtualizedContainerService.HintSize="1086,6792.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Name="MaxRow" />
       <Variable x:TypeArguments="sd:DataTable" Name="DataSheet" />
@@ -104,19 +104,19 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ExcelApplicationScope Password="{x:Null}" AutoSave="False" CreateNewFile="False" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="1043,260" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" ReadOnly="True" Visible="False" WorkbookPath="[TestDataURL]">
+    <ui:ExcelApplicationScope Password="{x:Null}" AutoSave="False" CreateNewFile="False" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="1044,259.333333333333" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" ReadOnly="True" Visible="False" WorkbookPath="[TestDataURL]">
       <ui:ExcelApplicationScope.Body>
         <ActivityAction x:TypeArguments="ui:WorkbookApplication">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,151" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,150.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:ExcelReadRange AddHeaders="False" DataTable="[DataSheet]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_1" SheetName="[Worksheet]">
+            <ui:ExcelReadRange AddHeaders="False" DataTable="[DataSheet]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="334,58.6666666666667" sap2010:WorkflowViewState.IdRef="ExcelReadRange_1" SheetName="[Worksheet]">
               <ui:ExcelReadRange.Range>
                 <InArgument x:TypeArguments="x:String">
                   <Literal x:TypeArguments="x:String" Value="" />
@@ -127,7 +127,7 @@
         </ActivityAction>
       </ui:ExcelApplicationScope.Body>
     </ui:ExcelApplicationScope>
-    <Assign sap:VirtualizedContainerService.HintSize="1043,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+    <Assign sap:VirtualizedContainerService.HintSize="1044,62" sap2010:WorkflowViewState.IdRef="Assign_1">
       <Assign.To>
         <OutArgument x:TypeArguments="x:Int32">[MaxRow]</OutArgument>
       </Assign.To>
@@ -135,29 +135,29 @@
         <InArgument x:TypeArguments="x:Int32">[DataSheet.RowCount]</InArgument>
       </Assign.Value>
     </Assign>
-    <Assign sap:VirtualizedContainerService.HintSize="1043,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+    <Assign sap:VirtualizedContainerService.HintSize="1044,62" sap2010:WorkflowViewState.IdRef="Assign_2">
       <Assign.To>
         <OutArgument x:TypeArguments="x:Int32">[StartRow]</OutArgument>
       </Assign.To>
       <Assign.Value>
-        <InArgument x:TypeArguments="x:Int32">2</InArgument>
+        <InArgument x:TypeArguments="x:Int32">27</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:InterruptibleDoWhile Condition="[StartRow &lt;= MaxRow]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="1043,6157" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+    <ui:InterruptibleDoWhile Condition="[StartRow &lt;= MaxRow]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="1044,6197.33333333333" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
       <ui:InterruptibleDoWhile.Body>
-        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1007,5990" sap2010:WorkflowViewState.IdRef="Sequence_3">
+        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="1007.33333333333,6028" sap2010:WorkflowViewState.IdRef="Sequence_3">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Read Test Data - C1 Resource Bank - Structure workflow" sap:VirtualizedContainerService.HintSize="965,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" UnSafe="False" WorkflowFileName="Reusable Process - C1\Read Test Data - C1 Resource Bank - Structure.xaml">
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Read Test Data - C1 Resource Bank - Structure workflow" sap:VirtualizedContainerService.HintSize="965.333333333333,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_12" UnSafe="False" WorkflowFileName="Reusable Process - C1\Read Test Data - C1 Resource Bank - Structure.xaml">
             <ui:InvokeWorkflowFile.Arguments>
               <InArgument x:TypeArguments="x:String" x:Key="TestDataURL">
                 <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TestDataURL" />
               </InArgument>
               <InArgument x:TypeArguments="x:String" x:Key="Worksheet">
-                <Literal x:TypeArguments="x:String">Structure</Literal>
+                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Worksheet" />
               </InArgument>
               <InArgument x:TypeArguments="x:Int32" x:Key="rowArg">
                 <mva:VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="StartRow" />
@@ -179,7 +179,7 @@
               </OutArgument>
             </ui:InvokeWorkflowFile.Arguments>
           </ui:InvokeWorkflowFile>
-          <If Condition="[Tier1.ToLower = &quot;end&quot;]" DisplayName="End" sap:VirtualizedContainerService.HintSize="965,293" sap2010:WorkflowViewState.IdRef="If_3">
+          <If Condition="[Tier1.ToLower = &quot;end&quot;]" DisplayName="End" sap:VirtualizedContainerService.HintSize="965.333333333333,305.333333333333" sap2010:WorkflowViewState.IdRef="If_3">
             <If.Then>
               <Sequence sap:VirtualizedContainerService.HintSize="242,114" sap2010:WorkflowViewState.IdRef="Sequence_8">
                 <sap:WorkflowViewStateService.ViewState>
@@ -200,15 +200,15 @@
               </Sequence>
             </If.Else>
           </If>
-          <If Condition="[Tier1 &lt;&gt; &quot;&quot;]" DisplayName="Tier1" sap:VirtualizedContainerService.HintSize="965,1298" sap2010:WorkflowViewState.IdRef="If_2">
+          <If Condition="[Tier1 &lt;&gt; &quot;&quot;]" DisplayName="Tier1" sap:VirtualizedContainerService.HintSize="965.333333333333,1322.66666666667" sap2010:WorkflowViewState.IdRef="If_2">
             <If.Then>
-              <Sequence sap:VirtualizedContainerService.HintSize="929,1119" sap2010:WorkflowViewState.IdRef="Sequence_6">
+              <Sequence sap:VirtualizedContainerService.HintSize="928.666666666667,1131.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_6">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:UiElementExists DisplayName="Element Exists 'A'" Exists="[HomeExist]" sap:VirtualizedContainerService.HintSize="887,106" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+                <ui:UiElementExists DisplayName="Element Exists 'A'" Exists="[HomeExist]" sap:VirtualizedContainerService.HintSize="886.666666666667,106" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
                   <ui:UiElementExists.Target>
                     <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="34d8d798-e58a-44b9-8d41-9d4f368223dc" InformativeScreenshot="847aec60fad032a384577a41712a8690" Selector="&lt;html app='chrome.exe' title='comproDLS | Builder | Courses' /&gt;&lt;webctrl aaname='Home' parentid='content' tag='A' /&gt;" TimeoutMS="3000">
                       <ui:Target.WaitForReady>
@@ -217,7 +217,7 @@
                     </ui:Target>
                   </ui:UiElementExists.Target>
                 </ui:UiElementExists>
-                <If Condition="[HomeExist = True]" sap:VirtualizedContainerService.HintSize="887,377" sap2010:WorkflowViewState.IdRef="If_4">
+                <If Condition="[HomeExist = True]" sap:VirtualizedContainerService.HintSize="886.666666666667,389.333333333333" sap2010:WorkflowViewState.IdRef="If_4">
                   <If.Then>
                     <Sequence sap:VirtualizedContainerService.HintSize="376,198" sap2010:WorkflowViewState.IdRef="Sequence_10">
                       <sap:WorkflowViewStateService.ViewState>
@@ -269,12 +269,8 @@
                       </sap:WorkflowViewStateService.ViewState>
                       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Resource Bank - Logic For Content Typology workflow" sap:VirtualizedContainerService.HintSize="379,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_13" UnSafe="False" WorkflowFileName="Reusable Process - C1\Resource Bank - Logic For Content Typology.xaml">
                         <ui:InvokeWorkflowFile.Arguments>
-                          <InArgument x:TypeArguments="x:String" x:Key="Content">
-                            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Tier1" />
-                          </InArgument>
-                          <InArgument x:TypeArguments="x:String" x:Key="Title">
-                            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="CustomerFacingInfo" />
-                          </InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="Content">[Tier1]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="Title">[CustomerFacingInfo]</InArgument>
                         </ui:InvokeWorkflowFile.Arguments>
                       </ui:InvokeWorkflowFile>
                     </Sequence>
@@ -288,9 +284,7 @@
                       </sap:WorkflowViewStateService.ViewState>
                       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Resource Bank - Tier Creation workflow" sap:VirtualizedContainerService.HintSize="379,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_14" UnSafe="False" WorkflowFileName="Reusable Process - C1\Resource Bank - Tier Creation.xaml">
                         <ui:InvokeWorkflowFile.Arguments>
-                          <InArgument x:TypeArguments="x:String" x:Key="Tier">
-                            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Tier1" />
-                          </InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="Tier">[Tier1]</InArgument>
                         </ui:InvokeWorkflowFile.Arguments>
                       </ui:InvokeWorkflowFile>
                     </Sequence>
@@ -385,12 +379,8 @@
                       </sap:WorkflowViewStateService.ViewState>
                       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Resource Bank - Logic For Content Typology workflow" sap:VirtualizedContainerService.HintSize="379,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_15" UnSafe="False" WorkflowFileName="Reusable Process - C1\Resource Bank - Logic For Content Typology.xaml">
                         <ui:InvokeWorkflowFile.Arguments>
-                          <InArgument x:TypeArguments="x:String" x:Key="Content">
-                            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Tier2" />
-                          </InArgument>
-                          <InArgument x:TypeArguments="x:String" x:Key="Title">
-                            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="CustomerFacingInfo" />
-                          </InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="Content">[Tier2]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="Title">[CustomerFacingInfo]</InArgument>
                         </ui:InvokeWorkflowFile.Arguments>
                       </ui:InvokeWorkflowFile>
                     </Sequence>
@@ -404,9 +394,7 @@
                       </sap:WorkflowViewStateService.ViewState>
                       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Resource Bank - Tier Creation workflow" sap:VirtualizedContainerService.HintSize="379,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_16" UnSafe="False" WorkflowFileName="Reusable Process - C1\Resource Bank - Tier Creation.xaml">
                         <ui:InvokeWorkflowFile.Arguments>
-                          <InArgument x:TypeArguments="x:String" x:Key="Tier">
-                            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Tier2" />
-                          </InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="Tier">[Tier2]</InArgument>
                         </ui:InvokeWorkflowFile.Arguments>
                       </ui:InvokeWorkflowFile>
                     </Sequence>
@@ -501,12 +489,8 @@
                       </sap:WorkflowViewStateService.ViewState>
                       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Resource Bank - Logic For Content Typology workflow" sap:VirtualizedContainerService.HintSize="379,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_17" UnSafe="False" WorkflowFileName="Reusable Process - C1\Resource Bank - Logic For Content Typology.xaml">
                         <ui:InvokeWorkflowFile.Arguments>
-                          <InArgument x:TypeArguments="x:String" x:Key="Content">
-                            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Tier3" />
-                          </InArgument>
-                          <InArgument x:TypeArguments="x:String" x:Key="Title">
-                            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="CustomerFacingInfo" />
-                          </InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="Content">[Tier3]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="Title">[CustomerFacingInfo]</InArgument>
                         </ui:InvokeWorkflowFile.Arguments>
                       </ui:InvokeWorkflowFile>
                     </Sequence>
@@ -520,9 +504,7 @@
                       </sap:WorkflowViewStateService.ViewState>
                       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Resource Bank - Tier Creation workflow" sap:VirtualizedContainerService.HintSize="379,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_18" UnSafe="False" WorkflowFileName="Reusable Process - C1\Resource Bank - Tier Creation.xaml">
                         <ui:InvokeWorkflowFile.Arguments>
-                          <InArgument x:TypeArguments="x:String" x:Key="Tier">
-                            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Tier3" />
-                          </InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="Tier">[Tier3]</InArgument>
                         </ui:InvokeWorkflowFile.Arguments>
                       </ui:InvokeWorkflowFile>
                     </Sequence>
@@ -617,12 +599,8 @@
                       </sap:WorkflowViewStateService.ViewState>
                       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Resource Bank - Logic For Content Typology workflow" sap:VirtualizedContainerService.HintSize="379,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_19" UnSafe="False" WorkflowFileName="Reusable Process - C1\Resource Bank - Logic For Content Typology.xaml">
                         <ui:InvokeWorkflowFile.Arguments>
-                          <InArgument x:TypeArguments="x:String" x:Key="Content">
-                            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Tier4" />
-                          </InArgument>
-                          <InArgument x:TypeArguments="x:String" x:Key="Title">
-                            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="CustomerFacingInfo" />
-                          </InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="Content">[Tier4]</InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="Title">[CustomerFacingInfo]</InArgument>
                         </ui:InvokeWorkflowFile.Arguments>
                       </ui:InvokeWorkflowFile>
                     </Sequence>
@@ -636,9 +614,7 @@
                       </sap:WorkflowViewStateService.ViewState>
                       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Resource Bank - Tier Creation workflow" sap:VirtualizedContainerService.HintSize="379,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_20" UnSafe="False" WorkflowFileName="Reusable Process - C1\Resource Bank - Tier Creation.xaml">
                         <ui:InvokeWorkflowFile.Arguments>
-                          <InArgument x:TypeArguments="x:String" x:Key="Tier">
-                            <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Tier4" />
-                          </InArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="Tier">[Tier4]</InArgument>
                         </ui:InvokeWorkflowFile.Arguments>
                       </ui:InvokeWorkflowFile>
                     </Sequence>
