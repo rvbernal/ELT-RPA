@@ -11,7 +11,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>926.666666666667,1502.66666666667</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1253.33333333333,1502.66666666667</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>C1_Automation_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="32">
@@ -130,36 +130,22 @@
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="379.333333333333,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_22" UnSafe="False" WorkflowFileName="Reusable Process - C1\Read Test Data - C1 Resource Bank B.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <OutArgument x:TypeArguments="x:String" x:Key="LearningPath" />
-        <InArgument x:TypeArguments="x:String" x:Key="TestDataURL">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="TestDataURL_SetUp" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="Worksheet">
-          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="Worksheet_SetUp" />
-        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="TestDataURL">[TestDataURL_SetUp]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="Worksheet">[Worksheet_SetUp]</InArgument>
         <OutArgument x:TypeArguments="x:String" x:Key="Program" />
-        <OutArgument x:TypeArguments="x:String" x:Key="ClassMaterialsSummary">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="ClassMaterialsSummary" />
-        </OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="ClassMaterialsSummary">[ClassMaterialsSummary]</OutArgument>
         <OutArgument x:TypeArguments="x:String" x:Key="ECommerceSummary" />
         <OutArgument x:TypeArguments="x:String" x:Key="Name" />
         <OutArgument x:TypeArguments="x:String" x:Key="Style" />
         <OutArgument x:TypeArguments="x:String" x:Key="ResultDisplayType" />
-        <OutArgument x:TypeArguments="x:String" x:Key="ParentTile">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="ParentTile" />
-        </OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="ParentTile">[ParentTile]</OutArgument>
         <OutArgument x:TypeArguments="x:String" x:Key="LearningPathway" />
         <OutArgument x:TypeArguments="x:String" x:Key="ResultDisplayScoreDetailFormat" />
         <OutArgument x:TypeArguments="x:String" x:Key="AssignmentLimit" />
-        <OutArgument x:TypeArguments="x:String" x:Key="ActivationInstructions">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="ActivationInstructions" />
-        </OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="ActivationInstructions">[ActivationInstructions]</OutArgument>
         <OutArgument x:TypeArguments="x:String" x:Key="ActivityAttemptsAllowed" />
-        <OutArgument x:TypeArguments="x:String" x:Key="FreelyAvailableToRoles">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="FreelyAvailableToRoles" />
-        </OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="CanBeActivatedByRoles">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="CanBeActivatedByRoles" />
-        </OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="FreelyAvailableToRoles">[FreelyAvailableToRoles]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="CanBeActivatedByRoles">[CanBeActivatedByRoles]</OutArgument>
         <OutArgument x:TypeArguments="x:String" x:Key="ActivitySequenceNumbers" />
         <OutArgument x:TypeArguments="x:String" x:Key="UnitNumbers" />
         <OutArgument x:TypeArguments="x:String" x:Key="EnableProgressTrackingForTeachers" />
@@ -175,9 +161,7 @@
         <OutArgument x:TypeArguments="x:String" x:Key="Icon" />
         <OutArgument x:TypeArguments="x:String" x:Key="CompletionThreshold" />
         <OutArgument x:TypeArguments="x:String" x:Key="EBooks" />
-        <OutArgument x:TypeArguments="x:String" x:Key="CopyrightYear">
-          <mva:VisualBasicReference x:TypeArguments="x:String" ExpressionText="CopyrightYear" />
-        </OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="CopyrightYear">[CopyrightYear]</OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Login workflow" sap:VirtualizedContainerService.HintSize="379.333333333333,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Reusable Process - C1\Login - C1.xaml">
