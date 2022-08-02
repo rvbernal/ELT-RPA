@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="C1___Resource_Bank_Automation" this:C1___Resource_Bank_Automation.Username="[Environment.GetEnvironmentVariable(&quot;useraccount&quot;,EnvironmentVariableTarget.Machine)]" this:C1___Resource_Bank_Automation.Password="[Environment.GetEnvironmentVariable(&quot;userpass&quot;,EnvironmentVariableTarget.Machine)]" this:C1___Resource_Bank_Automation.TestDataURL="https://cambridgeorg.sharepoint.com/:x:/r/sites/ELTAutomation/Shared%20Documents/RPA%20mappings/CambridgeOneComponentLevel_HandoverDocument_Template.xlsx?d=w422e1f9255284e699f8937d0f594bccd&amp;csf=1&amp;web=1&amp;e=jXLVmc" this:C1___Resource_Bank_Automation.Worksheet="Resource Bank" this:C1___Resource_Bank_Automation.URL="https://qa-builder.cambridgeone.org/" this:C1___Resource_Bank_Automation.TestDataURL_SetUp="https://cambridgeorg.sharepoint.com/:x:/r/sites/ELTAutomation/Shared%20Documents/RPA%20mappings/CambridgeOne_SetUp_Document_Template.xlsx?d=w2b6761005dc048ffafbff29f499e6fca&amp;csf=1&amp;web=1&amp;e=zyomHE" this:C1___Resource_Bank_Automation.Worksheet_SetUp="C1 Set up info" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="C1___Resource_Bank_Automation" this:C1___Resource_Bank_Automation.Username="[Environment.GetEnvironmentVariable(&quot;useraccount&quot;,EnvironmentVariableTarget.Machine)]" this:C1___Resource_Bank_Automation.Password="[Environment.GetEnvironmentVariable(&quot;userpass&quot;,EnvironmentVariableTarget.Machine)]" this:C1___Resource_Bank_Automation.TestDataURL="https://cambridgeorg.sharepoint.com/:x:/r/sites/ELTAutomation/Shared%20Documents/RPA%20mappings/CambridgeOneComponentLevel_HandoverDocument_Template.xlsx?d=w422e1f9255284e699f8937d0f594bccd&amp;csf=1&amp;web=1&amp;e=jXLVmc" this:C1___Resource_Bank_Automation.Worksheet="Resource Bank" this:C1___Resource_Bank_Automation.URL="https://qa-builder.cambridgeone.org/" this:C1___Resource_Bank_Automation.TestDataURL_SetUp="https://cambridgeorg.sharepoint.com/:x:/r/sites/ELTAutomation/Shared%20Documents/RPA%20mappings/CambridgeOne_SetUp_Document_Template.xlsx?d=w2b6761005dc048ffafbff29f499e6fca&amp;csf=1&amp;web=1&amp;e=w82Fbo" this:C1___Resource_Bank_Automation.Worksheet_SetUp="C1 Set up info" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="Username" Type="InArgument(x:String)" />
     <x:Property Name="Password" Type="InArgument(x:String)" />
@@ -162,6 +162,7 @@
         <OutArgument x:TypeArguments="x:String" x:Key="CompletionThreshold" />
         <OutArgument x:TypeArguments="x:String" x:Key="EBooks" />
         <OutArgument x:TypeArguments="x:String" x:Key="CopyrightYear">[CopyrightYear]</OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="VisblePriorToActivation" />
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Login workflow" sap:VirtualizedContainerService.HintSize="379.333333333333,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" LogEntry="No" LogExit="No" UnSafe="False" WorkflowFileName="Reusable Process - C1\Login - C1.xaml">
@@ -187,11 +188,27 @@
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Resource Bank - Content Creation workflow" sap:VirtualizedContainerService.HintSize="379.333333333333,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_19" UnSafe="False" WorkflowFileName="Reusable Process - C1\Resource Bank - Content Creation.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="LearningMaterialsSummary">[LearningMaterialsSummary]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="ParentTile">[ParentTile]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="ActivationInstructions">[ActivationInstructions]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="CanBeActivatedByRoles">[CanBeActivatedByRoles]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="FreelyAvailableToRoles">[FreelyAvailableToRoles]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="LearningMaterialsSummary">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="LearningMaterialsSummary" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="ParentTile">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ParentTile" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="ActivationInstructions">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="ActivationInstructions" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="CanBeActivatedByRoles">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="CanBeActivatedByRoles" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="FreelyAvailableToRoles">
+          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="FreelyAvailableToRoles" />
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="VisiblePriorActivation">
+          <Literal x:TypeArguments="x:String">Yes</Literal>
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="Name">
+          <Literal x:TypeArguments="x:String">Secondary</Literal>
+        </InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke Resource Bank - Click Learning Path &amp; Modules workflow" sap:VirtualizedContainerService.HintSize="379.333333333333,114" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_20" UnSafe="False" WorkflowFileName="Reusable Process - C1\Resource Bank - Click Learning Path &amp; Modules.xaml">
